@@ -128,7 +128,7 @@ export default function PostContent() {
 
         <div className={styles.cta}>
           <p>
-            <strong>King Rock</strong> — 1220b King St W, Toronto · Open 24 Hours · (437) 236-3469
+            <strong>King Rock</strong> — 1220b King St W, Toronto · Open Daily: 10:00 AM - 02:00 AM · (437) 236-3469
           </p>
           <Link href="/exotic" className={styles.ctaBtn}>Browse Our Menu</Link>
         </div>
