@@ -673,7 +673,7 @@ function AddOnsCard({ items, hiIdx }: { items: Item[]; hiIdx: number }) {
 const TICKER_SLIDES = [
   "🔥 King Rock — 1220b King St W, Toronto",
   "200+ Strains In Stock",
-  "Open 24 Hours",
+  "Open Daily: 10:00 AM - 02:00 AM",
   "ALL SALES ARE FINAL",
   "🎮 Play Games at king-rock.com/games",
 ];

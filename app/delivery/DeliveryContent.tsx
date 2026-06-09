@@ -101,7 +101,7 @@ export default function DeliveryContent() {
         <div className={styles.ctaSection}>
           <p className={styles.ctaText}>
             Can&apos;t wait? Visit us in-store at <strong>1220b King St W, Toronto</strong> —
-            open <strong>24 hours</strong>. Call <strong>(437) 236-3469</strong>.
+            we are <strong>Open Daily: 10:00 AM - 02:00 AM</strong>. Call <strong>(437) 236-3469</strong>.
           </p>
         </div>
       </div>
