@@ -136,7 +136,7 @@ function ItemCard({ title, accent, items, hiIdx, preset }: {
 const TICKER_SLIDES = [
   "🔥 King Rock — 1220b King St W, Toronto",
   "200+ Strains In Stock",
-  "Open Daily: 10:00 AM - 02:00 AM",
+  "Open Daily: 10:00 AM - 01:00 AM",
   "Pre-Rolls · Edibles · Vapes · Concentrates",
   "ALL SALES ARE FINAL",
   "🎮 Play Games at king-rock.com/games",

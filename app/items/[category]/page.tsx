@@ -128,7 +128,7 @@ export default async function ItemsCategoryPage({
           <div className={styles.visitCta}>
             <h3 className={styles.visitTitle}>Visit King Rock</h3>
             <p className={styles.visitText}>
-              1220b King St W, Toronto, ON M6K 1G4 · Open Daily: 10:00 AM - 02:00 AM
+              1220b King St W, Toronto, ON M6K 1G4 · Open Daily: 10:00 AM - 01:00 AM
             </p>
             <a
               href="https://maps.google.com"
