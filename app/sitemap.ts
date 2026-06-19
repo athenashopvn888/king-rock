@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { TIER_CONFIG, CATEGORY_CONFIG, allFlowers, allItems } from "./lib/products";
 import { SEO_PAGES } from "./lib/seoPages";
 
-const BASE = "https://king-rock.com";
+const BASE = "https://kingrockcannabis.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date().toISOString();

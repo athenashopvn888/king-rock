@@ -16,7 +16,7 @@ export async function generateMetadata({
     title: `${title} — Blog | King Rock`,
     description: `Read about ${title.toLowerCase()} and other cannabis guides from King Rock in Toronto.`,
     alternates: {
-      canonical: `https://king-rock.com/blog/${slug}`,
+      canonical: `https://kingrockcannabis.com/blog/${slug}`,
     },
   };
 }

@@ -32,7 +32,7 @@ export const SEO_PAGES: SeoPageData[] = [
       },
       {
         heading: "Beyond Flower — Edibles, Vapes, Concentrates & More",
-        body: "King Rock is more than just a flower shop. We carry a comprehensive selection of cannabis edibles (gummies, chocolates, baked goods), vape pens and disposable vapes, concentrates (shatter, wax, hash, diamonds, live resin), pre-rolled joints, magic mushrooms, native cigarettes, rolling papers, and accessories. Our live digital menu at king-rock.com updates in real time so you always know exactly what's in stock before you make the trip.",
+        body: "King Rock is more than just a flower shop. We carry a comprehensive selection of cannabis edibles (gummies, chocolates, baked goods), vape pens and disposable vapes, concentrates (shatter, wax, hash, diamonds, live resin), pre-rolled joints, magic mushrooms, native cigarettes, rolling papers, and accessories. Our live digital menu at kingrockcannabis.com updates in real time so you always know exactly what's in stock before you make the trip.",
       },
       {
         heading: "Open Daily: 10:00 AM - 01:00 AM on 1220b King St W & Nearby Expressway",
@@ -52,9 +52,9 @@ export const SEO_PAGES: SeoPageData[] = [
       { q: "What are the hours for King Rock?", a: "We are open daily from 10:00 AM to 01:00 AM. Walk in anytime — no appointment needed. Whether it's day or night, our staff is here to help." },
       { q: "What cannabis products does King Rock carry?", a: "We carry 200+ strains of cannabis flower across 5 quality tiers (Exotic, Premium, AAA+, AA, Budget), plus edibles, vapes, concentrates, pre-rolls, magic mushrooms, native cigarettes, and accessories. Our menu updates in real time online." },
       { q: "What is the cheapest weed at King Rock?", a: "Our Budget tier starts at $3/g with value ounces from $40. Our AA tier is $4/g. Every tier includes our Buy 2g Get 1g FREE promotion, making our prices even more competitive." },
-      { q: "Does King Rock have a live menu?", a: "Yes! Our online menu at king-rock.com updates in real time with current stock, prices, and availability. You can see exactly what we have before you visit." },
+      { q: "Does King Rock have a live menu?", a: "Yes! Our online menu at kingrockcannabis.com updates in real time with current stock, prices, and availability. You can see exactly what we have before you visit." },
       { q: "What makes King Rock different from other Toronto dispensaries?", a: "Three things set us apart: (1) we are open daily from 10:00 AM to 01:00 AM, (2) our transparent 5-tier pricing system means no confusing markups, and (3) every purchase includes our Buy 2g Get 1g FREE promotion. Plus we carry one of Toronto's largest selections with over 200 strains." },
-      { q: "Can I check stock before visiting?", a: "Absolutely. Visit king-rock.com to see our live menu. All flower, edibles, vapes, and accessories are listed with real-time stock status, THC levels, and pricing." },
+      { q: "Can I check stock before visiting?", a: "Absolutely. Visit kingrockcannabis.com to see our live menu. All flower, edibles, vapes, and accessories are listed with real-time stock status, THC levels, and pricing." },
       { q: "Is there parking near King Rock?", a: "Yes. Free street parking is available nearby and surrounding residential streets. We're also easily accessible via local transit." },
     ],
   },
@@ -158,7 +158,7 @@ export const SEO_PAGES: SeoPageData[] = [
       },
       {
         heading: "Full Menu — Cannabis, Edibles, Vapes & More",
-        body: "When you make the trip up to Toronto, make it count. King Rock carries a full selection including 200+ flower strains, edibles, vape pens, disposable vapes, concentrates (shatter, wax, hash, live resin), pre-rolled joints, magic mushrooms, native cigarettes, and accessories. Check our live online menu at king-rock.com before you visit to see exactly what's in stock.",
+        body: "When you make the trip up to Toronto, make it count. King Rock carries a full selection including 200+ flower strains, edibles, vape pens, disposable vapes, concentrates (shatter, wax, hash, live resin), pre-rolled joints, magic mushrooms, native cigarettes, and accessories. Check our live online menu at kingrockcannabis.com before you visit to see exactly what's in stock.",
       },
     ],
     faqs: [
@@ -198,7 +198,7 @@ export const SEO_PAGES: SeoPageData[] = [
       { q: "Where is the closest dispensary in 1220b King St W & Nearby Expressway?", a: "King Rock at 1220b King St W is conveniently located in the heart of Toronto — easily accessible from 1220b King St W & Nearby Expressway." },
       { q: "Is King Rock walk-in friendly?", a: "Absolutely! No appointment needed. Walk in anytime during our hours — we are open daily from 10:00 AM to 01:00 AM. Our friendly staff is always ready to help." },
       { q: "What neighbourhoods does King Rock serve?", a: "We serve all of Toronto and surrounding areas, including 1220b King St W & Nearby Expressway and surrounding areas." },
-      { q: "How do I check what's in stock?", a: "Visit king-rock.com for our live menu with real-time stock, pricing, and THC levels for all products." },
+      { q: "How do I check what's in stock?", a: "Visit kingrockcannabis.com for our live menu with real-time stock, pricing, and THC levels for all products." },
       { q: "Do you sell edibles and vapes?", a: "Yes! In addition to 200+ flower strains, we carry edibles (gummies, chocolates), vape pens, disposable vapes, concentrates, pre-rolls, and accessories." },
     ],
   },

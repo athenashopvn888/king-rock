@@ -29,7 +29,7 @@ export async function generateMetadata({
     title: `${item.name} | ${item.category} | King Rock Toronto`,
     description: itemData.metaDescription,
     alternates: {
-      canonical: `https://king-rock.com/item/${slug}`,
+      canonical: `https://kingrockcannabis.com/item/${slug}`,
     },
     openGraph: {
       title: `${item.name} | King Rock`,
@@ -54,7 +54,7 @@ function getJsonLd(item: ItemProduct) {
 
   const offers: any = {
     "@type": "Offer",
-    url: `https://king-rock.com/item/${item.slug}`,
+    url: `https://kingrockcannabis.com/item/${item.slug}`,
     priceCurrency: "CAD",
     availability: "https://schema.org/InStock",
     itemCondition: "https://schema.org/NewCondition",
@@ -74,7 +74,7 @@ function getJsonLd(item: ItemProduct) {
     "@context": "https://schema.org",
     "@type": "Product",
     name: item.name,
-    image: item.image ? [item.image.startsWith('http') ? item.image : `https://king-rock.com${item.image.startsWith('/') ? '' : '/'}${item.image}`] : undefined,
+    image: item.image ? [item.image.startsWith('http') ? item.image : `https://kingrockcannabis.com${item.image.startsWith('/') ? '' : '/'}${item.image}`] : undefined,
     description: itemData.description,
     brand: { "@type": "Brand", name: "King Rock" },
     sku: cleanSku(item.sku || item.slug),
@@ -93,19 +93,19 @@ function getBreadcrumbJsonLd(item: ItemProduct) {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://king-rock.com"
+        "item": "https://kingrockcannabis.com"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": item.category,
-        "item": `https://king-rock.com/items/${catSlug}`
+        "item": `https://kingrockcannabis.com/items/${catSlug}`
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": item.name,
-        "item": `https://king-rock.com/item/${item.slug}`
+        "item": `https://kingrockcannabis.com/item/${item.slug}`
       }
     ]
   };

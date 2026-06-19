@@ -139,7 +139,7 @@ const TICKER_SLIDES = [
   "Open Daily: 10:00 AM - 01:00 AM",
   "Pre-Rolls · Edibles · Vapes · Concentrates",
   "ALL SALES ARE FINAL",
-  "🎮 Play Games at king-rock.com/games",
+  "🎮 Play Games at kingrockcannabis.com/games",
 ];
 
 function VerticalTicker() {

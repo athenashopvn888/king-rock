@@ -3,7 +3,7 @@ import "./globals.css";
 import AgeGate from "./components/AgeGate";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://king-rock.com"),
+  metadataBase: new URL("https://kingrockcannabis.com"),
   title: {
     default: "King Rock — Premium Cannabis Dispensary, Toronto",
     template: "%s | King Rock",
@@ -29,14 +29,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_CA",
-    url: "https://king-rock.com",
+    url: "https://kingrockcannabis.com",
     siteName: "King Rock",
     title: "King Rock — Premium Toronto Cannabis Dispensary",
     description:
       "200+ strains from $3/g. Exotic to Budget. Toronto's uplifting dispensary at 1220b King St W. Open Daily: 10:00 AM - 01:00 AM.",
     images: [
       {
-        url: "https://king-rock.com/wp-content/uploads/2026/04/46Oi5.jpg",
+        url: "https://kingrockcannabis.com/wp-content/uploads/2026/04/46Oi5.jpg",
         width: 1200,
         height: 630,
         alt: "King Rock — Premium Cannabis Dispensary Toronto",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "King Rock — Toronto's Uplifting Dispensary",
     description: "200+ strains from $3/g. Open Daily: 10:00 AM - 01:00 AM at 1220b King St W, Toronto.",
-    images: ["https://king-rock.com/wp-content/uploads/2026/04/46Oi5.jpg"],
+    images: ["https://kingrockcannabis.com/wp-content/uploads/2026/04/46Oi5.jpg"],
   },
   robots: {
     index: true,
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://king-rock.com",
+    canonical: "https://kingrockcannabis.com",
   },
   verification: {
     // google: "your-google-verification-code",
@@ -73,12 +73,12 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Store",
   additionalType: "https://schema.org/Store",
-  "@id": "https://king-rock.com",
+  "@id": "https://kingrockcannabis.com",
   name: "King Rock",
   description: "Cannabis dispensary at 1220b King St W in Toronto, ON. Shop exotic, premium, AAA+, AA, and budget flower tiers plus edibles, prerolls, and vapes. Open Daily: 10:00 AM - 01:00 AM.",
-  url: "https://king-rock.com",
+  url: "https://kingrockcannabis.com",
   telephone: "+14372363469",
-  image: "https://king-rock.com/wp-content/uploads/2026/04/7Clmh.jpg",
+  image: "https://kingrockcannabis.com/wp-content/uploads/2026/04/7Clmh.jpg",
   priceRange: "$3 - $12/g",
   address: {
     "@type": "PostalAddress",

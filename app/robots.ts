@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/"],
     },
-    sitemap: "https://king-rock.com/sitemap.xml",
+    sitemap: "https://kingrockcannabis.com/sitemap.xml",
   };
 }

@@ -28,7 +28,7 @@ export async function generateMetadata({
     title: page.title,
     description: page.metaDescription,
     alternates: {
-      canonical: `https://king-rock.com/info/${slug}`,
+      canonical: `https://kingrockcannabis.com/info/${slug}`,
     },
   };
 }

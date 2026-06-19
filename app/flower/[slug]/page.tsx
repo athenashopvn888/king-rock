@@ -31,7 +31,7 @@ export async function generateMetadata({
     title: `${flower.name} | ${tierName} ${flower.type === "indica" ? "Indica" : flower.type === "sativa" ? "Sativa" : "Hybrid"} | THC ${flower.thc} | King Rock Toronto`,
     description: strainData.metaDescription,
     alternates: {
-      canonical: `https://king-rock.com/flower/${slug}`,
+      canonical: `https://kingrockcannabis.com/flower/${slug}`,
     },
     openGraph: {
       title: `${flower.name} | King Rock`,
@@ -60,7 +60,7 @@ function getJsonLd(flower: FlowerProduct) {
 
   const offers: any = {
     "@type": "Offer",
-    url: `https://king-rock.com/flower/${flower.slug}`,
+    url: `https://kingrockcannabis.com/flower/${flower.slug}`,
     priceCurrency: "CAD",
     availability: "https://schema.org/InStock",
     itemCondition: "https://schema.org/NewCondition",
@@ -80,7 +80,7 @@ function getJsonLd(flower: FlowerProduct) {
     "@context": "https://schema.org",
     "@type": "Product",
     name: flower.name,
-    image: flower.image ? [flower.image.startsWith('http') ? flower.image : `https://king-rock.com${flower.image.startsWith('/') ? '' : '/'}${flower.image}`] : undefined,
+    image: flower.image ? [flower.image.startsWith('http') ? flower.image : `https://kingrockcannabis.com${flower.image.startsWith('/') ? '' : '/'}${flower.image}`] : undefined,
     description: strainData.description,
     brand: { "@type": "Brand", name: "King Rock" },
     sku: cleanSku(flower.sku || flower.slug),
@@ -101,19 +101,19 @@ function getBreadcrumbJsonLd(flower: FlowerProduct) {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://king-rock.com"
+        "item": "https://kingrockcannabis.com"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": tierName,
-        "item": `https://king-rock.com/${tierSlug}`
+        "item": `https://kingrockcannabis.com/${tierSlug}`
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": flower.name,
-        "item": `https://king-rock.com/flower/${flower.slug}`
+        "item": `https://kingrockcannabis.com/flower/${flower.slug}`
       }
     ]
   };
