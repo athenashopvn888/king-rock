@@ -24,8 +24,8 @@ export const gbpLocation = {
     "Accessories"
   ],
   menuUrl: "/",
-  directionsUrl: "https://www.google.com/maps/search/?api=1&query=1220b%20King%20St%20W%2C%20Toronto%2C%20ON%20M6K%201G4",
-  mapEmbedUrl: "https://maps.google.com/maps?q=King%20Rock%201220b%20King%20St%20W%2C%20Toronto%2C%20ON%20M6K%201G4&t=&z=15&ie=UTF8&iwloc=&output=embed",
+  directionsUrl: "",
+  mapEmbedUrl: "",
   latitude: "43.6395857",
   longitude: "-79.4241844",
   hours: ["Open Daily: 10:00 AM - 01:00 AM"],

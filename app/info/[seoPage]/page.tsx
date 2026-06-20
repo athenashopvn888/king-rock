@@ -110,26 +110,8 @@ export default async function SeoLandingPage({
           <div className={styles.section}>
             <h2 className={styles.sectionTitle}>Find Us</h2>
             <div className={styles.mapWrap}>
-              <iframe
-                src="https://maps.google.com/maps?q=1220b%20King%20St%20W,+Toronto,+ON+M6K%201G4&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                width="100%"
-                height="350"
-                style={{ border: 0, borderRadius: "var(--radius-lg)" }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="King Rock — 1220b King St W, Toronto"
-              />
             </div>
             <div className={styles.visitBtns}>
-              <a
-                href="https://maps.google.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.visitBtn}
-              >
-                📍 Get Directions
-              </a>
             </div>
           </div>
 

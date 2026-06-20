@@ -109,20 +109,9 @@ const jsonLd = {
     "closes": "01:00"
   }
 ],
-  sameAs: [
-    "https://maps.google.com",
-    "https://maps.google.com",
-  ],
-  hasMap: "https://maps.google.com",
   areaServed: {
     "@type": "City",
     name: "Toronto",
-  },
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "5.0",
-    reviewCount: "15",
-    bestRating: "5",
   },
 };
 
