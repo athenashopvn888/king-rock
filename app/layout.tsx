@@ -5,11 +5,11 @@ import AgeGate from "./components/AgeGate";
 export const metadata: Metadata = {
   metadataBase: new URL("https://kingrockcannabis.com"),
   title: {
-    default: "King Rock — Premium Cannabis Dispensary, Toronto",
+    default: "King Rock Cannabis | Toronto Dispensary",
     template: "%s | King Rock",
   },
   description:
-    "Shop 200+ premium cannabis strains at King Rock. Exotic, Premium, AAA+, AA & Budget flower from $3/g. Toronto's uplifting dispensary at 1220b King St W. Open Daily: 10:00 AM - 01:00 AM.",
+    "King Rock is a Toronto cannabis dispensary on King St W with adult 19+ store info and category browsing for flower, pre-rolls, vapes, edibles, concentrates, and accessories. Open Daily: 10:00 AM - 01:00 AM.",
   keywords: [
     "cannabis dispensary Toronto",
     "weed store Toronto",
