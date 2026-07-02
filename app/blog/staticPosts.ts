@@ -25,7 +25,7 @@ export const STORE_BLOG_CONFIG = {
   storeCode: "KR01",
   storeName: "King Rock",
   city: "Toronto",
-  domain: "kingrockcannabis.com",
+  domain: "www.kingrockcannabis.com",
   storePath: "/weed-dispensary-toronto",
 };
 
