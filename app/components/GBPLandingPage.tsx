@@ -131,6 +131,10 @@ export function GBPLandingPage() {
         <p className={styles.infoBlock}>
           Helpful local reference points include {landmarkList}. Customers also use this page when planning from {nearbyAreaList}.
         </p>
+        <p className={styles.infoText}>
+          For a fuller local overview, read the{" "}
+          <Link href="/blog/king-rock-toronto-store-guide">King Rock store guide</Link>.
+        </p>
       </section>
 
       {/* Location & NAP Section */}
