@@ -39,7 +39,7 @@ export const STATIC_POSTS: StaticBlogPost[] = [
     meta_description: "Adult 19+ guide to King Rock around Liberty Village / Parkdale, with local store-page checks, menu-category context, and safe visit planning.",
     h1: "King Rock Local Store Guide for Adults 19+",
     excerpt: "King Rock guide for adults 19+ reviewing store information around Liberty Village / Parkdale.",
-    author: "Athena SEO Team",
+    author: "The King Rock Team",
     date: "2026-07-02",
     category: "Store Guide",
     readTime: "4 min",
