@@ -133,7 +133,7 @@ export function GBPLandingPage() {
         </p>
         <p className={styles.infoText}>
           For a fuller local overview, read the{" "}
-          <Link href="/blog/king-rock-toronto-store-guide">King Rock store guide</Link>.
+          <Link href="/">Home</Link>.
         </p>
       </section>
 
