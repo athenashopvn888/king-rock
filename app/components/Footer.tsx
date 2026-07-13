@@ -6,27 +6,22 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.inner}>
         <div className={styles.grid}>
-          {/* Column 1 — Store Description */}
+          {/* Column 1 Store Description */}
           <div className={styles.col}>
-            <div className={styles.brand}>
-              KING ROCK
-            </div>
+            <div className={styles.brand}>KING ROCK</div>
             <p className={styles.desc}>
               Your Local Cannabis Dispensary At 1220b King St W, Toronto. Visit
-              King Rock For Premium Flower, Edibles, Vapes &amp; More.
-              Open: Open Daily: 10:00 AM - 01:00 AM.
+              King Rock For Premium Flower, Edibles, Vapes &amp; More. Open
+              daily: 10:00 AM - 01:00 AM.
             </p>
             <div className={styles.buttons}>
-              <a
-                href="tel:+14372363469"
-                className={styles.btnPrimary}
-              >
+              <a href="tel:+14372363469" className={styles.btnPrimary}>
                 Call Now
               </a>
             </div>
           </div>
 
-          {/* Column 2 — Contact Info */}
+          {/* Column 2 Contact Info */}
           <div className={styles.col}>
             <h3 className={styles.colTitle}>Contact Info</h3>
             <div className={styles.infoBlock}>
@@ -37,15 +32,21 @@ export default function Footer() {
             </div>
             <div className={styles.infoBlock}>
               <span className={styles.infoLabel}>Phone:</span>
-              <span><a href="tel:+14372363469" style={{color: "inherit"}}>(437) 236-3469</a></span>
+              <span>
+                <a href="tel:+14372363469" style={{ color: "inherit" }}>
+                  (437) 236-3469
+                </a>
+              </span>
             </div>
             <div className={styles.infoBlock}>
               <span className={styles.infoLabel}>Hours:</span>
-              <span className={styles.highlight}>Open Daily: 10:00 AM - 01:00 AM</span>
+              <span className={styles.highlight}>
+                Open Daily: 10:00 AM - 01:00 AM
+              </span>
             </div>
           </div>
 
-          {/* Column 3 — Quick Links */}
+          {/* Column 3 Quick Links */}
           <div className={styles.col}>
             <h3 className={styles.colTitle}>Quick Links</h3>
             <nav className={styles.links}>
@@ -61,21 +62,29 @@ export default function Footer() {
               <Link href="/faq">FAQ</Link>
               <Link href="/delivery">Delivery (Coming Soon)</Link>
               <Link href="/games">Games Arcade</Link>
-              <Link href="/info/york-weed-dispensary">Toronto Dispensary</Link>
-              <Link href="/info/cheap-weed-york">Cheap Weed Toronto</Link>
-              <Link href="/info/native-cigarettes-york">Native Cigarettes</Link>
-              <Link href="/info/weed-store-near-mississauga">Weed Store Near Mississauga</Link>
-              <Link href="/weed-dispensary-toronto/">King Rock Weed Dispensary in Toronto</Link>
+              <Link href="/info/king-west-weed-dispensary">
+                Toronto Dispensary
+              </Link>
+              <Link href="/info/cheap-weed-king-west">Cheap Weed Toronto</Link>
+              <Link href="/info/native-cigarettes-king-west">
+                Native Cigarettes
+              </Link>
+              <Link href="/info/weed-store-near-liberty-village">
+                Liberty Village Weed Store
+              </Link>
+              <Link href="/weed-dispensary-toronto/">
+                King Rock Weed Dispensary in Toronto
+              </Link>
               <Link href="/contact">Contact Us</Link>
-                          <Link href="/resources">Resources</Link>
+              <Link href="/resources">Resources</Link>
             </nav>
           </div>
         </div>
 
         <div className={styles.bottom}>
           <p>
-            © {new Date().getFullYear()} King Rock. Must be 19+ to
-            enter. Please consume responsibly.
+            {new Date().getFullYear()} King Rock. Must be 19+ to enter. Please
+            consume responsibly.
           </p>
         </div>
       </div>
