@@ -24,14 +24,14 @@ export const metadata: Metadata = {
     "vapes",
     "pre-rolls",
     "native cigarettes Toronto",
-    "weed store Mississauga",
+    "weed store west Toronto",
   ],
   openGraph: {
     type: "website",
     locale: "en_CA",
     url: "https://kingrockcannabis.com",
     siteName: "King Rock",
-    title: "King Rock — Premium Toronto Cannabis Dispensary",
+    title: "King Rock Premium Toronto Cannabis Dispensary",
     description:
       "200+ strains from $3/g. Exotic to Budget. Toronto's uplifting dispensary at 1220b King St W. Open Daily: 10:00 AM - 01:00 AM.",
     images: [
@@ -39,15 +39,18 @@ export const metadata: Metadata = {
         url: "https://kingrockcannabis.com/wp-content/uploads/2026/04/46Oi5.jpg",
         width: 1200,
         height: 630,
-        alt: "King Rock — Premium Cannabis Dispensary Toronto",
+        alt: "King Rock Premium Cannabis Dispensary Toronto",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "King Rock — Toronto's Uplifting Dispensary",
-    description: "200+ strains from $3/g. Open Daily: 10:00 AM - 01:00 AM at 1220b King St W, Toronto.",
-    images: ["https://kingrockcannabis.com/wp-content/uploads/2026/04/46Oi5.jpg"],
+    title: "King Rock Toronto's Uplifting Dispensary",
+    description:
+      "200+ strains from $3/g. Open Daily: 10:00 AM - 01:00 AM at 1220b King St W, Toronto.",
+    images: [
+      "https://kingrockcannabis.com/wp-content/uploads/2026/04/46Oi5.jpg",
+    ],
   },
   robots: {
     index: true,
@@ -68,14 +71,15 @@ export const metadata: Metadata = {
   },
 };
 
-/* ── JSON-LD Structured Data ── */
+/* JSON-LD Structured Data */
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Store",
   additionalType: "https://schema.org/Store",
   "@id": "https://kingrockcannabis.com",
   name: "King Rock",
-  description: "Cannabis dispensary at 1220b King St W in Toronto, ON. Shop exotic, premium, AAA+, AA, and budget flower tiers plus edibles, prerolls, and vapes. Open Daily: 10:00 AM - 01:00 AM.",
+  description:
+    "Cannabis dispensary at 1220b King St W in Toronto, ON. Shop exotic, premium, AAA+, AA, and budget flower tiers plus edibles, prerolls, and vapes. Open Daily: 10:00 AM - 01:00 AM.",
   url: "https://kingrockcannabis.com",
   telephone: "+14372363469",
   image: "https://kingrockcannabis.com/wp-content/uploads/2026/04/7Clmh.jpg",
@@ -94,21 +98,21 @@ const jsonLd = {
     longitude: -79.4241844,
   },
   openingHoursSpecification: [
-  {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
-      "Sunday"
-    ],
-    "opens": "10:00",
-    "closes": "01:00"
-  }
-],
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday",
+      ],
+      opens: "10:00",
+      closes: "01:00",
+    },
+  ],
   areaServed: {
     "@type": "City",
     name: "Toronto",
@@ -137,15 +141,18 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z0S71M8ZV8"></script>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-Z0S71M8ZV8"
+        ></script>
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-Z0S71M8ZV8');
-            `
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-Z0S71M8ZV8');
+ `,
           }}
         />
       </head>

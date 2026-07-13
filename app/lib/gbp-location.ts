@@ -12,7 +12,15 @@ export const gbpLocation = {
   phone: "(437) 236-3469",
   phoneIntl: "+14372363469",
   neighborhood: "Liberty Village / Parkdale",
-  nearbyAreas: ["King St W", "Liberty Village", "Parkdale", "Dufferin", "Exhibition Place", "TTC", "Roncesvalles"],
+  nearbyAreas: [
+    "King St W",
+    "Liberty Village",
+    "Parkdale",
+    "Dufferin",
+    "Exhibition Place",
+    "TTC",
+    "Roncesvalles",
+  ],
   products: [
     "Flower",
     "Pre-rolls",
@@ -21,7 +29,7 @@ export const gbpLocation = {
     "Concentrates",
     "Shatter",
     "CBD oils",
-    "Accessories"
+    "Accessories",
   ],
   menuUrl: "/",
   directionsUrl: "",
@@ -30,11 +38,14 @@ export const gbpLocation = {
   longitude: "-79.4241844",
   hours: ["Open Daily: 10:00 AM - 01:00 AM"],
   seoTitle: "King Rock | Weed Dispensary in Toronto",
-  metaDescription: "King Rock is a local weed dispensary in Toronto offering flower, pre-rolls, edibles, vapes, concentrates, CBD, and service for adults 19+.",
+  metaDescription:
+    "King Rock is a local weed dispensary in Toronto offering flower, pre-rolls, edibles, vapes, concentrates, CBD, and service for adults 19+.",
   localLandmarks: ["King St W", "Liberty Village", "Parkdale"],
-  introVariant: "King Rock is your welcoming neighborhood weed dispensary in Toronto, located at 1220b King St W near Liberty Village / Parkdale. We carry a massive selection of weed, cannabis flower, pre-rolls, edibles, THC vapes, concentrates, and smoking accessories for adults 19+. Conveniently located near Liberty Village, our cannabis store and weed shop is designed to make finding the perfect strain easy and accessible.",
-  neighborhoodDescription: "Located in the vibrant Liberty Village / Parkdale district, our cannabis store fits right into this active and historic community, surrounded by local retail shops and convenient transit links.",
+  introVariant:
+    "King Rock is your welcoming neighborhood weed dispensary in Toronto, located at 1220b King St W near Liberty Village / Parkdale. We carry a massive selection of weed, cannabis flower, pre-rolls, edibles, THC vapes, concentrates, and smoking accessories for adults 19+. Conveniently located near Liberty Village, our cannabis store and weed shop is designed to make finding the perfect strain easy and accessible.",
+  neighborhoodDescription:
+    "Located in the vibrant Liberty Village / Parkdale district, our cannabis store fits right into this active and historic community, surrounded by local retail shops and convenient transit links.",
   parkingNote: "Street parking is available along King Street West",
   transitNote: "Served by the 504 King streetcar and local TTC transit routes.",
-  sectionTitle: "Serving Customers Near Liberty Village in Toronto"
+  sectionTitle: "Serving Customers Near Liberty Village in Toronto",
 };
