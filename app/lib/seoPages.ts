@@ -1,4 +1,4 @@
-// Geo-targeted SEO landing pages for King Rock.
+// Geo-targeted SEO store pages for King Rock.
 
 export interface SeoPageData {
   slug: string;

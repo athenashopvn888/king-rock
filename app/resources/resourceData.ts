@@ -31,7 +31,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
     intro: "A practical resource hub for King West, Liberty Village, and Parkdale shoppers. Use it to move from local search intent to the right menu shelf: flower, pre-rolls, edibles, THC vapes, concentrates, accessories, cigarettes, Native smokes, Backwoods, and grabba.",
     cards: [
       { title: "Local Visit Guide", href: "/resources/king-west-liberty-visit-guide", text: "Plan the stop around King St W, Liberty Village, Parkdale, Dufferin, Exhibition Place, Roncesvalles, and TTC routes." },
-      { title: "Menu Guide", href: "/resources/menu-guide", text: "Choose the right category before jumping into product pages." },
+      { title: "Menu Guide", href: "/resources/menu-guide", text: "Choose the matching menu category before opening individual product listings." },
       { title: "Flower Tier Guide", href: "/resources/flower-guide", text: "Compare Exotic, Premium, AAA+, AA, and Budget with 3g and 6g deal math." },
       { title: "Value Guide", href: "/resources/value-guide", text: "A cleaner path for cheap weed, budget weed, and affordable flower searches." },
       { title: "Native Smokes Prices", href: "/resources/native-smokes", text: "Brand and price notes for cigarettes, Backwoods, grabba, and pouch listings." }
@@ -39,12 +39,12 @@ export const RESOURCE_PAGES: ResourcePage[] = [
     sections: [
       {
         heading: "Local Search, Useful Next Step",
-        body: "King Rock is listed at 1220b King St W, Toronto, ON M6K 1G4. These resources support the protected GBP landing page, not replace it. Start with the local page for address and visit context, then use the resource guides for menu decisions.",
-        bullets: ["GBP landing page: /weed-dispensary-toronto", "Local areas: King St W, Liberty Village, Parkdale, Dufferin, Exhibition Place, Roncesvalles, and TTC routes", "Store hours shown in the site data: Open Daily: 10:00 AM - 01:00 AM"]
+        body: "King Rock is listed at 1220b King St W, Toronto, ON M6K 1G4. These resources work with the visit guide, not replace it. Start with the local page for address and visit context, then use the resource guides for menu decisions.",
+        bullets: ["visit guide: /weed-dispensary-toronto", "Local areas: King St W, Liberty Village, Parkdale, Dufferin, Exhibition Place, Roncesvalles, and TTC routes", "Store hours shown in the site data: Open Daily: 10:00 AM - 01:00 AM"]
       },
       {
-        heading: "Built Around Real Menu Paths",
-        body: "The pages are organized around high-intent keywords shoppers actually use: weed dispensary near Liberty Village / Parkdale, cannabis store Toronto, cheap weed, budget weed, pre-rolls, edibles, THC vapes, concentrates, Native cigarettes, Backwoods, and grabba."
+        heading: "Built Around Real Menu Choices",
+        body: "The pages are organized around common shopping questions shoppers often use: weed dispensary near Liberty Village / Parkdale, cannabis store Toronto, cheap weed, budget weed, pre-rolls, edibles, THC vapes, concentrates, Native cigarettes, Backwoods, and grabba."
       }
     ],
   },
@@ -56,8 +56,8 @@ export const RESOURCE_PAGES: ResourcePage[] = [
     eyebrow: "Visit Guide",
     intro: "Use this page when the search starts local: weed dispensary near Liberty Village / Parkdale, cannabis store near 1220b King St W, or a quick menu check before visiting from King St W, Liberty Village, Parkdale, Dufferin, Exhibition Place, Roncesvalles, and TTC routes.",
     cards: [
-      { title: "GBP Store Page", href: "/weed-dispensary-toronto", text: "Use the main local landing page for address, directions, hours, and NAP details." },
-      { title: "Menu Guide", href: "/resources/menu-guide", text: "Choose the product lane before opening deep menu pages." },
+      { title: "Store Visit Page", href: "/weed-dispensary-toronto", text: "Use the main visit guide for address, directions, hours, and contact details." },
+      { title: "Menu Guide", href: "/resources/menu-guide", text: "Choose the product category before opening deep menu pages." },
       { title: "Value Guide", href: "/resources/value-guide", text: "Fast help for affordable flower and budget weed searches." }
     ],
     sections: [
@@ -66,9 +66,9 @@ export const RESOURCE_PAGES: ResourcePage[] = [
         body: "King Rock is listed at 1220b King St W, Toronto, ON M6K 1G4. Keep that address as the local anchor, then use the resource pages to decide whether the trip is about flower, pre-rolls, edibles, THC vapes, concentrates, accessories, or cigarettes."
       },
       {
-        heading: "Neighborhood Search Paths",
+        heading: "Nearby Area Guide",
         body: "King West shoppers may be coming from Liberty Village, Parkdale, Dufferin, Exhibition Place, or Roncesvalles, so the resource pages keep fast menu choices separate from local visit planning.",
-        bullets: ["King St W cannabis store search path", "Liberty Village cannabis store search path", "Parkdale cannabis store search path", "Dufferin cannabis store search path", "Exhibition Place cannabis store search path", "TTC cannabis store search path", "Roncesvalles cannabis store search path"]
+        bullets: ["King St W cannabis store area guide", "Liberty Village cannabis store area guide", "Parkdale cannabis store area guide", "Dufferin cannabis store area guide", "Exhibition Place cannabis store area guide", "TTC cannabis store area guide", "Roncesvalles cannabis store area guide"]
       },
       {
         heading: "Best First Click",
@@ -80,24 +80,24 @@ export const RESOURCE_PAGES: ResourcePage[] = [
     slug: "menu-guide",
     title: "King Rock Menu Guide",
     seoTitle: "King Rock Menu Guide | Flower, Pre-Rolls, Edibles, Vapes And Cigarettes",
-    description: "A category-first menu guide for King Rock, covering flower tiers, pre-rolls, edibles, THC vapes, concentrates, accessories, cigarettes, and Native smokes.",
+    description: "A category-by-category menu guide for King Rock, covering flower tiers, pre-rolls, edibles, THC vapes, concentrates, accessories, cigarettes, and Native smokes.",
     eyebrow: "Menu Guide",
-    intro: "The menu gets easier when you choose the lane first. Flower has tier math. Pre-rolls have format details. Edibles, THC vapes, concentrates, and accessories need category notes. Cigarettes need brand and price checks.",
+    intro: "The menu gets easier when you choose one category first. Flower has tier math. Pre-rolls have format details. Edibles, THC vapes, concentrates, and accessories need category notes. Cigarettes need brand and price checks.",
     cards: [
       { title: "Flower Tiers", href: "/resources/flower-guide", text: "Start here for Exotic, Premium, AAA+, AA, and Budget flower." },
       { title: "Pre-Rolls", href: "/resources/pre-roll-guide", text: "Use this for ready-to-smoke singles, packs, and quick-trip browsing." },
       { title: "Cigarettes", href: "/items/cigarettes", text: "Open the cigarette category for current Native smokes listings." },
-      { title: "GBP Store Page", href: "/weed-dispensary-toronto", text: "Return to the protected local store page." }
+      { title: "Store Visit Page", href: "/weed-dispensary-toronto", text: "Return to the visit guide." }
     ],
     sections: [
       {
         heading: "Pick The Shelf First",
-        body: "For King West, Liberty Village, and Parkdale shoppers, the best menu path is simple: flower shoppers compare tiers, pre-roll shoppers compare format, edible and vape shoppers read product notes, and cigarette shoppers compare brand, full/light/menthol style, and price.",
-        bullets: ["Flower, pre-rolls, edibles, THC vapes, concentrates, accessories, and cigarettes each need their own pass.", "Use current category pages for live product details.", "Use resources for shopping logic and local planning."]
+        body: "For King West, Liberty Village, and Parkdale shoppers, the best menu choice is simple: flower shoppers compare tiers, pre-roll shoppers compare format, edible and vape shoppers read product details, and cigarette shoppers compare brand, full/light/menthol style, and price.",
+        bullets: ["Flower, pre-rolls, edibles, THC vapes, concentrates, accessories, and cigarettes are easier to compare one category at a time.", "Use current menu categories for live product details.", "Use resources for shopping tips and local planning."]
       },
       {
-        heading: "Local Keywords Without The Mess",
-        body: "This page supports searches like weed dispensary near Liberty Village / Parkdale, cannabis store Toronto, cheap weed near me, Native cigarettes, and THC vape menu while keeping the actual shopper path clear."
+        heading: "Nearby Areas Without The Mess",
+        body: "This page helps shoppers compare nearby areas and categories such as weed dispensary near Liberty Village / Parkdale, cannabis store Toronto, cheap weed near me, Native cigarettes, and THC vape menu while keeping the actual shopping plan clear."
       }
     ],
   },
@@ -131,7 +131,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
     slug: "value-guide",
     title: "King Rock Value Weed Guide",
     seoTitle: "King Rock Value Weed Guide | Cheap Weed Near Liberty Village / Parkdale",
-    description: "A value shopping guide for King Rock, covering cheap weed, budget weed, AA flower, AAA+ deals, 6g tier math, and affordable menu paths.",
+    description: "A value shopping guide for King Rock, covering cheap weed, budget weed, AA flower, AAA+ deals, 6g tier math, and affordable menu choices.",
     eyebrow: "Value Guide",
     intro: "For King West and Liberty Village value shopping, value shopping works best when the shelf is clear. Start with Budget, AA, and AAA+ before jumping into higher tiers or mixed categories.",
     cards: [
@@ -147,7 +147,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
       },
       {
         heading: "Compare Inside The Category",
-        body: "Value means something different for flower, pre-rolls, edibles, THC vapes, concentrates, accessories, and cigarettes. Keep each comparison inside the right category so the decision does not get muddy."
+        body: "Compare each format on its own: flower, pre-rolls, edibles, THC vapes, concentrates, accessories, and cigarettes all shop a little differently."
       }
     ],
   },
@@ -232,11 +232,11 @@ export const RESOURCE_PAGES: ResourcePage[] = [
   },
   {
     slug: "resource-centre-launch",
-    title: "King Rock Resource Centre Update",
-    seoTitle: "King Rock Resource Centre Update | Local Menu Guides",
-    description: "King Rock resource centre update with local visit planning, menu guide pages, flower tier pricing, value shopping, pre-roll tips, and Native smokes prices.",
+    title: "King Rock Resource Guide Update",
+    seoTitle: "King Rock Resource Guide Update | Local Menu Guides",
+    description: "King Rock resource guide update with local visit planning, menu guide pages, flower tier pricing, value shopping, pre-roll tips, and Native smokes prices.",
     eyebrow: "Resource Update",
-    intro: "The resource centre has been rebuilt around real shopper paths: local visit planning, category-first browsing, flower tier math, value shopping, pre-roll shortcuts, and cigarette price notes.",
+    intro: "The resource section is organized around real shopping plans: local visit planning, category-by-category browsing, flower tier math, value shopping, pre-roll shortcuts, and cigarette price notes.",
     cards: [
       { title: "Resource Home", href: "/resources", text: "Start at the main resource hub." },
       { title: "Local Visit Guide", href: "/resources/king-west-liberty-visit-guide", text: "Plan around King St W, Liberty Village, Parkdale, Dufferin, Exhibition Place, Roncesvalles, and TTC routes." },
@@ -246,7 +246,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
     sections: [
       {
         heading: "What Changed",
-        body: "The resources now sound like King Rock and Liberty Village / Parkdale, not a copied store template. Each page supports a specific shopper task and points back to the right category or local landing page."
+        body: "The resources are written for King Rock and Liberty Village / Parkdale, Each page helps with a specific shopping task and points back to the matching menu category or visit guide."
       },
       {
         heading: "What Stayed Protected",
