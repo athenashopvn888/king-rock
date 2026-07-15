@@ -26,7 +26,7 @@ const FAQ_CATEGORIES = [
       },
       {
         q: "Is there parking nearby?",
-        a: "Yes. Free street parking is available nearby on surrounding streets in the evenings. We're also easily accessible by local transit.",
+        a: "Yes. Free street parking is listed nearby on surrounding streets in the evenings. We're also easily accessible by local transit.",
       },
       {
         q: "How far are you from west Toronto?",
@@ -34,7 +34,7 @@ const FAQ_CATEGORIES = [
       },
       {
         q: "What's the best way to get to King Rock?",
-        a: "We're easily accessible by car, bus, or foot. We are easily accessible by car, local transit, or bus routes. Free parking is available on surrounding streets.",
+        a: "We're easily accessible by car, bus, or foot. We are easily accessible by car, local transit, or bus routes. Free parking is listed on surrounding streets.",
       },
     ],
   },
@@ -55,7 +55,7 @@ const FAQ_CATEGORIES = [
       },
       {
         q: "Do you sell edibles?",
-        a: "Yes! We carry a variety of edibles including gummies, chocolates, baked goods, and more. THC content varies. Check our current menu for current availability.",
+        a: "Yes! We carry a variety of edibles including gummies, chocolates, baked goods, and more. THC content varies. Check our current menu for current listings.",
       },
       {
         q: "Do you sell vapes?",

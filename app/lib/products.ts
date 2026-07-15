@@ -220,7 +220,7 @@ export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
     icon: "💨",
     seoTitle: "Vape Pens Toronto THC & Nicotine Cartridges",
     seoIntro:
-      "Shop THC and nicotine vape pens at King Rock, Toronto. Cartridges, 510-thread batteries, and premium vape brands available when listed on the menu.",
+      "Shop THC and nicotine vape pens at King Rock, Toronto. Cartridges, 510-thread batteries, and premium vape brands listed when listed on the menu.",
     seoDescription:
       "King Rock carries a curated selection of vape pens and cartridges in Toronto. From 510-thread THC cartridges to nicotine vape pods, we stock the most popular brands and flavours. Our knowledgeable budtenders can help you choose the right cartridge and battery setup. Visit us at 1220b King St W for the useful vape selection in King West.",
     faqs: [
@@ -242,7 +242,7 @@ export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
     icon: "💨",
     seoTitle: "Disposable Vapes Toronto THC Disposable Pens",
     seoIntro:
-      "THC disposable vapes available at King Rock, Toronto. No charging, no refilling just open and enjoy.",
+      "THC disposable vapes listed at King Rock, Toronto. No charging, no refilling just open and enjoy.",
     seoDescription:
       "Disposable THC vapes are the easiest way to enjoy cannabis on the go. King Rock stocks a wide selection of pre-charged, pre-filled disposable vape pens with various strain profiles and potencies. Perfect for beginners and experienced users alike. Visit us at 1220b King St W, Toronto.",
     faqs: [
@@ -264,7 +264,7 @@ export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
     icon: "💎",
     seoTitle: "Cannabis Concentrates Toronto Shatter, Wax, Hash & Live Resin",
     seoIntro:
-      "Cannabis concentrates at King Rock, Toronto. Shatter, wax, hash, live resin, and diamonds available when listed on the menu.",
+      "Cannabis concentrates at King Rock, Toronto. Shatter, wax, hash, live resin, and diamonds listed when listed on the menu.",
     seoDescription:
       "Browse the current King Rock concentrates menu for categories such as hash, kief, shatter, wax, live resin, and THC diamonds. Visit us at 1220b King St W.",
     faqs: [
@@ -325,17 +325,17 @@ export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
     icon: "*",
     seoTitle: "Magic Stuff - Specialty Items",
     seoIntro:
-      "Browse current menu for available specialty products. Availability may vary by store.",
+      "Browse current menu for listed specialty products. Listings may vary by store.",
     seoDescription:
-      "Current specialty items are listed when they are carried on the menu. Product availability may vary by store and by day. Check the current menu for current selection.",
+      "Current specialty items are listed when they are carried on the menu. Product listings may vary by store and by day. Check the current menu for current selection.",
     faqs: [
       {
-        q: "What specialty items are available?",
-        a: "Selection varies by store and by day. Check the current menu for available specialty products.",
+        q: "What specialty items are listed?",
+        a: "Selection varies by store and by day. Check the current menu for listed specialty products.",
       },
       {
-        q: "Does availability vary by location?",
-        a: "Yes. Specialty item availability may vary by store, so please check the current menu for this location.",
+        q: "Do listings vary by location?",
+        a: "Yes. Specialty item listings may vary by store, so please check the current menu for this location.",
       },
     ],
   },
