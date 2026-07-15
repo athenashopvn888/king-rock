@@ -28,7 +28,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
     seoTitle: "King Rock Resources | Liberty Village / Parkdale Menu And Visit Guides",
     description: "King Rock resource pages for Liberty Village / Parkdale shoppers, with local visit planning, menu shortcuts, flower tier pricing, value shopping, pre-roll tips, and Native smokes prices.",
     eyebrow: "King West Resource Hub",
-    intro: "A practical resource hub for King West, Liberty Village, and Parkdale shoppers. Use it to move from local search intent to the right menu shelf: flower, pre-rolls, edibles, THC vapes, concentrates, accessories, cigarettes, Native smokes, Backwoods, and grabba.",
+    intro: "A practical resource hub for King West, Liberty Village, and Parkdale shoppers. Use it to find the relevant menu section for flower, pre-rolls, edibles, THC vapes, concentrates, accessories, cigarettes, Native smokes, Backwoods, and grabba.",
     cards: [
       { title: "Local Visit Guide", href: "/resources/king-west-liberty-visit-guide", text: "Plan the stop around King St W, Liberty Village, Parkdale, Dufferin, Exhibition Place, Roncesvalles, and TTC routes." },
       { title: "Menu Guide", href: "/resources/menu-guide", text: "Choose the matching menu category before opening individual product listings." },
@@ -71,7 +71,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
         bullets: ["King St W cannabis store area guide", "Liberty Village cannabis store area guide", "Parkdale cannabis store area guide", "Dufferin cannabis store area guide", "Exhibition Place cannabis store area guide", "TTC cannabis store area guide", "Roncesvalles cannabis store area guide"]
       },
       {
-        heading: "Best First Click",
+        heading: "Choose a Starting Point",
         body: "If you need store details, start with /weed-dispensary-toronto. If you are comparing product types, start with the menu guide. If the trip is about Native smokes or cigarettes, start with the Native smokes page and then confirm the current category page."
       }
     ],
@@ -92,7 +92,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
     sections: [
       {
         heading: "Pick The Shelf First",
-        body: "For King West, Liberty Village, and Parkdale shoppers, the best menu choice is simple: flower shoppers compare tiers, pre-roll shoppers compare format, edible and vape shoppers read product details, and cigarette shoppers compare brand, full/light/menthol style, and price.",
+        body: "For King West, Liberty Village, and Parkdale shoppers, a useful starting point depends on the category: flower shoppers can compare tiers, pre-roll shoppers can compare format, edible and vape shoppers can read product details, and cigarette shoppers can compare brand, style, and price.",
         bullets: ["Flower, pre-rolls, edibles, THC vapes, concentrates, accessories, and cigarettes are easier to compare one category at a time.", "Use current menu categories for live product details.", "Use resources for shopping tips and local planning."]
       },
       {
@@ -133,7 +133,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
     seoTitle: "King Rock Value Weed Guide | Cheap Weed Near Liberty Village / Parkdale",
     description: "A value shopping guide for King Rock, covering cheap weed, budget weed, AA flower, AAA+ deals, 6g tier math, and affordable menu choices.",
     eyebrow: "Value Guide",
-    intro: "For King West and Liberty Village value shopping, value shopping works best when the shelf is clear. Start with Budget, AA, and AAA+ before jumping into higher tiers or mixed categories.",
+    intro: "For King West and Liberty Village value shopping, start with Budget, AA, and AAA+ before comparing higher tiers or mixed categories.",
     cards: [
       { title: "Budget Flower", href: "/budget", text: "$3/g for the lowest posted flower lane." },
       { title: "AA Flower", href: "/aa", text: "$4/g for a simple low-spend lane." },
@@ -170,7 +170,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
       },
       {
         heading: "Useful For Local Quick Stops",
-        body: "For King West, Liberty Village, and Parkdale shoppers, pre-rolls can be the fastest shelf to check before heading through King St W, Liberty Village, Parkdale, Dufferin, Exhibition Place, Roncesvalles, and TTC routes. Use the current category page for live details."
+        body: "For King West, Liberty Village, and Parkdale shoppers, pre-rolls offer a direct category to check before heading through King St W, Liberty Village, Parkdale, Dufferin, Exhibition Place, Roncesvalles, and TTC routes. Use the current category page for current details."
       }
     ],
   },

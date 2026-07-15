@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Frequently asked questions about King Rock in Toronto. Hours, location, products, pricing, bundle offers, and everything you need to know before visiting.",
   alternates: {
-    canonical: "https://kingrockcannabis.com/faq",
+    canonical: "https://www.kingrockcannabis.com/faq",
   },
 };
 
@@ -43,15 +43,15 @@ const FAQ_CATEGORIES = [
     faqs: [
       {
         q: "What products do you carry?",
-        a: "We carry over 200 strains of cannabis flower across 5 quality tiers (Exotic, Premium, AAA+, AA, Budget), plus edibles (gummies, chocolates, baked goods), vape pens, disposable vapes, concentrates (shatter, wax, hash, diamonds, live resin), pre-rolled joints, native cigarettes, and accessories.",
+        a: "Our menu includes cannabis flower across five price tiers (Exotic, Premium, AAA+, AA, and Budget), plus edibles, vapes, concentrates, pre-rolls, native cigarettes, and accessories. Check the current menu for today’s selection.",
       },
       {
         q: "Do you have a current menu?",
-        a: "Yes! Our online menu at kingrockcannabis.com shows current menu details with current stock, prices, THC levels, and availability. You can check what's in stock before you visit.",
+        a: "Yes. Our online menu at kingrockcannabis.com lists current menu items and prices. Check it before visiting because the selection can change.",
       },
       {
         q: "What are your flower tiers?",
-        a: "Exotic ($10-$12/g, THC 35-39%) ultra-rare top-shelf genetics. Premium ($7-$10/g, THC 32-34%) connoisseur-grade. AAA+ ($5-$6/g, THC 30-32%) heavy hitters, our most popular tier. AA ($4/g, THC 27-29%) quality daily drivers. Budget ($3/g, THC 24-27%) reliable value flower.",
+        a: "The menu groups flower into Exotic, Premium, AAA+, AA, and Budget tiers. Each tier page shows its current prices and menu items.",
       },
       {
         q: "Do you sell edibles?",
@@ -80,7 +80,7 @@ const FAQ_CATEGORIES = [
       },
       {
         q: "Do you have ounce deals?",
-        a: "Yes! Budget ounces from $40, AA ounces from $90, AAA+ ounces from $100. All with freshness and quality guaranteed.",
+        a: "The menu lists ounce options and prices when offered. Check the relevant flower tier for current details.",
       },
       {
         q: "How does bundle pricing work?",
@@ -101,7 +101,7 @@ const FAQ_CATEGORIES = [
       },
       {
         q: "Can I order online?",
-        a: "Currently, King Rock is an in-store shopping experience only. You can browse our current menu online to see what's in stock before visiting.",
+        a: "Currently, King Rock is an in-store shopping experience only. You can browse the current menu online before visiting.",
       },
       {
         q: "Do you offer delivery?",
@@ -113,7 +113,7 @@ const FAQ_CATEGORIES = [
       },
       {
         q: "Can your staff help me choose a strain?",
-        a: "Absolutely! Our knowledgeable budtenders are here to help. Whether you're a first-time buyer or a seasoned connoisseur, we can recommend strains based on your preferences, desired effects, and budget.",
+        a: "Our budtenders can help you compare the menu based on your preferences and budget.",
       },
       {
         q: "Is there a minimum purchase?",

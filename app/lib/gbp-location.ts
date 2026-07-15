@@ -1,7 +1,6 @@
-// Auto-generated Google Business Profile Local SEO Location Configuration
 export const gbpLocation = {
   storeName: "King Rock",
-  domain: "kingrockcannabis.com",
+  domain: "www.kingrockcannabis.com",
   city: "Toronto",
   province: "ON",
   country: "CA",
@@ -42,7 +41,7 @@ export const gbpLocation = {
     "King Rock is a local weed dispensary in Toronto offering flower, pre-rolls, edibles, vapes, concentrates, CBD, and service for adults 19+.",
   localLandmarks: ["King St W", "Liberty Village", "Parkdale"],
   introVariant:
-    "King Rock is your welcoming neighborhood weed dispensary in Toronto, located at 1220b King St W near Liberty Village / Parkdale. We carry a massive selection of weed, cannabis flower, pre-rolls, edibles, THC vapes, concentrates, and smoking accessories for adults 19+. Conveniently located near Liberty Village, our cannabis store and weed shop is designed to make finding the perfect strain easy and accessible.",
+    "King Rock is a neighborhood weed dispensary in Toronto, located at 1220b King St W near Liberty Village and Parkdale. Adults 19+ can browse menu categories including cannabis flower, pre-rolls, edibles, THC vapes, concentrates, and smoking accessories before visiting.",
   neighborhoodDescription:
     "Located in the vibrant Liberty Village / Parkdale district, our cannabis store fits right into this active and historic community, surrounded by local retail shops and convenient transit links.",
   parkingNote: "Street parking is available along King Street West",

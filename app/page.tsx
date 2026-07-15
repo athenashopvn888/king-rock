@@ -354,8 +354,7 @@ export default function HomePage() {
           <div className={styles.sectionHeader}>
             <h2 className={styles.sectionTitle}>Featured Strains</h2>
             <p className={styles.sectionSubtitle}>
-              Staff picks and top sellers dynamically updated from our real-time
-              stock sheet.
+              A rotating sample from the current flower menu.
             </p>
           </div>
 
@@ -377,23 +376,22 @@ export default function HomePage() {
               King West Cannabis Dispensary - Open Daily: 10:00 AM - 01:00 AM
             </h2>
             <p className={styles.seoPanelText}>
-              Welcome to <strong>King Rock</strong>, Toronto's local cannabis
-              stop at 1220b King St W. We carry an electrifying selection of
-              top-shelf strains - from ultra-rare exotics to solid everyday
-              budget picks.
+              Welcome to <strong>King Rock</strong>, Toronto&apos;s local cannabis
+              stop at 1220b King St W. Browse flower across several price tiers,
+              from Exotic and Premium to everyday Budget options.
             </p>
             <p className={styles.seoPanelText}>
               King Rock is open daily from 10:00 AM to 01:00 AM. Our current
-              menu is constantly refreshed with the freshest drops, premium
-              prerolls, artisan edibles, and everything in between. Whether
-              you're winding down or stocking up for the weekend, our
+              menu brings together flower, pre-rolls, edibles, vapes, and other
+              categories. Whether
+              you&apos;re winding down or stocking up for the weekend, our
               knowledgeable staff can help during listed store hours.
             </p>
             <p className={styles.seoPanelText}>
               Searching for a cannabis dispensary in Toronto or the surrounding
-              area? King Rock is your local stop for premium flower, potent
-              prerolls, and artisan edibles. Our six-tier pricing system means
-              quality cannabis at every budget level - starting from just $3/g.
+              area? King Rock is a local stop for flower, pre-rolls, and
+              edibles. The menu groups flower into clear price tiers so shoppers
+              can compare options before visiting.
             </p>
           </div>
         </div>

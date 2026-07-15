@@ -84,7 +84,7 @@ export default function Footer() {
         <div className={styles.bottom}>
           <p>
             {new Date().getFullYear()} King Rock. Must be 19+ to enter. Please
-            consume responsibly.
+            review posted store and menu information.
           </p>
         </div>
       </div>

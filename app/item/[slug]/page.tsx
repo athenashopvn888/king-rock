@@ -29,7 +29,7 @@ export async function generateMetadata({
     title: `${item.name} | ${item.category} | King Rock Toronto`,
     description: itemData.metaDescription,
     alternates: {
-      canonical: `https://kingrockcannabis.com/item/${slug}`,
+      canonical: `https://www.kingrockcannabis.com/item/${slug}`,
     },
     openGraph: {
       title: `${item.name} | King Rock`,
@@ -54,9 +54,8 @@ function getJsonLd(item: ItemProduct) {
 
   const offers: any = {
     "@type": "Offer",
-    url: `https://kingrockcannabis.com/item/${item.slug}`,
+    url: `https://www.kingrockcannabis.com/item/${item.slug}`,
     priceCurrency: "CAD",
-    availability: "https://schema.org/InStock",
     itemCondition: "https://schema.org/NewCondition",
     seller: { "@type": "Organization", name: "King Rock" },
     hasMerchantReturnPolicy: {
@@ -74,7 +73,7 @@ function getJsonLd(item: ItemProduct) {
     "@context": "https://schema.org",
     "@type": "Product",
     name: item.name,
-    image: item.image ? [item.image.startsWith('http') ? item.image : `https://kingrockcannabis.com${item.image.startsWith('/') ? '' : '/'}${item.image}`] : undefined,
+    image: item.image ? [item.image.startsWith('http') ? item.image : `https://www.kingrockcannabis.com${item.image.startsWith('/') ? '' : '/'}${item.image}`] : undefined,
     description: itemData.description,
     brand: { "@type": "Brand", name: "King Rock" },
     sku: cleanSku(item.sku || item.slug),
@@ -93,19 +92,19 @@ function getBreadcrumbJsonLd(item: ItemProduct) {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://kingrockcannabis.com"
+        "item": "https://www.kingrockcannabis.com"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": item.category,
-        "item": `https://kingrockcannabis.com/items/${catSlug}`
+        "item": `https://www.kingrockcannabis.com/items/${catSlug}`
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": item.name,
-        "item": `https://kingrockcannabis.com/item/${item.slug}`
+        "item": `https://www.kingrockcannabis.com/item/${item.slug}`
       }
     ]
   };
@@ -214,7 +213,7 @@ export default async function ItemPage({
                 </div>
               </div>
 
-              {/* Effects */}
+              {/* Menu notes */}
               <div className={styles.effectsRow}>
                 {itemData.effects.map((e) => (
                   <span key={e.label} className={styles.effectPill}>
@@ -247,14 +246,14 @@ export default async function ItemPage({
                 <p className={styles.descText}>{itemData.description}</p>
               </div>
 
-              {/* -- How to consume -- */}
+              {/* -- Item details -- */}
               <div className={styles.descSection} style={{ marginTop: '24px' }}>
-                <h2 className={styles.descTitle}>How to Consume</h2>
+                <h2 className={styles.descTitle}>Item Details</h2>
                 <p className={styles.descText}>{itemData.consume}</p>
               </div>
 
               <div className={styles.visitCta}>
-                <p>Available in-store &middot; Walk-in welcome &middot; No appointment needed</p>
+                <p>Check the current menu &middot; Walk-in welcome &middot; No appointment needed</p>
               </div>
             </div>
           </div>

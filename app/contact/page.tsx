@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Visit King Rock at 1220b King St W, Toronto, ON M6K 1G4. We are open daily from 10:00 AM to 01:00 AM. Walk-ins welcome.",
   alternates: {
-    canonical: "https://kingrockcannabis.com/contact",
+    canonical: "https://www.kingrockcannabis.com/contact",
   },
   openGraph: {
     title: "Contact King Rock Toronto Dispensary",
@@ -108,16 +108,16 @@ export default function ContactPage() {
                 <br />
                 Just walk in and our staff will
                 <br />
-                help you find the perfect strain.
+                help you compare current menu details.
               </p>
               <div className={styles.featureList}>
                 <div className={styles.featureItem}>
                   <span className={styles.featureCheck}></span>
-                  200+ strains in stock
+                  Flower tiers and menu categories
                 </div>
                 <div className={styles.featureItem}>
                   <span className={styles.featureCheck}></span>
-                  Lab-tested &amp; safe
+                  Current package details
                 </div>
                 <div className={styles.featureItem}>
                   <span className={styles.featureCheck}></span>

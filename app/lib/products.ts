@@ -120,7 +120,7 @@ export const TIER_CONFIG: Record<
     slug: "exotic",
     color: "#f59e0b",
     icon: "\uD83D\uDD25",
-    tagline: "Ultra-rare, top-shelf genetics \u00B7 THC 35-39%",
+    tagline: "Explore the current Exotic flower menu",
     banner: "/banners/exotics_banner.webp",
     unitPrice: 20,
     deal3g: { label: "3g bundle", total: "3G", price: 40 },
@@ -131,7 +131,7 @@ export const TIER_CONFIG: Record<
     slug: "premium",
     color: "#a78bfa",
     icon: "\uD83D\uDC8E",
-    tagline: "Hand-picked connoisseur grade \u00B7 THC 32-34%",
+    tagline: "Explore the current Premium flower menu",
     banner: "/banners/premium_banner.webp",
     unitPrice: 15,
     deal3g: { label: "3g bundle", total: "3G", price: 30 },
@@ -142,7 +142,7 @@ export const TIER_CONFIG: Record<
     slug: "aaa",
     color: "#22d3ee",
     icon: "\u26A1",
-    tagline: "Heavy hitters, proven strains \u00B7 THC 30-32%",
+    tagline: "Explore the current AAA+ flower menu",
     banner: "/banners/aaa_plus_banner.webp",
     unitPrice: 10,
     deal3g: { label: "3g bundle", total: "3G", price: 20 },
@@ -153,7 +153,7 @@ export const TIER_CONFIG: Record<
     slug: "aa",
     color: "#34d399",
     icon: "\u2726",
-    tagline: "Quality daily drivers \u00B7 THC 27-29%",
+    tagline: "Explore the current AA flower menu",
     banner: "/banners/aa_banner.webp",
     unitPrice: 4,
     deal3g: null,
@@ -196,7 +196,7 @@ export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
     seoIntro:
       "Browse the full cannabis edibles menu at King Rock on King St W, Toronto. We carry THC gummies, chocolates, drinks, and more from current menu brands.",
     seoDescription:
-      "Looking for cannabis edibles in Toronto? King Rock stocks a wide range of THC-infused gummies, chocolates, beverages, and baked goods. Our edibles range from micro-dose options for beginners to high-potency products for experienced consumers. Visit us at 1220b King St W we are open daily: 10:00 AM - 01:00 AM.",
+      "Browse cannabis edibles such as THC-infused gummies, chocolates, beverages, and baked goods on the current King Rock menu. Visit us at 1220b King St W; we are open daily: 10:00 AM - 01:00 AM.",
     faqs: [
       {
         q: "What cannabis edibles do you carry?",
@@ -204,7 +204,7 @@ export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
       },
       {
         q: "How long do edibles take to kick in?",
-        a: "Cannabis edibles typically take 30-90 minutes to take effect. Start with a low dose (5-10mg) and wait at least 2 hours before consuming more.",
+        a: "Product labels provide item-specific information. Ask store staff if you need help finding those details on the package.",
       },
       {
         q: "Can I buy edibles at King Rock?",
@@ -266,7 +266,7 @@ export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
     seoIntro:
       "Cannabis concentrates at King Rock, Toronto. Shatter, wax, hash, live resin, and diamonds available when listed on the menu.",
     seoDescription:
-      "King Rock offers a premium selection of cannabis concentrates in Toronto. From traditional hash and kief to modern extracts like shatter, wax, live resin, and THC diamonds, we carry products for every preference and potency level. Our concentrates are sourced from trusted extractors and tested for purity. Visit us at 1220b King St W.",
+      "Browse the current King Rock concentrates menu for categories such as hash, kief, shatter, wax, live resin, and THC diamonds. Visit us at 1220b King St W.",
     faqs: [
       {
         q: "What types of concentrates do you carry?",
@@ -274,7 +274,7 @@ export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
       },
       {
         q: "How do I consume concentrates?",
-        a: "Concentrates can be dabbed with a rig, vaped with a concentrate pen, or added to flower in a joint or bowl for extra potency.",
+        a: "The menu groups concentrates by product type. Ask store staff if you need help comparing the listed formats.",
       },
     ],
   },
@@ -310,7 +310,7 @@ export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
     seoIntro:
       "Essential cannabis accessories at King Rock, Toronto. Grinders, rolling papers, lighters, trays, and more.",
     seoDescription:
-      "King Rock carries all the accessories you need for the perfect smoke session. From premium grinders and rolling papers to lighters, trays, and storage containers, we have everything in stock. Visit us at 1220b King St W, Toronto.",
+      "Browse grinders, rolling papers, lighters, trays, storage containers, and other accessories on the current King Rock menu. Visit us at 1220b King St W, Toronto.",
     faqs: [
       {
         q: "What accessories do you sell?",
@@ -361,7 +361,7 @@ export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
       },
       {
         q: "Are your cigarette prices competitive?",
-        a: "Absolutely. We offer some of the best cigarette prices in the King West and Liberty Village area of Toronto.",
+        a: "Check the current cigarette menu for listed prices and brands.",
       },
     ],
   },
