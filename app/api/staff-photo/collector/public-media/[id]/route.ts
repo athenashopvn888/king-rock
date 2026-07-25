@@ -27,15 +27,19 @@ export async function GET(request: Request, context: { params: Promise<{ id: str
 
     const state = await readStaffState();
     const submission = state.submissions.find((row) => row.id === id);
-    if (!submission?.object_path) return new Response(null, { status: 404 });
-    if (Date.parse(submission.expires_at) <= Date.now()) {
+    const enhanced = state.enhancedMedia.find((row) => row.id === id);
+    const objectPath = enhanced?.object_path || submission?.object_path;
+    const mimeType = enhanced?.mime_type || submission?.mime_type;
+    const expiresAt = enhanced?.expires_at || submission?.expires_at;
+    if (!objectPath || !mimeType || !expiresAt) return new Response(null, { status: 404 });
+    if (Date.parse(expiresAt) <= Date.now()) {
       return new Response(null, { status: 410 });
     }
-    const media = await getStaffMedia(submission.object_path);
+    const media = await getStaffMedia(objectPath);
     if (!media || media.statusCode !== 200 || !media.stream) return new Response(null, { status: 404 });
     return new Response(media.stream, {
       headers: {
-        "content-type": submission.mime_type,
+        "content-type": mimeType,
         "content-disposition": `inline; filename="${id}"`,
         "cache-control": "private, no-store",
         "x-content-type-options": "nosniff",
