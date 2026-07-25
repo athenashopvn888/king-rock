@@ -4,8 +4,10 @@ import {
   BlobPreconditionFailedError,
   del,
   get,
+  head,
   put,
 } from "@vercel/blob";
+import { mutationRetryDelay, normalizeBlobEtag } from "./staffPhotoMutation";
 
 export const STAFF_STATE_PATH = "staff-photo/state/v1.json";
 export const STAFF_MEDIA_PREFIX = "staff-photo/media/";
@@ -84,6 +86,10 @@ function ensureBlobConfigured() {
   if (!hasToken && !hasOidc) throw new Error("Private staff photo Blob storage is not configured.");
 }
 
+async function waitForMutationRetry(attempt: number) {
+  await new Promise((resolve) => setTimeout(resolve, mutationRetryDelay(attempt)));
+}
+
 export function defaultStaffState(now = new Date()): StaffPhotoState {
   return {
     schemaVersion: 1,
@@ -150,22 +156,30 @@ export async function readStaffState() {
 }
 
 export async function mutateStaffState<T>(mutator: (draft: StaffPhotoState) => T | Promise<T>) {
-  for (let attempt = 0; attempt < 8; attempt += 1) {
+  for (let attempt = 0; attempt < 10; attempt += 1) {
     const { state, etag } = await readStateVersion();
     const draft = structuredClone(state);
     const result = await mutator(draft);
     draft.updatedAt = new Date().toISOString();
     try {
+      const current = await head(STAFF_STATE_PATH);
+      if (normalizeBlobEtag(current.etag) !== normalizeBlobEtag(etag)) {
+        await waitForMutationRetry(attempt);
+        continue;
+      }
       await put(STAFF_STATE_PATH, JSON.stringify(draft), {
         access: "private",
         contentType: "application/json",
         cacheControlMaxAge: 60,
-        allowOverwrite: etag !== null,
-        ...(etag ? { ifMatch: etag } : {}),
+        allowOverwrite: true,
+        ifMatch: current.etag,
       });
       return result;
     } catch (error) {
-      if (error instanceof BlobPreconditionFailedError) continue;
+      if (error instanceof BlobPreconditionFailedError) {
+        await waitForMutationRetry(attempt);
+        continue;
+      }
       throw error;
     }
   }
