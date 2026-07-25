@@ -161,6 +161,9 @@ test("client source does not contain server secret names or PIN formula", () => 
   assert.equal(client.includes("KR_STAFF_"), false);
   assert.equal(client.includes("createHmac"), false);
   assert.equal(client.includes("DAILY_PIN_SECRET"), false);
+  assert.match(client, /const formElement = event\.currentTarget/);
+  assert.match(client, /formElement\.reset\(\)/);
+  assert.doesNotMatch(client, /await apiJson\("\/api\/staff-photo\/auth"[\s\S]{0,400}event\.currentTarget\.reset\(\)/);
 });
 
 test("deployment cleanup is scheduled and keeps separate cron authorization", () => {
