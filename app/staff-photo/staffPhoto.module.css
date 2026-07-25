@@ -24,6 +24,7 @@
 .primaryButton:disabled, .secondaryButton:disabled, .issueButton:disabled { opacity: .55; }
 .hiddenInput { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
 .cameraButton { cursor: pointer; font-size: 1rem; }
+.livePhotoNotice { margin: 14px 0 12px; padding: 13px 14px; border: 2px solid #c47b08; border-radius: 12px; background: #fff3cf; color: #6f3d00; font-weight: 850; line-height: 1.45; }
 .cardHeading { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
 .card h2 { font-size: 1.3rem; line-height: 1.25; margin: 3px 0 10px; }
 .todoBadge, .doneBadge { white-space: nowrap; border-radius: 999px; padding: 6px 9px; font-size: .72rem; font-weight: 850; }

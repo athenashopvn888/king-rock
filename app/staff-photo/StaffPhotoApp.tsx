@@ -190,6 +190,7 @@ export default function StaffPhotoApp({ previewMode = null }: { previewMode?: "l
           {status?.requiredComplete && <p className={styles.optionalNote}>A second photo is optional.</p>}
           <label className={styles.field} htmlFor="shot-type"><span>Choose a shot type</span><select id="shot-type" value={promptKey} onChange={(event) => setPromptKey(event.target.value)}><option value="">Select one…</option>{status?.availablePrompts.map((prompt) => <option key={prompt.key} value={prompt.key}>{prompt.label}</option>)}</select></label>
           {!preview ? <>
+            <p className={styles.livePhotoNotice}>Make sure the area is CLEAN and PRESENTABLE. This photo WILL be posted LIVE to the store’s Google Business Profile.</p>
             <input ref={cameraRef} className={styles.hiddenInput} id="daily-camera" type="file" accept="image/jpeg,image/png,image/webp" capture="environment" onChange={(event) => void choosePhoto(event.target.files?.[0])} />
             <label className={`${styles.primaryButton} ${styles.cameraButton}`} htmlFor="daily-camera">📷 Take {status?.requiredComplete ? "another" : "today’s"} photo</label>
             <p className={styles.hint}>Avoid customers, IDs, paperwork, licence plates and security screens.</p>
