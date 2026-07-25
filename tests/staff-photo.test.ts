@@ -223,8 +223,25 @@ test("private Vercel Blob state uses fresh reads and optimistic concurrency", ()
   assert.match(store, /access: "private"/);
   assert.match(store, /useCache: false/);
   assert.match(store, /BlobPreconditionFailedError/);
-  assert.match(store, /ifMatch: etag/);
+  assert.match(store, /ifMatch: current\.etag/);
+  assert.match(store, /head\(STAFF_STATE_PATH\)/);
+  assert.match(store, /normalizeBlobEtag\(current\.etag\) !== normalizeBlobEtag\(etag\)/);
+  assert.match(store, /waitForMutationRetry\(attempt\)/);
   assert.doesNotMatch(store, /NEXT_PUBLIC_/);
+});
+
+test("state mutation retries use bounded exponential backoff with jitter", async () => {
+  const { mutationRetryDelay, normalizeBlobEtag } = await import(
+    "../app/lib/staffPhotoMutation.ts"
+  );
+  assert.equal(mutationRetryDelay(0, 0), 35);
+  assert.equal(mutationRetryDelay(1, 0), 70);
+  assert.equal(mutationRetryDelay(20, 1), 1_250);
+  assert.equal(mutationRetryDelay(-1, -1), 35);
+  assert.equal(normalizeBlobEtag("abc123"), "abc123");
+  assert.equal(normalizeBlobEtag('"abc123"'), "abc123");
+  assert.equal(normalizeBlobEtag('W/"abc123"'), "abc123");
+  assert.throws(() => normalizeBlobEtag("  "), /ETag is missing/);
 });
 
 test("staff-photo runtime and package have no Supabase dependency", () => {
