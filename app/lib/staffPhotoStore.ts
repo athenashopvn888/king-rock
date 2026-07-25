@@ -54,6 +54,18 @@ export interface StaffRandomCheck {
   completed_at: string;
 }
 
+export interface StaffEnhancedMedia {
+  id: string;
+  source_submission_id: string;
+  object_path: string;
+  original_name: string;
+  mime_type: string;
+  byte_size: number;
+  sha256: string;
+  created_at: string;
+  expires_at: string;
+}
+
 export interface StaffPhotoState {
   schemaVersion: 1;
   pinVersion: number;
@@ -61,6 +73,7 @@ export interface StaffPhotoState {
   submissions: StaffSubmission[];
   issues: StaffIssue[];
   randomChecks: StaffRandomCheck[];
+  enhancedMedia: StaffEnhancedMedia[];
   loginAttempts: Array<{ client_key: string; succeeded: boolean; created_at: string }>;
   pinAudit: Array<{ pin_version: number; rotated_at: string }>;
 }
@@ -79,6 +92,7 @@ export function defaultStaffState(now = new Date()): StaffPhotoState {
     submissions: [],
     issues: [],
     randomChecks: [],
+    enhancedMedia: [],
     loginAttempts: [],
     pinAudit: [],
   };
@@ -99,7 +113,10 @@ function parseState(value: unknown): StaffPhotoState {
   ) {
     throw new Error("Staff photo state is invalid.");
   }
-  return state as StaffPhotoState;
+  return {
+    ...state,
+    enhancedMedia: Array.isArray(state.enhancedMedia) ? state.enhancedMedia : [],
+  } as StaffPhotoState;
 }
 
 async function readStateVersion() {
