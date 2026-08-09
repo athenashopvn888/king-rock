@@ -275,6 +275,10 @@ export default function HomePage() {
             <div className={styles.brandBadge}>
               Open Daily: 10:00 AM - 01:00 AM
             </div>
+            <div className={styles.homeMenuActions} aria-label="Choose a King Rock menu">
+              <Link href="/exotic" className={styles.homeMenuCta}>STORE MENU</Link>
+              <Link href="/delivery" className={`${styles.homeMenuCta} ${styles.homeDeliveryCta}`}>DELIVERY MENU</Link>
+            </div>
           </div>
 
           {/* Bento Grid */}
