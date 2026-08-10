@@ -675,7 +675,7 @@ const TICKER_SLIDES = [
   "FLOWER TIERS - MENU CATEGORIES",
   "Open Daily: 10:00 AM - 01:00 AM",
   "ALL SALES ARE FINAL",
-  "🎮 Play Games at kingrockcannabis.com/games",
+  "DELIVERY MENU at kingrockcannabis.com/delivery",
 ];
 
 function VerticalTicker() {

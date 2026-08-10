@@ -20,10 +20,9 @@ const ALL_LINKS = [
   { href: "/items/magic", label: "Magic Stuff" },
   { href: "/items/cigarettes", label: "Cigarettes" },
   { href: "/items/add-ons", label: "Accessories" },
-  { href: "/delivery", label: "🚗 Delivery" },
+  { href: "/delivery", label: "DELIVERY MENU" },
   { href: "/careers/budtender", label: "Join Team", featured: true },
   { href: "/faq", label: "FAQ" },
-  { href: "/games", label: "🎮" },
   { href: "/resources", label: "Resources" },
 ];
 
@@ -72,9 +71,6 @@ export default function Navbar() {
               DELIVERY MENU
             </Link>
           </div>
-          <Link href="/games" className={styles.gamesBtn}>
-            🎮 Play Games
-          </Link>
           <span className={styles.open}>
             <span className={styles.dot}></span>
             Open Now
