@@ -106,7 +106,7 @@ const LOCAL_FAQS = [
   },
   {
     q: "Where is King Rock located?",
-    a: "We are located at 1220b King St W, Toronto, ON M6K 1G4. Visit us in person or call us at (437) 236-3469. Free evening street parking is available.",
+    a: "We are located at 1220b King St W, Toronto, ON M6K 1G4. Visit us in person or call us at (437) 780-9691. Free evening street parking is available.",
   },
   {
     q: "What is the cheapest weed at King Rock?",
