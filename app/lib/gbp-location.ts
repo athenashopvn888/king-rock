@@ -8,8 +8,8 @@ export const gbpLocation = {
   address: "1220b King St W, Toronto, ON M6K 1G4",
   streetAddress: "1220b King St W",
   postalCode: "M6K 1G4",
-  phone: "(437) 236-3469",
-  phoneIntl: "+14372363469",
+  phone: "(437) 780-9691",
+  phoneIntl: "+14377809691",
   neighborhood: "Liberty Village / Parkdale",
   nearbyAreas: [
     "King St W",

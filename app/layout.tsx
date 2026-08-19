@@ -82,7 +82,7 @@ const jsonLd = {
   description:
     "Cannabis dispensary at 1220b King St W in Toronto, ON. Shop exotic, premium, AAA+, AA, and budget flower tiers plus edibles, prerolls, and vapes. Open Daily: 10:00 AM - 01:00 AM.",
   url: "https://www.kingrockcannabis.com",
-  telephone: "+14372363469",
+  telephone: "+14377809691",
   image: "https://www.kingrockcannabis.com/wp-content/uploads/2026/04/7Clmh.jpg",
   priceRange: "$3 - $12/g",
   address: {
