@@ -21,7 +21,7 @@ export default function NicotineVapesPage() {
         locationLabel="King West"
         eyebrow="Nicotine Vapes · King Street West"
         title="Nicotine Vapes in King West"
-        intro="Shop nicotine vape devices from Elf Bar, Geek, OVNS, NEXA, Level X and other listed names at King Rock on King Street West. Compare formats, flavours, puff counts and prices."
+        intro="Shop nicotine vape devices at King Rock on King Street West. Compare the current formats, flavours, puff counts and listed prices before visiting."
         items={items}
         menuHref="/items/vapes"
         menuLabel="Shop the nicotine vape menu"
@@ -30,7 +30,7 @@ export default function NicotineVapesPage() {
         crossLink={{ href: "/info/native-cigarettes-king-west", eyebrow: "Also at King Rock", title: "Need Native cigarettes instead?", body: "Shop full, light and menthol cigarette styles alongside Backwoods, grabba and other smoke-shop essentials at King Rock.", label: "Shop Native cigarettes" }}
         sections={[
           { heading: "Nicotine Vapes on King Street West", body: "King Rock lists disposable nicotine vapes, pods and devices at 1220b King St W near King West and Liberty Village." },
-          { heading: "Devices for a King West Stop", body: "Compare listed Elf Bar, Geek, OVNS, NEXA, Level X and MOSMO options by format, flavour, puff count and price." },
+          { heading: "Devices for a King West Stop", body: "Compare the current device selection by format, flavour, puff count and listed price near Liberty Village." },
           { heading: "Late-Night Shopping in King West", body: "King Rock lists daily hours from 10:00 AM to 1:00 AM for cigarettes, nicotine vapes and other smoke-shop essentials." },
         ]}
         faqs={[
