@@ -214,46 +214,30 @@ export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
   },
   "VAPE PENS": {
     banner: "/banners/01_Vape_Pens.webp",
-    name: "THC Vape",
+    name: "Nic Vape",
     slug: "vapes",
     color: "#8b5cf6",
-    icon: "💨",
-    seoTitle: "Vape Pens Toronto THC & Nicotine Cartridges",
-    seoIntro:
-      "Shop THC and nicotine vape pens at King Rock, Toronto. Cartridges, 510-thread batteries, and premium vape brands listed when listed on the menu.",
-    seoDescription:
-      "King Rock carries a curated selection of vape pens and cartridges in Toronto. From 510-thread THC cartridges to nicotine vape pods, we stock the most popular brands and flavours. Our knowledgeable budtenders can help you choose the right cartridge and battery setup. Visit us at 1220b King St W for the useful vape selection in King West.",
+    icon: "NV",
+    seoTitle: "Nicotine Vape Menu King West",
+    seoIntro: "Browse nicotine vape devices, formats, flavours, puff counts and listed prices at King Rock.",
+    seoDescription: "Compare nicotine vape devices, formats, flavours, puff counts and listed prices at King Rock, 1220b King St W.",
     faqs: [
-      {
-        q: "What vape pens do you sell?",
-        a: "We carry 510-thread THC cartridges, nicotine vape pods, disposable vapes, and compatible batteries from current menu brands.",
-      },
-      {
-        q: "Do you sell vape batteries?",
-        a: "Yes! We stock 510-thread batteries and pod systems that pair with our cartridge selection.",
-      },
+      { q: "What nicotine vape details are available?", a: "Compare listed device formats, flavours, puff counts and prices before visiting King Rock." },
+      { q: "Can I compare nicotine vape prices online?", a: "Yes. Current listings show available product details and posted prices for King West shoppers." },
     ],
   },
   "VAPE DISPOSABLE": {
     banner: "/banners/02_Vape_Disposable.webp",
-    name: "Nic Vape",
+    name: "THC Vape",
     slug: "vape-disposables",
     color: "#a78bfa",
-    icon: "💨",
-    seoTitle: "Disposable Vapes Toronto THC Disposable Pens",
-    seoIntro:
-      "THC disposable vapes listed at King Rock, Toronto. No charging, no refilling just open and enjoy.",
-    seoDescription:
-      "Disposable THC vapes are the easiest way to enjoy cannabis on the go. King Rock stocks a wide selection of pre-charged, pre-filled disposable vape pens with various strain profiles and potencies. Perfect for beginners and experienced users alike. Visit us at 1220b King St W, Toronto.",
+    icon: "V",
+    seoTitle: "THC Vape Menu King West",
+    seoIntro: "Browse THC vape products and listed prices at King Rock.",
+    seoDescription: "Compare listed THC vape products, formats and prices from King Rock at 1220b King St W near Liberty Village.",
     faqs: [
-      {
-        q: "How long does a disposable vape last?",
-        a: "Most disposable THC vapes contain 0.5g-1g of distillate and last between 100-300 puffs depending on usage.",
-      },
-      {
-        q: "Are disposable vapes rechargeable?",
-        a: "Most are designed for single use, but some models include a USB-C charging port to ensure you can use the full cartridge.",
-      },
+      { q: "What THC vape details are available?", a: "Compare listed product names, formats and prices before visiting King Rock." },
+      { q: "Can I compare THC vape prices online?", a: "Yes. Current listings show available product details and posted prices for King West shoppers." },
     ],
   },
   CONCENTRATES: {
@@ -344,25 +328,14 @@ export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
     name: "Cigarettes",
     slug: "cigarettes",
     color: "#78716c",
-    icon: "*",
-    seoTitle: "Native Cigarettes Toronto Discount Tobacco at King Rock",
-    seoIntro:
-      "Discount native cigarettes at King Rock, Toronto. Cigarette category options at the competitive prices on King St W.",
-    seoDescription:
-      "King Rock is your go-to source for affordable native cigarettes in Toronto. We carry a wide selection of premium and value tobacco brands at competitive prices. Located at 1220b King St W in the heart of King West and Liberty Village, we're Open Daily: 10:00 AM - 01:00 AM.",
+    icon: "CG",
+    seoTitle: "Native Cigarette Menu King West",
+    seoIntro: "Browse Native cigarette brands, pack styles and listed prices at King Rock.",
+    seoDescription: "The cigarette menu at King Rock lists cigarette brands, styles and prices for King West shoppers. Visit 1220b King St W. Open daily 10:00 AM–1:00 AM.",
     faqs: [
-      {
-        q: "Do you sell cigarettes at King Rock?",
-        a: "Yes! We carry a wide selection of native cigarette brands at competitive prices.",
-      },
-      {
-        q: "What cigarette brands do you carry?",
-        a: "We stock a variety of premium and value native cigarette brands. Visit us to see our full in-store selection.",
-      },
-      {
-        q: "Are your cigarette prices competitive?",
-        a: "Check the current cigarette menu for listed prices and brands.",
-      },
+      { q: "Does King Rock list Native cigarettes?", a: "Yes. Compare listed Native cigarette brands, styles and prices from King Rock." },
+      { q: "What cigarette styles are listed?", a: "The selection includes full, light and menthol styles across several listed brands." },
+      { q: "Where is King Rock?", a: "King Rock is at 1220b King St W." },
     ],
   },
 };
