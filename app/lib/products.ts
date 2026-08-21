@@ -222,7 +222,7 @@ export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
     seoIntro: "Browse nicotine vape devices, formats, flavours, puff counts and listed prices at King Rock.",
     seoDescription: "Compare nicotine vape devices, formats, flavours, puff counts and listed prices at King Rock, 1220b King St W.",
     faqs: [
-      { q: "Is this the nicotine vape menu?", a: "Yes. This category lists nicotine vape devices and prices from King Rock." },
+      { q: "What nicotine vape details are available?", a: "Compare listed device formats, flavours, puff counts and prices before visiting King Rock." },
       { q: "Can I compare nicotine vape prices online?", a: "Yes. Current listings show available product details and posted prices for King West shoppers." },
     ],
   },
@@ -236,7 +236,7 @@ export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
     seoIntro: "Browse THC vape products and listed prices at King Rock.",
     seoDescription: "Compare listed THC vape products, formats and prices from King Rock at 1220b King St W near Liberty Village.",
     faqs: [
-      { q: "Is this the THC vape menu?", a: "Yes. This category lists THC vape products and prices from King Rock." },
+      { q: "What THC vape details are available?", a: "Compare listed product names, formats and prices before visiting King Rock." },
       { q: "Can I compare THC vape prices online?", a: "Yes. Current listings show available product details and posted prices for King West shoppers." },
     ],
   },
@@ -333,7 +333,7 @@ export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
     seoIntro: "Browse Native cigarette brands, pack styles and listed prices at King Rock.",
     seoDescription: "The cigarette menu at King Rock lists cigarette brands, styles and prices for King West shoppers. Visit 1220b King St W. Open daily 10:00 AM–1:00 AM.",
     faqs: [
-      { q: "Does King Rock list Native cigarettes?", a: "Yes. This category lists Native cigarette brands, styles and prices from King Rock." },
+      { q: "Does King Rock list Native cigarettes?", a: "Yes. Compare listed Native cigarette brands, styles and prices from King Rock." },
       { q: "What cigarette styles are listed?", a: "The selection includes full, light and menthol styles across several listed brands." },
       { q: "Where is King Rock?", a: "King Rock is at 1220b King St W." },
     ],
