@@ -58,16 +58,17 @@ export default function Footer() {
               <Link href="/budget">Budget Flower</Link>
               <Link href="/items/edibles">Edibles</Link>
               <Link href="/items/cigarettes">Cigarettes</Link>
-              <Link href="/items/vapes">Vape Pens</Link>
+<Link href="/items/vapes">Nicotine Vapes</Link>
               <Link href="/faq">FAQ</Link>
               <Link href="/delivery">DELIVERY MENU</Link>
               <Link href="/info/king-west-weed-dispensary">
                 Toronto Dispensary
               </Link>
               <Link href="/info/cheap-weed-king-west">Cheap Weed Toronto</Link>
-              <Link href="/info/native-cigarettes-king-west">
+<Link href="/info/native-cigarettes-king-west">
                 Native Cigarettes
               </Link>
+              <Link href="/info/nicotine-vapes-king-west">Nicotine Vapes King West</Link>
               <Link href="/info/weed-store-near-liberty-village">
                 Liberty Village Weed Store
               </Link>
