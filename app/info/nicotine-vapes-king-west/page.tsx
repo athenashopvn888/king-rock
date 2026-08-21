@@ -30,12 +30,12 @@ export default function NicotineVapesPage() {
         crossLink={{ href: "/info/native-cigarettes-king-west", eyebrow: "Also at King Rock", title: "Need Native cigarettes instead?", body: "Shop full, light and menthol cigarette styles alongside Backwoods, grabba and other smoke-shop essentials at King Rock.", label: "Shop Native cigarettes" }}
         sections={[
           { heading: "Nicotine Vapes on King Street West", body: "King Rock lists disposable nicotine vapes, pods and devices at 1220b King St W near King West and Liberty Village." },
-          { heading: "Flavours, Puff Counts and Device Formats", body: "Compare listed options from Elf Bar, Geek, OVNS, NEXA, Level X and MOSMO by device format, flavour and puff count." },
+          { heading: "Devices for a King West Stop", body: "Compare listed Elf Bar, Geek, OVNS, NEXA, Level X and MOSMO options by format, flavour, puff count and price." },
           { heading: "Late-Night Shopping in King West", body: "King Rock lists daily hours from 10:00 AM to 1:00 AM for cigarettes, nicotine vapes and other smoke-shop essentials." },
         ]}
         faqs={[
           { q: "Does King Rock sell nicotine vapes?", a: "Yes. King Rock lists nicotine vape devices with formats, flavours, puff counts and prices." },
-          { q: "Are nicotine vapes different from THC vapes?", a: "Yes. Nicotine devices and THC vapes are different product groups, with separate selections for each." },
+          { q: "What nicotine vape details can I compare?", a: "Listings may include the device format, flavour, puff count and price. Selection can change, so check the current details before visiting." },
           { q: "Where is King Rock?", a: "King Rock is at 1220b King St W, Toronto, ON M6K 1G4 and lists open daily 10:00 am–1:00 am." },
         ]}
         address="1220b King St W, Toronto"

@@ -30,8 +30,8 @@ export default function NativeCigarettesPage() {
         crossLink={{ href: "/info/nicotine-vapes-king-west", eyebrow: "Also at King Rock", title: "Prefer a nicotine vape?", body: "Shop nicotine vape devices with brand, flavour, puff-count and listed price details from King Rock.", label: "Shop nicotine vapes" }}
         sections={[
           { heading: "Native Cigarettes on King Street West", body: "King Rock carries Native cigarettes and smoke-shop essentials at 1220b King St W, close to King West and Liberty Village." },
-          { heading: "Full, Light and Menthol Styles", body: "Compare Canadian, Canadian Goose, Canadian Classics, Nexus, Time and Putters across full, light and menthol styles in the listed selection." },
-          { heading: "Backwoods, Grabba and Nicotine Pouches", body: "The smoke-shop selection also includes Backwoods, grabba, grabba shakers and nicotine pouches where listed." },
+          { heading: "Canadian and Putters on King West", body: "Compare listed Canadian, Canadian Goose, Canadian Classics and Putters options, including full, light and menthol styles." },
+          { heading: "Backwoods and Grabba Near Liberty Village", body: "King Rock also lists Backwoods, grabba, grabba shakers and nicotine pouches for a convenient King Street West stop." },
         ]}
         faqs={[
           { q: "Does King Rock sell Native cigarettes?", a: "Yes. King Rock lists Native cigarette brands and related smoke-shop products at 1220b King St W, Toronto." },
