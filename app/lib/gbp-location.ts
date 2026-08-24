@@ -33,8 +33,8 @@ export const gbpLocation = {
   menuUrl: "/",
   directionsUrl: "",
   mapEmbedUrl: "",
-  latitude: "43.6395857",
-  longitude: "-79.4241844",
+  latitude: "43.6388839",
+  longitude: "-79.428146",
   hours: ["Open Daily: 10:00 AM - 01:00 AM"],
   seoTitle: "King Rock | Weed Dispensary in Toronto",
   metaDescription:
