@@ -43,9 +43,12 @@ test("legacy Weed campaign routes redirect directly to V2 owners", () => {
 });
 
 test("every tier title and H1 uses Weed naming", () => {
-  for (const label of ["Weed Exotic", "Weed Premium", "Weed AAA+", "Weed AA", "Weed Budget"]) {
+  for (const label of ["Exotic Weed", "Premium Weed", "AAA+ Weed", "AA Weed", "Budget Weed"]) {
     assert.ok(tierCopy.includes(label), `missing ${label}`);
   }
+  assert.doesNotMatch(tierCopy, /Weed (Exotic|Premium|AAA\+?|AA|Budget)/);
+  assert.doesNotMatch(products, /name: "Weed (Exotic|Premium|AAA\+?|AA|Budget)"/);
+  assert.doesNotMatch(navbar, /label: "Weed (Exotic|Premium|AAA\+?|AA|Budget)"/);
 });
 
 test("new tier copy respects KR01 Hours Lock and omits commercial claims", () => {

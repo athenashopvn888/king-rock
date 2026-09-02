@@ -33,7 +33,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
     cards: [
       { title: "Local Visit Guide", href: "/resources/king-west-liberty-visit-guide", text: "Plan the stop around King St W, Liberty Village, Parkdale, Dufferin, Exhibition Place, Roncesvalles, and TTC routes." },
       { title: "Menu Guide", href: "/resources/menu-guide", text: "Choose the matching menu category before opening individual product listings." },
-      { title: "Weed & Flower Guide", href: "/resources/weed-flower-guide", text: "Compare Weed Exotic, Weed Premium, Weed AAA+, Weed AA and Weed Budget." },
+      { title: "Weed & Flower Guide", href: "/resources/weed-flower-guide", text: "Compare Exotic Weed, Premium Weed, AAA+ Weed, AA Weed and Budget Weed." },
       { title: "Value Guide", href: "/resources/value-guide", text: "A cleaner path for cheap weed, budget weed, and affordable flower searches." },
       { title: "Native Smokes Prices", href: "/resources/native-smokes", text: "Brand and price notes for cigarettes, Backwoods, grabba, and pouch listings." }
     ],
@@ -106,22 +106,22 @@ export const RESOURCE_PAGES: ResourcePage[] = [
     slug: "weed-flower-guide",
     title: "King Rock Weed & Flower Guide",
     seoTitle: "Weed & Cannabis Flower Guide Toronto | King Rock",
-    description: "Explore King Rock flower collections including Weed Exotic, Weed Premium, Weed AAA+, Weed AA and Weed Budget in one concise Toronto guide.",
+    description: "Explore King Rock flower collections including Exotic Weed, Premium Weed, AAA+ Weed, AA Weed and Budget Weed in one concise Toronto guide.",
     eyebrow: "King Rock · Weed & Flower",
-    intro: "King Rock brings five Weed flower collections together for shoppers who want to compare different parts of the selection: Weed Exotic, Weed Premium, Weed AAA+, Weed AA and Weed Budget. Explore whichever collections interest you, or begin with King Rock's broader Toronto Weed selection.",
+    intro: "King Rock brings five Weed flower collections together for shoppers who want to compare different parts of the selection: Exotic Weed, Premium Weed, AAA+ Weed, AA Weed and Budget Weed. Explore whichever collections interest you, or begin with King Rock's broader Toronto Weed selection.",
     cards: [
       { title: "Explore King Rock Weed in Toronto", href: "/weed-dispensary-toronto/", text: "Begin with the broader King Rock Weed selection." },
-      { title: "Weed Exotic", href: "/exotic-weed", text: "Explore King Rock's Weed Exotic flower collection." },
-      { title: "Weed Premium", href: "/premium-weed", text: "Browse King Rock's Weed Premium flower collection." },
-      { title: "Weed AAA+", href: "/aaa-weed", text: "Explore King Rock's Weed AAA+ flower collection." },
-      { title: "Weed AA", href: "/aa-weed", text: "Browse King Rock's Weed AA flower collection." },
-      { title: "Weed Budget", href: "/budget-weed", text: "Explore King Rock's Weed Budget flower collection." }
+      { title: "Exotic Weed", href: "/exotic-weed", text: "Explore King Rock's Exotic Weed flower collection." },
+      { title: "Premium Weed", href: "/premium-weed", text: "Browse King Rock's Premium Weed flower collection." },
+      { title: "AAA+ Weed", href: "/aaa-weed", text: "Explore King Rock's AAA+ Weed flower collection." },
+      { title: "AA Weed", href: "/aa-weed", text: "Browse King Rock's AA Weed flower collection." },
+      { title: "Budget Weed", href: "/budget-weed", text: "Explore King Rock's Budget Weed flower collection." }
     ],
     sections: [
       {
         heading: "Explore Five Weed Flower Collections",
         body: "The five collections give shoppers different parts of the King Rock Cannabis Flower selection to explore. Start with whichever collection interests you and compare others when useful.",
-        bullets: ["Explore Weed Exotic, Weed Premium, Weed AAA+, Weed AA and Weed Budget.", "Use the information presented within each collection as you browse.", "For broader browsing, explore King Rock Weed in Toronto."]
+        bullets: ["Explore Exotic Weed, Premium Weed, AAA+ Weed, AA Weed and Budget Weed.", "Use the information presented within each collection as you browse.", "For broader browsing, explore King Rock Weed in Toronto."]
       },
       {
         heading: "Weed, Cannabis and Flower at King Rock",
@@ -129,11 +129,11 @@ export const RESOURCE_PAGES: ResourcePage[] = [
       },
       {
         heading: "Compare the Collections That Interest You",
-        body: "Explore Weed Exotic, Weed Premium, Weed AAA+, Weed AA and Weed Budget individually and compare the information presented within each collection as you browse."
+        body: "Explore Exotic Weed, Premium Weed, AAA+ Weed, AA Weed and Budget Weed individually and compare the information presented within each collection as you browse."
       }
     ],
     faqs: [
-      { question: "What Weed flower collections can I explore at King Rock?", answer: "King Rock organizes flower browsing across Weed Exotic, Weed Premium, Weed AAA+, Weed AA and Weed Budget." },
+      { question: "What Weed flower collections can I explore at King Rock?", answer: "King Rock organizes flower browsing across Exotic Weed, Premium Weed, AAA+ Weed, AA Weed and Budget Weed." },
       { question: "Where can I start if I do not have a specific flower collection in mind?", answer: "Start with King Rock's broader Toronto Weed selection, then explore a flower collection when one interests you." },
       { question: "Can I compare several Weed flower collections?", answer: "Yes. You can explore the five collections individually and compare the information presented within each one." }
     ],
@@ -146,9 +146,9 @@ export const RESOURCE_PAGES: ResourcePage[] = [
     eyebrow: "Value Guide",
     intro: "For King West and Liberty Village value shopping, start with Budget, AA, and AAA+ before comparing higher tiers or mixed categories.",
     cards: [
-      { title: "Weed Budget", href: "/budget-weed", text: "$3/g for the lowest posted flower lane." },
-      { title: "Weed AA", href: "/aa-weed", text: "$4/g for a simple low-spend lane." },
-      { title: "Weed AAA+", href: "/aaa-weed", text: "$10/g, 3g for $20, or 6g around $30 where listed." },
+      { title: "Budget Weed", href: "/budget-weed", text: "$3/g for the lowest posted flower lane." },
+      { title: "AA Weed", href: "/aa-weed", text: "$4/g for a simple low-spend lane." },
+      { title: "AAA+ Weed", href: "/aaa-weed", text: "$10/g, 3g for $20, or 6g around $30 where listed." },
       { title: "Native Smokes Prices", href: "/resources/native-smokes", text: "Use this if cigarettes or Backwoods are part of the same stop." }
     ],
     sections: [
