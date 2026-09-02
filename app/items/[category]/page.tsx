@@ -31,7 +31,9 @@ export async function generateMetadata({
   const items = getItemsByCategory(catInfo.key);
 
   return {
-    title: catInfo.config.seoTitle || `${catInfo.config.name} — ${items.length} Products`,
+    title: catInfo.key === "VAPE PENS"
+      ? { absolute: catInfo.config.seoTitle }
+      : catInfo.config.seoTitle || `${catInfo.config.name} — ${items.length} Products`,
     description: catInfo.config.seoIntro || `Shop ${items.length} ${catInfo.config.name.toLowerCase()} at King Rock.`,
     alternates: {
       canonical: `https://www.kingrockcannabis.com/items/${catSlug}`,
@@ -85,6 +87,15 @@ export default async function ItemsCategoryPage({
           </div>
         )}
       </section>
+
+      {bannerExists && catInfo.key === "VAPE PENS" && (
+        <section className={styles.heroContent} style={{ background: config.color, padding: "32px 24px", textAlign: "center" }}>
+          <h1 className={styles.heroTitle}>
+            <span style={{ color: "#fff" }}>Nicotine Vape</span>
+          </h1>
+          <p className={styles.heroSub} style={{ color: "rgba(255,255,255,0.88)" }}>{config.seoIntro}</p>
+        </section>
+      )}
 
       {/* Product Grid */}
       <section className={styles.products}>
