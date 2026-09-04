@@ -6,8 +6,9 @@ export interface ResourceCard {
 
 export interface ResourceSection {
   heading: string;
-  body: string;
+  body: string | string[];
   bullets?: string[];
+  link?: ResourceCard;
 }
 
 export interface ResourcePage {
@@ -19,6 +20,7 @@ export interface ResourcePage {
   intro: string;
   cards: ResourceCard[];
   sections: ResourceSection[];
+  faqHeading?: string;
   faqs?: { question: string; answer: string }[];
 }
 
@@ -58,6 +60,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
     intro: "Use this page when the search starts local: weed dispensary near Liberty Village / Parkdale, cannabis store near 1220b King St W, or a quick menu check before visiting from King St W, Liberty Village, Parkdale, Dufferin, Exhibition Place, Roncesvalles, and TTC routes.",
     cards: [
       { title: "Store Visit Page", href: "/weed-dispensary-toronto", text: "Use the main visit guide for address, directions, hours, and contact details." },
+      { title: "Cannabis And Weed Dispensary Guide", href: "/resources/cannabis-dispensary-vs-weed-dispensary", text: "Learn how common dispensary and cannabis store terms relate." },
       { title: "Menu Guide", href: "/resources/menu-guide", text: "Choose the product category before opening deep menu pages." },
       { title: "Value Guide", href: "/resources/value-guide", text: "Fast help for affordable flower and budget weed searches." }
     ],
@@ -75,6 +78,55 @@ export const RESOURCE_PAGES: ResourcePage[] = [
         heading: "Choose a Starting Point",
         body: "If you need store details, start with /weed-dispensary-toronto. If you are comparing product types, start with the menu guide. If the trip is about Native smokes or cigarettes, start with the Native smokes page and then confirm the current category page."
       }
+    ],
+  },
+  {
+    slug: "cannabis-dispensary-vs-weed-dispensary",
+    title: "Different Words, Similar Meaning: Cannabis vs. Weed Dispensary",
+    seoTitle: "Dispensary vs Weed Dispensary | King Rock Toronto",
+    description: "Cannabis dispensary or weed dispensary? Learn how the terms relate, what “dispensary near me” means, and how King Rock helps Toronto shoppers understand the terminology.",
+    eyebrow: "King Rock · Toronto",
+    intro: "A search for a nearby dispensary can begin in several ways. “Cannabis dispensary near me,” “weed dispensary near me,” “cannabis store near me,” and “dispensary near me” are separate queries, yet they can describe a closely related shopping need. This guide explains how the terminology fits together.",
+    cards: [],
+    sections: [
+      {
+        heading: "What Changes — and What Does Not",
+        body: "Cannabis dispensary is the more formal phrase, weed dispensary is familiar everyday wording, cannabis store is a common retail term, and dispensary near me is the shortest local version. The words may change while the shopper is still looking for the same kind of nearby store.",
+        bullets: [
+          "Cannabis dispensary: a formal retail term",
+          "Weed dispensary: familiar everyday wording",
+          "Cannabis store: another common name for the same type of retailer",
+          "Dispensary near me: a shorter way to look for a nearby store",
+        ],
+      },
+      {
+        heading: "Connecting the Words to King Rock",
+        body: "King Rock serves adults 19+ in Toronto. This guide explains the vocabulary so shoppers can understand the different phrases they may see while looking for a nearby cannabis store.",
+        link: {
+          title: "For King Rock store information and visiting details, see our Toronto weed dispensary page.",
+          href: "/weed-dispensary-toronto/",
+          text: "King Rock Toronto weed dispensary information",
+        },
+      },
+    ],
+    faqHeading: "Frequently Asked Questions",
+    faqs: [
+      {
+        question: "Is cannabis the same word as weed?",
+        answer: "Cannabis is the more formal term, while weed is a common conversational term for the same plant.",
+      },
+      {
+        question: "What does dispensary mean in this context?",
+        answer: "It describes the type of local retail business a shopper is trying to find.",
+      },
+      {
+        question: "Can one page explain several related phrases?",
+        answer: "Yes. Closely related terms can be explained naturally without repeating them in every sentence.",
+      },
+      {
+        question: "Where can I find King Rock store information?",
+        answer: "Use the King Rock Toronto weed dispensary page for store information and visiting details.",
+      },
     ],
   },
   {
@@ -273,3 +325,4 @@ export function getResourcePage(slug: string) {
   const cleanSlug = slug.replace(/^\/+|\/+$/g, "");
   return RESOURCE_PAGES.find((page) => page.slug === cleanSlug);
 }
+

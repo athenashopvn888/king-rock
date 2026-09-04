@@ -37,7 +37,12 @@ export default function ResourceView({ page }: ResourceViewProps) {
         {page.sections.map((section) => (
           <article key={section.heading} className={styles.section}>
             <h2>{section.heading}</h2>
-            <p>{section.body}</p>
+            {Array.isArray(section.body) ? section.body.map((paragraph) => <p key={paragraph}>{paragraph}</p>) : <p>{section.body}</p>}
+            {section.link && (
+              <p>
+                <Link href={section.link.href} aria-label={section.link.text}>{section.link.title}</Link>
+              </p>
+            )}
             {section.bullets && (
               <ul>
                 {section.bullets.map((item) => (
@@ -49,7 +54,7 @@ export default function ResourceView({ page }: ResourceViewProps) {
         ))}
         {page.faqs && (
           <article className={styles.section}>
-            <h2>King Rock Weed & Flower Questions</h2>
+            <h2>{page.faqHeading || "King Rock Weed & Flower Questions"}</h2>
             {page.faqs.map((faq) => (
               <div key={faq.question}>
                 <h3>{faq.question}</h3>
@@ -63,3 +68,4 @@ export default function ResourceView({ page }: ResourceViewProps) {
     </main>
   );
 }
+
