@@ -91,9 +91,9 @@ export function GBPLandingPage() {
 
       {/* Call to Actions */}
       <div className={styles.btnRow}>
-        <a href="/visit" className={`${styles.btn} ${styles.btnPrimary}`}>
+        <Link href="/visit" className={`${styles.btn} ${styles.btnPrimary}`}>
           How to get here
-        </a>
+        </Link>
         <a href={gbpLocation.menuUrl} className={`${styles.btn} ${styles.btnSecondary}`}>
           View Menu
         </a>
