@@ -1,15 +1,16 @@
 import { Metadata } from "next";
 import { GBPLandingPage } from "@/app/components/GBPLandingPage";
-import { gbpLocation } from "@/app/lib/gbp-location";
+import { STORE_NAP } from "@/app/lib/storeNap";
 
 export const metadata: Metadata = {
-  title: gbpLocation.seoTitle,
-  description: gbpLocation.metaDescription,
+  title: { absolute: "King Rock store notes" },
+  description:
+    "Archived city landing notes for King Rock Cannabis. Use the King West / Liberty Village visit guide for how to reach 1220b King St W.",
   alternates: {
-    canonical: `https://${gbpLocation.domain}/${gbpLocation.slug}/`,
+    canonical: `${STORE_NAP.origin}/visit`,
   },
   robots: {
-    index: true,
+    index: false,
     follow: true,
   },
 };

@@ -4,6 +4,7 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       { protocol: "https", hostname: "kingrockcannabis.com" },
+      { protocol: "https", hostname: "www.kingrockcannabis.com" },
       { protocol: "https", hostname: "kennedyloudcannabis.com" },
       { protocol: "https", hostname: "stclaircannabis.com" },
       {
@@ -21,6 +22,7 @@ const nextConfig: NextConfig = {
       { source: "/aaa", destination: "/aaa-weed", permanent: true },
       { source: "/aa", destination: "/aa-weed", permanent: true },
       { source: "/budget", destination: "/budget-weed", permanent: true },
+      { source: "/location", destination: "/visit", permanent: true },
       {
         source: "/resources/flower-guide",
         destination: "/resources/weed-flower-guide",

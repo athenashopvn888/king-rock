@@ -85,13 +85,16 @@ export function GBPLandingPage() {
 
       {/* Hero Header */}
       <header className={styles.hero}>
-        <h1 className={styles.h1}>{gbpLocation.storeName} — Weed Dispensary in {gbpLocation.city}</h1>
-        <p className={styles.heroTagline}>Serving {gbpLocation.city} & Nearby Neighborhoods</p>
+        <h1 className={styles.h1}>{gbpLocation.storeName} — {gbpLocation.neighborhood} walk-in</h1>
+        <p className={styles.heroTagline}>How to reach 1220b King St W. City-wide Toronto pages are demoted — use the visit guide.</p>
       </header>
 
       {/* Call to Actions */}
       <div className={styles.btnRow}>
-        <a href={gbpLocation.menuUrl} className={`${styles.btn} ${styles.btnPrimary}`}>
+        <a href="/visit" className={`${styles.btn} ${styles.btnPrimary}`}>
+          How to get here
+        </a>
+        <a href={gbpLocation.menuUrl} className={`${styles.btn} ${styles.btnSecondary}`}>
           View Menu
         </a>
         <a href={`tel:${gbpLocation.phoneIntl}`} className={`${styles.btn} ${styles.btnSecondary}`}>
@@ -132,8 +135,8 @@ export function GBPLandingPage() {
           Helpful local reference points include {landmarkList}. Customers also use this page when planning from {nearbyAreaList}.
         </p>
         <p className={styles.infoText}>
-          For a fuller local overview, read the{" "}
-          <Link href="/">Home</Link>.
+          For street-level directions, transit, parking, and unit B notes, use the{" "}
+          <Link href="/visit">King West visit guide</Link>.
         </p>
       </section>
 

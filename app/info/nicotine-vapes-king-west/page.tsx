@@ -16,8 +16,8 @@ export default function NicotineVapesPage() {
       <SmokePilotLanding
         canonicalUrl="https://www.kingrockcannabis.com/info/nicotine-vapes-king-west"
         storeName="King Rock"
-        locationLabel="Liberty Village / Parkdale"
-        eyebrow="KING ROCK • LIBERTY VILLAGE / PARKDALE • ADULTS 19+"
+        locationLabel="King West / Liberty Village"
+        eyebrow="KING ROCK • KING WEST / LIBERTY VILLAGE • ADULTS 19+"
         title="Nicotine Vape"
         intro="Explore King Rock nicotine vape products in a category kept separate from THC Vape products. Nicotine products are for adults 19+ and contain nicotine, which is addictive."
         items={[]}
@@ -37,7 +37,7 @@ export default function NicotineVapesPage() {
         showMenuGrid={false}
         secondaryHref="#featured-vapes"
         secondaryLabel="Explore Featured Nicotine Products"
-        identityLabel="Liberty Village / Parkdale · Adults 19+ · Nicotine is addictive."
+        identityLabel="King West / Liberty Village · Adults 19+ · Nicotine is addictive."
         sections={[
           { heading: "Explore Nicotine Vape at King Rock", body: "Use the product information presented with individual items to learn more while exploring the nicotine category." },
           { heading: "Keep Nicotine and Cannabis Vape Routes Separate", body: "This adult-only King Rock guide uses VAPE PENS products under /items/vapes. THC and cannabis vape products under /items/vape-disposables are excluded." },
