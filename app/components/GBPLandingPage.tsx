@@ -132,14 +132,11 @@ export function GBPLandingPage() {
       <section className={styles.section}>
         <h2 className={styles.h2}>Plan a Visit to {gbpLocation.storeName}</h2>
         <p className={styles.infoText}>
-          Use this page to confirm the basics before visiting {gbpLocation.storeName} near {gbpLocation.neighborhood}. The store page brings together the address, phone number, menu links, nearby-area context, and adult 19+ shopping notes for customers comparing cannabis stores around {gbpLocation.city}.
+          This city URL is archived. The King Rock homepage is the store listing for {gbpLocation.storeName} near {gbpLocation.neighborhood}: address, phone, 24/7 hours, and the map. Extra street-level transit and parking notes are on the{" "}
+          <Link href="/visit">how-to-reach page</Link>.
         </p>
         <p className={styles.infoBlock}>
-          Helpful local reference points include {landmarkList}. Customers also use this page when planning from {nearbyAreaList}.
-        </p>
-        <p className={styles.infoText}>
-          Use the King Rock homepage for the store listing (address, 24/7 hours, map). For extra street-level transit and parking notes, see the{" "}
-          <Link href="/visit">how-to-reach page</Link>.
+          Helpful local reference points include {landmarkList}. Neighbourhood cues also include {nearbyAreaList}.
         </p>
       </section>
 
@@ -232,7 +229,7 @@ export function GBPLandingPage() {
           <div className={styles.faqItem}>
             <h3 className={styles.faqQuestion}>How should I plan a visit to {gbpLocation.storeName}?</h3>
             <p className={styles.faqAnswer}>
-              Check the store address, phone number, hours, menu links, and nearby-area notes on this page before visiting. {gbpLocation.storeName} serves adults 19+ near {gbpLocation.neighborhood} and surrounding {gbpLocation.city} areas.
+              Use the King Rock homepage for address, phone, 24/7 hours, and the map. Extra transit and parking notes are on the how-to-reach page. {gbpLocation.storeName} serves adults 19+ near {gbpLocation.neighborhood}.
             </p>
           </div>
           <div className={styles.faqItem}>

@@ -49,6 +49,8 @@ test("homepage FAQPage JSON-LD mirrors visible FAQs and corridor copy", () => {
 });
 
 test("homepage is the visit hub and GBP website target", () => {
+  const homeCss = fs.readFileSync("app/page.module.css", "utf8");
+  const gbpLanding = fs.readFileSync("app/components/GBPLandingPage.tsx", "utf8");
   assert.match(home, /id="visit"/);
   assert.match(home, /Visit King Rock at 1220b King St W/);
   assert.match(home, /mapEmbedUrl/);
@@ -56,9 +58,12 @@ test("homepage is the visit hub and GBP website target", () => {
   assert.match(home, /504 King/);
   assert.match(home, /Open 24 Hours Daily|hoursLabel/);
   assert.match(home, /This homepage is the store listing/);
+  assert.match(homeCss, /scroll-margin-top/);
   assert.match(nap, /GBP_WEBSITE = STORE_NAP\.origin/);
   assert.match(layout, /url: STORE_NAP\.origin|url: nap\.origin|canonical: STORE_NAP\.origin/);
   assert.doesNotMatch(nap, /GBP_WEBSITE[^\n]*\/visit/);
+  assert.match(gbpLanding, /This city URL is archived/);
+  assert.doesNotMatch(gbpLanding, /Use this page to confirm the basics/);
 });
 
 test("/visit is a supporting how-to-reach page with transit, parking, unit B, and full NAP", () => {

@@ -789,6 +789,8 @@
 .visitHub {
   position: relative;
   z-index: 2;
+  /* Clear the fixed delivery bar + navbar when jumping to /#visit */
+  scroll-margin-top: calc(var(--delivery-announcement-height, 42px) + 120px);
   padding: 48px 0 56px;
   background:
     radial-gradient(circle at 8% 0%, rgba(249, 115, 22, 0.16), transparent 42%),
