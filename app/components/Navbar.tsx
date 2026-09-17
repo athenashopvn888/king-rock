@@ -5,8 +5,10 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./Navbar.module.css";
+import { STORE_NAP } from "../lib/storeNap";
 
 const ALL_LINKS = [
+  { href: "/visit", label: "Visit King West" },
   { href: "/exotic-weed", label: "Exotic Weed" },
   { href: "/premium-weed", label: "Premium Weed" },
   { href: "/aaa-weed", label: "AAA+ Weed" },
@@ -41,19 +43,16 @@ export default function Navbar() {
     <nav className={styles.navbar} id="main-nav">
       {/* Top bar — logo + open now */}
       <div className={styles.topBar}>
-        <Link href="/" className={styles.logo} style={{ display: "flex", alignItems: "center", gap: "8px", textDecoration: "none" }}>
-          <Image src="/storeFavicon.webp" alt="King Rock Logo" width={30} height={30} style={{ objectFit: "contain", borderRadius: "4px" }} />
-          <span style={{
-            fontFamily: "var(--font-display)",
-            fontWeight: 900,
-            fontSize: "18px",
-            letterSpacing: "0.04em",
-            color: "white",
-            textShadow: "0 0 12px rgba(255,255,255,0.2)"
-          }}>
-            KING ROCK
-          </span>
-        </Link>
+        <div className={styles.logoCluster}>
+          <Link href="/" className={styles.logo} style={{ display: "flex", alignItems: "center", gap: "8px", textDecoration: "none" }}>
+            <Image src="/storeFavicon.webp" alt="King Rock Logo" width={30} height={30} style={{ objectFit: "contain", borderRadius: "4px" }} />
+            <span className={styles.brandName}>KING ROCK</span>
+          </Link>
+          <p className={styles.headerNap}>
+            <Link href="/#visit">{STORE_NAP.streetAddress}, {STORE_NAP.addressLocality}, {STORE_NAP.addressRegion} {STORE_NAP.postalCode}</Link>
+            <a href={`tel:${STORE_NAP.phoneIntl}`}>{STORE_NAP.phoneDisplay}</a>
+          </p>
+        </div>
         <div className={styles.topBarRight}>
           <div className={styles.menuChoices} aria-label="Choose a menu">
             <Link

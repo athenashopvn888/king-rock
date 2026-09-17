@@ -136,7 +136,7 @@ function ItemCard({ title, accent, items, hiIdx, preset }: {
 const TICKER_SLIDES = [
   "🔥 King Rock — 1220b King St W, Toronto",
   "FLOWER TIERS - MENU CATEGORIES",
-  "Open Daily: 10:00 AM - 01:00 AM",
+  "Open 24 Hours Daily",
   "Pre-Rolls · Edibles · Vapes · Concentrates",
   "ALL SALES ARE FINAL",
   "DELIVERY MENU at kingrockcannabis.com/delivery",

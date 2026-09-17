@@ -28,12 +28,12 @@ export const RESOURCE_PAGES: ResourcePage[] = [
   {
     slug: "",
     title: "King Rock Resources",
-    seoTitle: "King Rock Resources | Liberty Village / Parkdale Menu And Visit Guides",
-    description: "King Rock resource pages for Liberty Village / Parkdale shoppers, with local visit planning, menu shortcuts, flower tier pricing, value shopping, pre-roll tips, and Native smokes prices.",
+    seoTitle: "King Rock Resources | King West & Liberty Village Menu And Visit Guides",
+    description: "King Rock resource pages for King West and Liberty Village shoppers, with local visit planning, menu shortcuts, flower tier pricing, value shopping, pre-roll tips, and Native smokes prices.",
     eyebrow: "King West Resource Hub",
-    intro: "A practical resource hub for King West, Liberty Village, and Parkdale shoppers. Use it to find the relevant menu section for flower, pre-rolls, edibles, THC vapes, concentrates, accessories, cigarettes, Native smokes, Backwoods, and grabba.",
+    intro: "A practical resource hub for King West and Liberty Village shoppers. Use it to find the relevant menu section for flower, pre-rolls, edibles, THC vapes, concentrates, accessories, cigarettes, Native smokes, Backwoods, and grabba.",
     cards: [
-      { title: "Local Visit Guide", href: "/resources/king-west-liberty-visit-guide", text: "Plan the stop around King St W, Liberty Village, Parkdale, Dufferin, Exhibition Place, Roncesvalles, and TTC routes." },
+      { title: "Store listing", href: "/", text: "Homepage NAP, 24/7 hours, map, and King West / Liberty Village walk-in cues." },
       { title: "Menu Guide", href: "/resources/menu-guide", text: "Choose the matching menu category before opening individual product listings." },
       { title: "Weed & Flower Guide", href: "/resources/weed-flower-guide", text: "Compare Exotic Weed, Premium Weed, AAA+ Weed, AA Weed and Budget Weed." },
       { title: "Value Guide", href: "/resources/value-guide", text: "A cleaner path for cheap weed, budget weed, and affordable flower searches." },
@@ -43,23 +43,23 @@ export const RESOURCE_PAGES: ResourcePage[] = [
       {
         heading: "Local Search, Useful Next Step",
         body: "King Rock is listed at 1220b King St W, Toronto, ON M6K 1G4. These resources work with the visit guide, not replace it. Start with the local page for address and visit context, then use the resource guides for menu decisions.",
-        bullets: ["visit guide: /weed-dispensary-toronto", "Local areas: King St W, Liberty Village, Parkdale, Dufferin, Exhibition Place, Roncesvalles, and TTC routes", "Store hours shown in the site data: Open Daily: 10:00 AM - 01:00 AM"]
+        bullets: ["store listing: homepage /", "how-to-reach extras: /visit", "Local areas: King St W, Liberty Village, Dufferin, Atlantic Avenue, Exhibition Place, and TTC 504 King", "Store hours: Open 24 Hours Daily"]
       },
       {
         heading: "Built Around Real Menu Choices",
-        body: "The pages are organized around common shopping questions shoppers often use: weed dispensary near Liberty Village / Parkdale, cannabis store Toronto, cheap weed, budget weed, pre-rolls, edibles, THC vapes, concentrates, Native cigarettes, Backwoods, and grabba."
+        body: "The pages are organized around common shopping questions shoppers often use: weed dispensary near Liberty Village, cannabis store King West, cheap weed, budget weed, pre-rolls, edibles, THC vapes, concentrates, Native cigarettes, Backwoods, and grabba."
       }
     ],
   },
   {
     slug: "king-west-liberty-visit-guide",
-    title: "King West, Liberty Village, And Parkdale Cannabis Visit Guide",
-    seoTitle: "King West, Liberty Village, And Parkdale Cannabis Visit Guide | King Rock",
-    description: "Local visit planning for King Rock at 1220b King St W, with King St W, Liberty Village, Parkdale, Dufferin, Exhibition Place, Roncesvalles, and TTC routes context, menu shortcuts, hours, and category paths.",
+    title: "King West And Liberty Village Cannabis Visit Guide",
+    seoTitle: "King West And Liberty Village Cannabis Visit Guide | King Rock",
+    description: "Local visit planning for King Rock at 1220b King St W, with King St W, Liberty Village, Dufferin, Atlantic Avenue, Exhibition Place, and TTC 504 King context, menu shortcuts, hours, and category paths.",
     eyebrow: "Visit Guide",
-    intro: "Use this page when the search starts local: weed dispensary near Liberty Village / Parkdale, cannabis store near 1220b King St W, or a quick menu check before visiting from King St W, Liberty Village, Parkdale, Dufferin, Exhibition Place, Roncesvalles, and TTC routes.",
+    intro: "Use this page when the search starts local: weed dispensary near Liberty Village, cannabis store near 1220b King St W, or a quick menu check before visiting from King West, Dufferin, Exhibition Place, or the Atlantic Avenue walk.",
     cards: [
-      { title: "Store Visit Page", href: "/weed-dispensary-toronto", text: "Use the main visit guide for address, directions, hours, and contact details." },
+      { title: "How to get here", href: "/visit", text: "Walk-in directions, 504 King, unit B, parking, and 19+ ID for 1220b King St W." },
       { title: "Cannabis And Weed Dispensary Guide", href: "/resources/cannabis-dispensary-vs-weed-dispensary", text: "Learn how common dispensary and cannabis store terms relate." },
       { title: "Menu Guide", href: "/resources/menu-guide", text: "Choose the product category before opening deep menu pages." },
       { title: "Value Guide", href: "/resources/value-guide", text: "Fast help for affordable flower and budget weed searches." }
@@ -71,12 +71,12 @@ export const RESOURCE_PAGES: ResourcePage[] = [
       },
       {
         heading: "Nearby Area Guide",
-        body: "King West shoppers may be coming from Liberty Village, Parkdale, Dufferin, Exhibition Place, or Roncesvalles, so the resource pages keep fast menu choices separate from local visit planning.",
-        bullets: ["King St W cannabis store area guide", "Liberty Village cannabis store area guide", "Parkdale cannabis store area guide", "Dufferin cannabis store area guide", "Exhibition Place cannabis store area guide", "TTC cannabis store area guide", "Roncesvalles cannabis store area guide"]
+        body: "King West shoppers may be coming from Liberty Village, Dufferin, Exhibition Place, or the Atlantic Avenue bridge, so the resource pages keep fast menu choices separate from local visit planning.",
+        bullets: ["King St W cannabis store area guide", "Liberty Village cannabis store area guide", "Dufferin cannabis store area guide", "Exhibition Place cannabis store area guide", "Atlantic Avenue walk guide", "TTC 504 King area guide"]
       },
       {
         heading: "Choose a Starting Point",
-        body: "If you need store details, start with /weed-dispensary-toronto. If you are comparing product types, start with the menu guide. If the trip is about Native smokes or cigarettes, start with the Native smokes page and then confirm the current category page."
+        body: "If you need store details, start with the homepage. If you need extra street-level transit and parking notes, use /visit. If you are comparing product types, start with the menu guide. If the trip is about Native smokes or cigarettes, start with the Native smokes page and then confirm the current category page."
       }
     ],
   },
@@ -103,9 +103,9 @@ export const RESOURCE_PAGES: ResourcePage[] = [
         heading: "Connecting the Words to King Rock",
         body: "King Rock serves adults 19+ in Toronto. This guide explains the vocabulary so shoppers can understand the different phrases they may see while looking for a nearby cannabis store.",
         link: {
-          title: "For King Rock store information and visiting details, see our Toronto weed dispensary page.",
-          href: "/weed-dispensary-toronto/",
-          text: "King Rock Toronto weed dispensary information",
+          title: "For King Rock store information, see the homepage listing at 1220b King St W.",
+          href: "/",
+          text: "King Rock King West homepage",
         },
       },
     ],
@@ -125,7 +125,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
       },
       {
         question: "Where can I find King Rock store information?",
-        answer: "Use the King Rock Toronto weed dispensary page for store information and visiting details.",
+        answer: "Use the King Rock homepage for store information, 24/7 hours, and the map on King West.",
       },
     ],
   },
@@ -140,17 +140,17 @@ export const RESOURCE_PAGES: ResourcePage[] = [
       { title: "Weed Flower Collections", href: "/resources/weed-flower-guide", text: "Explore all five King Rock Weed flower collections." },
       { title: "Pre-Rolls", href: "/resources/pre-roll-guide", text: "Use this for ready-to-smoke singles, packs, and quick-trip browsing." },
       { title: "Cigarettes", href: "/items/cigarettes", text: "Open the cigarette category for current Native smokes listings." },
-      { title: "Store Visit Page", href: "/weed-dispensary-toronto", text: "Return to the visit guide." }
+      { title: "How to get here", href: "/visit", text: "Return to the King West visit guide." }
     ],
     sections: [
       {
         heading: "Pick The Shelf First",
-        body: "For King West, Liberty Village, and Parkdale shoppers, a useful starting point depends on the category: flower shoppers can compare tiers, pre-roll shoppers can compare format, edible and vape shoppers can read product details, and cigarette shoppers can compare brand, style, and price.",
+        body: "For King West and Liberty Village shoppers, a useful starting point depends on the category: flower shoppers can compare tiers, pre-roll shoppers can compare format, edible and vape shoppers can read product details, and cigarette shoppers can compare brand, style, and price.",
         bullets: ["Flower, pre-rolls, edibles, THC vapes, concentrates, accessories, and cigarettes are easier to compare one category at a time.", "Use current menu categories for live product details.", "Use resources for shopping tips and local planning."]
       },
       {
         heading: "Nearby Areas Without The Mess",
-        body: "This page helps shoppers compare nearby areas and categories such as weed dispensary near Liberty Village / Parkdale, cannabis store Toronto, cheap weed near me, Native cigarettes, and THC vape menu while keeping the actual shopping plan clear."
+        body: "This page helps shoppers compare nearby areas and categories such as weed dispensary near Liberty Village, cannabis store King West, cheap weed near me, Native cigarettes, and THC vape menu while keeping the actual shopping plan clear."
       }
     ],
   },
@@ -162,7 +162,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
     eyebrow: "King Rock · Weed & Flower",
     intro: "King Rock brings five Weed flower collections together for shoppers who want to compare different parts of the selection: Exotic Weed, Premium Weed, AAA+ Weed, AA Weed and Budget Weed. Explore whichever collections interest you, or begin with King Rock's broader Toronto Weed selection.",
     cards: [
-      { title: "Explore King Rock Weed in Toronto", href: "/weed-dispensary-toronto/", text: "Begin with the broader King Rock Weed selection." },
+      { title: "How to get here", href: "/visit", text: "Begin with the King West walk-in reach guide." },
       { title: "Exotic Weed", href: "/exotic-weed", text: "Explore King Rock's Exotic Weed flower collection." },
       { title: "Premium Weed", href: "/premium-weed", text: "Browse King Rock's Premium Weed flower collection." },
       { title: "AAA+ Weed", href: "/aaa-weed", text: "Explore King Rock's AAA+ Weed flower collection." },
@@ -193,7 +193,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
   {
     slug: "value-guide",
     title: "King Rock Value Weed Guide",
-    seoTitle: "King Rock Value Weed Guide | Cheap Weed Near Liberty Village / Parkdale",
+    seoTitle: "King Rock Value Weed Guide | Cheap Weed Near Liberty Village",
     description: "A value shopping guide for King Rock, covering cheap weed, budget weed, AA flower, AAA+ deals, 6g tier math, and affordable menu choices.",
     eyebrow: "Value Guide",
     intro: "For King West and Liberty Village value shopping, start with Budget, AA, and AAA+ before comparing higher tiers or mixed categories.",
@@ -206,7 +206,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
     sections: [
       {
         heading: "Start With Budget, Then Move Up",
-        body: "If the search is cheap weed, budget weed, or affordable cannabis near Liberty Village / Parkdale, start with Budget and AA. If the trip can stretch a little, AAA+ gives shoppers another value lane with 3g and 6g deal logic."
+        body: "If the search is cheap weed, budget weed, or affordable cannabis near Liberty Village or King West, start with Budget and AA. If the trip can stretch a little, AAA+ gives shoppers another value lane with 3g and 6g deal logic."
       },
       {
         heading: "Compare Inside The Category",
@@ -233,7 +233,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
       },
       {
         heading: "Useful For Local Quick Stops",
-        body: "For King West, Liberty Village, and Parkdale shoppers, pre-rolls offer a direct category to check before heading through King St W, Liberty Village, Parkdale, Dufferin, Exhibition Place, Roncesvalles, and TTC routes. Use the current category page for current details."
+        body: "For King West and Liberty Village shoppers, pre-rolls offer a direct category to check before heading through King St W, Dufferin, Exhibition Place, and the Atlantic Avenue walk. Use the current category page for current details."
       }
     ],
   },
@@ -302,14 +302,14 @@ export const RESOURCE_PAGES: ResourcePage[] = [
     intro: "The resource section is organized around real shopping plans: local visit planning, category-by-category browsing, flower tier math, value shopping, pre-roll shortcuts, and cigarette price notes.",
     cards: [
       { title: "Resource Home", href: "/resources", text: "Start at the main resource hub." },
-      { title: "Local Visit Guide", href: "/resources/king-west-liberty-visit-guide", text: "Plan around King St W, Liberty Village, Parkdale, Dufferin, Exhibition Place, Roncesvalles, and TTC routes." },
+      { title: "How to get here", href: "/visit", text: "Plan around King St W, Liberty Village, Dufferin, Exhibition Place, and the 504 King streetcar." },
       { title: "Weed & Flower Guide", href: "/resources/weed-flower-guide", text: "Explore the five Weed flower collections." },
       { title: "Native Smokes Prices", href: "/resources/native-smokes", text: "Check brand and price notes." }
     ],
     sections: [
       {
         heading: "What Changed",
-        body: "The resources are written for King Rock and Liberty Village / Parkdale, Each page helps with a specific shopping task and points back to the matching menu category or visit guide."
+        body: "The resources are written for King Rock on King West and Liberty Village. Each page helps with a specific shopping task and points back to the matching menu category or visit guide."
       },
       {
         heading: "What Stayed Protected",

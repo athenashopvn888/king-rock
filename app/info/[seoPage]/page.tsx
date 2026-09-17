@@ -7,6 +7,7 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import { SEO_PAGES, getSeoPageBySlug } from "../../lib/seoPages";
 import { TIER_CONFIG } from "../../lib/products";
+import { STORE_NAP } from "../../lib/storeNap";
 import styles from "./seo.module.css";
 
 /* ── Generate all SEO pages ── */
@@ -28,7 +29,7 @@ export async function generateMetadata({
     title: page.title,
     description: page.metaDescription,
     alternates: {
-      canonical: `https://www.kingrockcannabis.com/info/${slug}`,
+      canonical: `${STORE_NAP.origin}/info/${slug}`,
     },
   };
 }
@@ -85,6 +86,7 @@ export default async function SeoLandingPage({
           ))}
 
           {/* Tier Grid */}
+          {!page.suppressTierGrid && (
           <div className={styles.section}>
             <h2 className={styles.sectionTitle}>Our Cannabis Menu — Five Tiers of Quality</h2>
             <div className={styles.tierGrid}>
@@ -105,13 +107,29 @@ export default async function SeoLandingPage({
               ))}
             </div>
           </div>
+          )}
 
           {/* Map */}
           <div className={styles.section}>
             <h2 className={styles.sectionTitle}>Find Us</h2>
+            <p className={styles.sectionBody}>
+              {STORE_NAP.addressLine} · {STORE_NAP.hoursLabel} · {STORE_NAP.ageLine}
+            </p>
             <div className={styles.mapWrap}>
+              <iframe
+                title="Map of King Rock Cannabis at 1220b King St W"
+                src={STORE_NAP.mapEmbedUrl}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
             <div className={styles.visitBtns}>
+              <Link href="/visit" className={styles.visitBtn}>
+                How to get here
+              </Link>
+              <a href={`tel:${STORE_NAP.phoneIntl}`} className={styles.visitBtn}>
+                Call {STORE_NAP.phoneDisplay}
+              </a>
             </div>
           </div>
 

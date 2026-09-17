@@ -2,53 +2,52 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
 import AgeGate from "./components/AgeGate";
+import JsonLd from "./components/JsonLd";
+import {
+  STORE_NAP,
+  HOME_TITLE,
+  HOME_DESCRIPTION,
+  cannabisStoreJsonLd,
+} from "./lib/storeNap";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.kingrockcannabis.com"),
+  metadataBase: new URL(STORE_NAP.origin),
   title: {
-    default: "King Rock Cannabis | Toronto Dispensary",
+    default: HOME_TITLE,
     template: "%s | King Rock",
   },
-  description:
-    "King Rock is a Toronto cannabis dispensary on King St W with adult 19+ store info and category browsing for flower, pre-rolls, vapes, edibles, concentrates, and accessories. Open Daily: 10:00 AM - 01:00 AM.",
+  description: HOME_DESCRIPTION,
   keywords: [
-    "cannabis dispensary Toronto",
-    "weed store Toronto",
-    "exotic flower Toronto",
-    "premium cannabis",
-    "King Rock",
-    "cheap weed Toronto",
-    "dispensary near me",
-    "THC flower",
-    "indica sativa hybrid",
-    "edibles Toronto",
-    "vapes",
-    "pre-rolls",
-    "native cigarettes Toronto",
-    "weed store west Toronto",
+    "King West dispensary",
+    "Liberty Village cannabis",
+    "King Rock Cannabis",
+    "weed near King and Dufferin",
+    "1220b King walk-in",
+    "King Street West cannabis",
+    "Liberty Village weed store",
+    "Exhibition Place dispensary",
+    "adults 19+",
   ],
   openGraph: {
     type: "website",
     locale: "en_CA",
-    url: "https://www.kingrockcannabis.com",
+    url: STORE_NAP.origin,
     siteName: "King Rock",
-    title: "King Rock Premium Toronto Cannabis Dispensary",
-    description:
-      "Browse flower tiers and menu categories for King Rock at 1220b King St W. Open Daily: 10:00 AM - 01:00 AM.",
+    title: HOME_TITLE,
+    description: HOME_DESCRIPTION,
     images: [
       {
         url: "https://www.kingrockcannabis.com/wp-content/uploads/2026/04/46Oi5.jpg",
         width: 1200,
         height: 630,
-        alt: "King Rock Premium Cannabis Dispensary Toronto",
+        alt: "King Rock King West cannabis dispensary",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "King Rock Toronto's Uplifting Dispensary",
-    description:
-      "Browse current menu categories. Open Daily: 10:00 AM - 01:00 AM at 1220b King St W, Toronto.",
+    title: HOME_TITLE,
+    description: HOME_DESCRIPTION,
     images: [
       "https://www.kingrockcannabis.com/wp-content/uploads/2026/04/46Oi5.jpg",
     ],
@@ -65,58 +64,10 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://www.kingrockcannabis.com",
+    canonical: STORE_NAP.origin,
   },
   verification: {
     // google: "your-google-verification-code",
-  },
-};
-
-/* JSON-LD Structured Data */
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Store",
-  additionalType: "https://schema.org/Store",
-  "@id": "https://www.kingrockcannabis.com",
-  name: "King Rock",
-  description:
-    "Cannabis dispensary at 1220b King St W in Toronto, ON. Shop exotic, premium, AAA+, AA, and budget flower tiers plus edibles, prerolls, and vapes. Open Daily: 10:00 AM - 01:00 AM.",
-  url: "https://www.kingrockcannabis.com",
-  telephone: "+14377809691",
-  image: "https://www.kingrockcannabis.com/wp-content/uploads/2026/04/7Clmh.jpg",
-  priceRange: "$3 - $12/g",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "1220b King St W",
-    addressLocality: "Toronto",
-    addressRegion: "ON",
-    postalCode: "M6K 1G4",
-    addressCountry: "CA",
-  },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: 43.6388839,
-    longitude: -79.428146,
-  },
-  openingHoursSpecification: [
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday",
-        "Sunday",
-      ],
-      opens: "10:00",
-      closes: "01:00",
-    },
-  ],
-  areaServed: {
-    "@type": "City",
-    name: "Toronto",
   },
 };
 
@@ -125,23 +76,22 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const nap = STORE_NAP;
+
   return (
     <html lang="en">
       <head>
         <meta name="geo.region" content="CA-ON" />
-        <meta name="geo.placename" content="Toronto" />
-        <meta name="geo.position" content="43.6388839;-79.428146" />
-        <meta name="ICBM" content="43.6388839, -79.428146" />
+        <meta name="geo.placename" content="King West, Toronto" />
+        <meta name="geo.position" content={`${nap.latitude};${nap.longitude}`} />
+        <meta name="ICBM" content={`${nap.latitude}, ${nap.longitude}`} />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
           href="https://fonts.gstatic.com"
           crossOrigin="anonymous"
         />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
+        <JsonLd data={cannabisStoreJsonLd()} />
         <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-Z0S71M8ZV8"
@@ -158,6 +108,10 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <noscript>
+          King Rock Cannabis · {nap.addressLine} · {nap.phoneDisplay} ·{" "}
+          {nap.hoursLabel} · {nap.ageLine}
+        </noscript>
         <Link className="deliveryAnnouncement" href="/delivery">
           NEW DELIVERY MENU IS HERE — CLICK TO EXPLORE
         </Link>

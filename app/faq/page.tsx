@@ -4,9 +4,9 @@ import Footer from "../components/Footer";
 import styles from "./faq.module.css";
 
 export const metadata: Metadata = {
-  title: "FAQ King Rock | Toronto Dispensary Questions",
+  title: { absolute: "FAQ | King West & Liberty Village — King Rock" },
   description:
-    "Frequently asked questions about King Rock in Toronto. Hours, location, products, pricing, bundle offers, and everything you need to know before visiting.",
+    "Hours, parking, 504 King, 19+ ID, and walk-in questions for King Rock Cannabis at 1220b King St W. Adults 19+. Open 24 Hours Daily.",
   alternates: {
     canonical: "https://www.kingrockcannabis.com/faq",
   },
@@ -18,23 +18,23 @@ const FAQ_CATEGORIES = [
     faqs: [
       {
         q: "Where is King Rock located?",
-        a: "We are located at 1220b King St W, Toronto, ON M6K 1G4. We're easily accessible by TTC bus routes and close to major highways like the 401.",
+        a: "King Rock Cannabis is at 1220b King St W, Toronto, ON M6K 1G4, on the King West / Liberty Village corridor at Dufferin / Atlantic. Look for unit B on the 1220 King frontage. It is a walk-in pin for this stretch of King — not a downtown core shop further east.",
       },
       {
         q: "What are your hours?",
-        a: "We are open daily from 10:00 AM to 01:00 AM. Walk in anytime no appointment needed.",
+        a: "We are open 24 hours daily. Walk in anytime — no appointment needed. Adults 19+ with government-issued photo ID.",
       },
       {
         q: "Is there parking nearby?",
-        a: "Yes. Free street parking is listed nearby on surrounding streets in the evenings. We're also easily accessible by local transit.",
+        a: "Paid street parking on King Street West is the usual curb pattern. Follow posted signs; restrictions change by block and hour. When King West nightlife fills the frontage, loop Liberty Village Green P around Atlantic, Hanna, East Liberty, or Jefferson. The visit page has the parking notes.",
       },
       {
-        q: "How far are you from west Toronto?",
-        a: "We're just 5 minutes from the highways and central transit routes. We are centrally located and easy to reach.",
+        q: "How far are you from Liberty Village?",
+        a: "Liberty Village sits north of the rail corridor. Walk Atlantic Avenue south across the pedestrian bridge, then a short hop to King Street West. Address, 24/7 hours, and the map are on the homepage. Extra how-to-reach detail is on /visit.",
       },
       {
         q: "What's the best way to get to King Rock?",
-        a: "We're easily accessible by car, bus, or foot. We are easily accessible by car, local transit, or bus routes. Free parking is listed on surrounding streets.",
+        a: "Use the 504 King streetcar along King Street West, the 29 / 929 Dufferin buses at King & Dufferin, or walk down from Liberty Village via the Atlantic Avenue bridge. Exhibition GO and Dufferin Gate Loop are transfer landmarks south of the tracks. Full transit and parking notes are on the visit page.",
       },
     ],
   },
@@ -97,7 +97,7 @@ const FAQ_CATEGORIES = [
     faqs: [
       {
         q: "Do I need an appointment?",
-        a: "No! King Rock is walk-in only. Just show up anytime we are open daily from 10:00 AM to 01:00 AM.",
+        a: "No! King Rock is walk-in only. Just show up anytime — we are open 24 hours daily.",
       },
       {
         q: "Can I order online?",
@@ -105,7 +105,7 @@ const FAQ_CATEGORIES = [
       },
       {
         q: "Do you offer delivery?",
-        a: "Delivery is coming soon! Visit our delivery page to sign up for email notifications when we launch our delivery service.",
+        a: "Delivery is a separate neighbourhood-scoped service, not city-wide Toronto coverage. Use the delivery URL for King West / Liberty Village / Exhibition / Dufferin Gate range. The dispatcher confirms whether an address is in range. Walk-in remains 24/7 at 1220b King St W.",
       },
       {
         q: "What payment methods do you accept?",
@@ -168,8 +168,8 @@ export default function FAQPage() {
         <div className={styles.content}>
           <h1 className={styles.pageTitle}>Frequently Asked Questions</h1>
           <p className={styles.pageSubtitle}>
-            Everything you need to know about King Rock Toronto&apos;s premium
-            dispensary at 1220b King St W in Toronto.
+            Walk-in questions for King Rock Cannabis at 1220b King St W on
+            King West / Liberty Village. Adults 19+. Open 24 Hours Daily.
           </p>
 
           {FAQ_CATEGORIES.map((cat) => (
@@ -187,8 +187,8 @@ export default function FAQPage() {
           <div className={styles.ctaSection}>
             <h2 className={styles.ctaTitle}>Still have questions?</h2>
             <p className={styles.ctaText}>
-              Call us at <strong>(437) 780-9691</strong> or visit us at 1220b
-              King St W, Toronto.
+              Call us at <strong>+1 (437) 780-9691</strong> or visit us at 1220b
+              King St W, Toronto, ON M6K 1G4. Look for unit B. Open 24 Hours Daily.
             </p>
           </div>
         </div>

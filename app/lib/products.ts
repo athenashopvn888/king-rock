@@ -196,7 +196,7 @@ export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
     seoIntro:
       "Browse the full cannabis edibles menu at King Rock on King St W, Toronto. We carry THC gummies, chocolates, drinks, and more from current menu brands.",
     seoDescription:
-      "Browse cannabis edibles such as THC-infused gummies, chocolates, beverages, and baked goods on the current King Rock menu. Visit us at 1220b King St W; we are open daily: 10:00 AM - 01:00 AM.",
+      "Browse cannabis edibles such as THC-infused gummies, chocolates, beverages, and baked goods on the current King Rock menu. Visit us at 1220b King St W; we are open 24 hours daily.",
     faqs: [
       {
         q: "What cannabis edibles do you carry?",
@@ -208,7 +208,7 @@ export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
       },
       {
         q: "Can I buy edibles at King Rock?",
-        a: "Yes! Visit us at 1220b King St W, Toronto. We're open daily from 10:00 AM to 01:00 AM with a full edibles selection in store.",
+        a: "Yes! Visit us at 1220b King St W, Toronto. We're open 24 hours daily with a full edibles selection in store.",
       },
     ],
   },
@@ -273,7 +273,7 @@ export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
     seoIntro:
       "Pre-rolled cannabis joints at King Rock, Toronto. Singles, multi-packs, and infused pre-rolls ready to light up.",
     seoDescription:
-      "Skip the rolling and grab a pre-roll from King Rock in Toronto. We carry singles, multi-packs, and infused pre-rolls from premium flower. Whether you want a quick smoke or a party pack, our pre-roll selection has something for everyone. Visit us at 1220b King St W we are open daily: 10:00 AM - 01:00 AM.",
+      "Skip the rolling and grab a pre-roll from King Rock in Toronto. We carry singles, multi-packs, and infused pre-rolls from premium flower. Whether you want a quick smoke or a party pack, our pre-roll selection has something for everyone. Visit us at 1220b King St W — open 24 hours daily.",
     faqs: [
       {
         q: "What pre-rolls do you carry?",
@@ -332,7 +332,7 @@ export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
     icon: "CG",
     seoTitle: "Native Cigarette Menu King West",
     seoIntro: "Browse Native cigarette brands, pack styles and listed prices at King Rock.",
-    seoDescription: "The cigarette menu at King Rock lists cigarette brands, styles and prices for King West shoppers. Visit 1220b King St W. Open daily 10:00 AM–1:00 AM.",
+    seoDescription: "The cigarette menu at King Rock lists cigarette brands, styles and prices for King West shoppers. Visit 1220b King St W. Open 24 hours daily.",
     faqs: [
       { q: "Does King Rock list Native cigarettes?", a: "Yes. Compare listed Native cigarette brands, styles and prices from King Rock." },
       { q: "What cigarette styles are listed?", a: "The selection includes full, light and menthol styles across several listed brands." },

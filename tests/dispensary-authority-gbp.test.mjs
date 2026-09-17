@@ -19,7 +19,7 @@ test("resource links to the protected owner and omits workflow and commercial cl
   const start = data.indexOf(`slug: "${slug}"`);
   const end = data.indexOf('slug: "menu-guide"', start);
   const resource = data.slice(start, end);
-  assert.match(resource, /href: "\/weed-dispensary-toronto\/"/);
+  assert.match(resource, /href: "\/"/);
   assert.doesNotMatch(resource, /local intent|search intent|authority page|support page|canonical|Business Profile|entity alignment|primary destination|internal link/i);
   assert.doesNotMatch(resource, /price|deal|stock|availability|order now|buy now|delivery/i);
   assert.equal(data.split(`href: "/resources/${slug}"`).length - 1, 1);

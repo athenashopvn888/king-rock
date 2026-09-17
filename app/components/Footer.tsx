@@ -1,7 +1,10 @@
 import Link from "next/link";
 import styles from "./Footer.module.css";
+import { STORE_NAP } from "../lib/storeNap";
 
 export default function Footer() {
+  const nap = STORE_NAP;
+
   return (
     <footer className={styles.footer}>
       <div className={styles.inner}>
@@ -10,12 +13,11 @@ export default function Footer() {
           <div className={styles.col}>
             <div className={styles.brand}>KING ROCK</div>
             <p className={styles.desc}>
-              Your Local Cannabis Dispensary At 1220b King St W, Toronto. Visit
-              King Rock For Premium Flower, Edibles, Vapes &amp; More. Open
-              daily: 10:00 AM - 01:00 AM.
+              Walk-in cannabis shop at {nap.addressLine}, on the King West /
+              Liberty Village corridor. {nap.ageLine}. {nap.hoursLabel}.
             </p>
             <div className={styles.buttons}>
-              <a href="tel:+14377809691" className={styles.btnPrimary}>
+              <a href={`tel:${nap.phoneIntl}`} className={styles.btnPrimary}>
                 Call Now
               </a>
             </div>
@@ -26,23 +28,23 @@ export default function Footer() {
             <h3 className={styles.colTitle}>Contact Info</h3>
             <div className={styles.infoBlock}>
               <span className={styles.infoLabel}>Address:</span>
-              <span>1220b King St W</span>
-              <span>Toronto, ON M6K 1G4</span>
+              <span>{nap.streetAddress}</span>
+              <span>
+                {nap.addressLocality}, {nap.addressRegion} {nap.postalCode}
+              </span>
               <span>Canada</span>
             </div>
             <div className={styles.infoBlock}>
               <span className={styles.infoLabel}>Phone:</span>
               <span>
-                <a href="tel:+14377809691" style={{ color: "inherit" }}>
-                  (437) 780-9691
+                <a href={`tel:${nap.phoneIntl}`} style={{ color: "inherit" }}>
+                  {nap.phoneDisplay}
                 </a>
               </span>
             </div>
             <div className={styles.infoBlock}>
               <span className={styles.infoLabel}>Hours:</span>
-              <span className={styles.highlight}>
-                Open Daily: 10:00 AM - 01:00 AM
-              </span>
+              <span className={styles.highlight}>{nap.hoursLabel}</span>
             </div>
           </div>
 
@@ -51,6 +53,7 @@ export default function Footer() {
             <h3 className={styles.colTitle}>Quick Links</h3>
             <nav className={styles.links}>
               <Link href="/">Home</Link>
+              <Link href="/visit">Visit / How to get here</Link>
               <Link href="/exotic-weed">Exotic Weed</Link>
               <Link href="/premium-weed">Premium Weed</Link>
               <Link href="/aaa-weed">AAA+ Weed</Link>
@@ -58,14 +61,14 @@ export default function Footer() {
               <Link href="/budget-weed">Budget Weed</Link>
               <Link href="/items/edibles">Edibles</Link>
               <Link href="/items/cigarettes">Cigarettes</Link>
-<Link href="/items/vapes">Nicotine Vapes</Link>
+              <Link href="/items/vapes">Nicotine Vapes</Link>
               <Link href="/faq">FAQ</Link>
               <Link href="/delivery">DELIVERY MENU</Link>
               <Link href="/info/king-west-weed-dispensary">
-                Toronto Dispensary
+                King West Dispensary
               </Link>
-              <Link href="/info/cheap-weed-king-west">Cheap Weed Toronto</Link>
-<Link href="/info/native-cigarettes-king-west">
+              <Link href="/info/cheap-weed-king-west">Value Weed King West</Link>
+              <Link href="/info/native-cigarettes-king-west">
                 Native Cigarettes
               </Link>
               <Link href="/info/nicotine-vapes-king-west">Nicotine Vapes King West</Link>
@@ -73,7 +76,7 @@ export default function Footer() {
                 Liberty Village Weed Store
               </Link>
               <Link href="/weed-dispensary-toronto/">
-                King Rock Weed Dispensary in Toronto
+                King Rock store notes
               </Link>
               <Link href="/contact">Contact Us</Link>
               <Link href="/resources">Resources</Link>
@@ -83,7 +86,7 @@ export default function Footer() {
 
         <div className={styles.bottom}>
           <p>
-            {new Date().getFullYear()} King Rock. Must be 19+ to enter. Please
+            {new Date().getFullYear()} King Rock Cannabis. Must be 19+ to enter. Please
             review posted store and menu information.
           </p>
         </div>

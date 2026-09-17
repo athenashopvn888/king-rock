@@ -49,7 +49,7 @@ export function GBPLandingPage() {
     "@context": "https://schema.org",
     "@type": "Store",
     "name": gbpLocation.storeName,
-    "url": `https://${gbpLocation.domain}/${gbpLocation.slug}/`,
+    "url": `https://${gbpLocation.domain}/`,
     "telephone": gbpLocation.phone,
     "address": {
       "@type": "PostalAddress",
@@ -85,15 +85,21 @@ export function GBPLandingPage() {
 
       {/* Hero Header */}
       <header className={styles.hero}>
-        <h1 className={styles.h1}>{gbpLocation.storeName} — Weed Dispensary in {gbpLocation.city}</h1>
-        <p className={styles.heroTagline}>Serving {gbpLocation.city} & Nearby Neighborhoods</p>
+        <h1 className={styles.h1}>{gbpLocation.storeName} — {gbpLocation.neighborhood} walk-in</h1>
+        <p className={styles.heroTagline}>Store listing is the King Rock homepage. This city URL is archived.</p>
       </header>
 
       {/* Call to Actions */}
       <div className={styles.btnRow}>
-        <a href={gbpLocation.menuUrl} className={`${styles.btn} ${styles.btnPrimary}`}>
+        <Link href="/" className={`${styles.btn} ${styles.btnPrimary}`}>
+          King Rock homepage
+        </Link>
+        <Link href="/visit" className={`${styles.btn} ${styles.btnSecondary}`}>
+          How to get here
+        </Link>
+        <Link href="/exotic-weed" className={`${styles.btn} ${styles.btnSecondary}`}>
           View Menu
-        </a>
+        </Link>
         <a href={`tel:${gbpLocation.phoneIntl}`} className={`${styles.btn} ${styles.btnSecondary}`}>
           Call Store
         </a>
@@ -126,14 +132,11 @@ export function GBPLandingPage() {
       <section className={styles.section}>
         <h2 className={styles.h2}>Plan a Visit to {gbpLocation.storeName}</h2>
         <p className={styles.infoText}>
-          Use this page to confirm the basics before visiting {gbpLocation.storeName} near {gbpLocation.neighborhood}. The store page brings together the address, phone number, menu links, nearby-area context, and adult 19+ shopping notes for customers comparing cannabis stores around {gbpLocation.city}.
+          This city URL is archived. The King Rock homepage is the store listing for {gbpLocation.storeName} near {gbpLocation.neighborhood}: address, phone, 24/7 hours, and the map. Extra street-level transit and parking notes are on the{" "}
+          <Link href="/visit">how-to-reach page</Link>.
         </p>
         <p className={styles.infoBlock}>
-          Helpful local reference points include {landmarkList}. Customers also use this page when planning from {nearbyAreaList}.
-        </p>
-        <p className={styles.infoText}>
-          For a fuller local overview, read the{" "}
-          <Link href="/">Home</Link>.
+          Helpful local reference points include {landmarkList}. Neighbourhood cues also include {nearbyAreaList}.
         </p>
       </section>
 
@@ -226,7 +229,7 @@ export function GBPLandingPage() {
           <div className={styles.faqItem}>
             <h3 className={styles.faqQuestion}>How should I plan a visit to {gbpLocation.storeName}?</h3>
             <p className={styles.faqAnswer}>
-              Check the store address, phone number, hours, menu links, and nearby-area notes on this page before visiting. {gbpLocation.storeName} serves adults 19+ near {gbpLocation.neighborhood} and surrounding {gbpLocation.city} areas.
+              Use the King Rock homepage for address, phone, 24/7 hours, and the map. Extra transit and parking notes are on the how-to-reach page. {gbpLocation.storeName} serves adults 19+ near {gbpLocation.neighborhood}.
             </p>
           </div>
           <div className={styles.faqItem}>
