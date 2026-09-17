@@ -48,8 +48,22 @@ test("homepage FAQPage JSON-LD mirrors visible FAQs and corridor copy", () => {
   assert.doesNotMatch(home, /10:00 AM - 01:00 AM/);
 });
 
-test("/visit is a how-to-reach page with transit, parking, unit B, and full NAP", () => {
+test("homepage is the visit hub and GBP website target", () => {
+  assert.match(home, /id="visit"/);
+  assert.match(home, /Visit King Rock at 1220b King St W/);
+  assert.match(home, /mapEmbedUrl/);
+  assert.match(home, /mapSearchUrl/);
+  assert.match(home, /504 King/);
+  assert.match(home, /Open 24 Hours Daily|hoursLabel/);
+  assert.match(home, /This homepage is the store listing/);
+  assert.match(nap, /GBP_WEBSITE = STORE_NAP\.origin/);
+  assert.match(layout, /url: STORE_NAP\.origin|url: nap\.origin|canonical: STORE_NAP\.origin/);
+  assert.doesNotMatch(nap, /GBP_WEBSITE[^\n]*\/visit/);
+});
+
+test("/visit is a supporting how-to-reach page with transit, parking, unit B, and full NAP", () => {
   assert.match(visit, /How to Get to King Rock on King West/);
+  assert.match(visit, /supporting how-to-reach page/);
   assert.match(visit, /504 King/);
   assert.match(visit, /Atlantic Avenue/);
   assert.match(visit, /unit B/);
@@ -67,9 +81,10 @@ test("/location aliases to /visit", () => {
   assert.match(nextConfig, /source: "\/location", destination: "\/visit", permanent: true/);
 });
 
-test("city owner URL is noindexed and canonicalized to /visit", () => {
+test("city owner URL is noindexed and canonicalized to the homepage", () => {
   assert.match(ownerPage, /index: false/);
-  assert.match(ownerPage, /canonical: `\$\{STORE_NAP\.origin\}\/visit`/);
+  assert.match(ownerPage, /canonical: STORE_NAP\.origin/);
+  assert.doesNotMatch(ownerPage, /origin\}\/visit/);
   assert.match(sitemap, /\$\{BASE\}\/visit/);
   assert.match(sitemap, /priority: 0\.2/);
 });
@@ -96,7 +111,9 @@ test("primary host is www.kingrockcannabis.com with loser-host 308s", () => {
   assert.match(proxy, /www\.kingrockcannabis\.com/);
   assert.match(proxy, /kingrockcannabis\.ca/);
   assert.match(proxy, /308/);
-  assert.doesNotMatch(layout, /kingrockcannabis\.ca/);
+  assert.match(domainDoc, /GBP website/);
+  assert.match(domainDoc, /homepage/);
+  assert.match(domainDoc, /Do not point Google Business Profile at `\/visit`/);
 });
 
 test("standalone King Rock copy never names sister shops or old hours lock", () => {

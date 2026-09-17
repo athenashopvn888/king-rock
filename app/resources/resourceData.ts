@@ -33,7 +33,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
     eyebrow: "King West Resource Hub",
     intro: "A practical resource hub for King West and Liberty Village shoppers. Use it to find the relevant menu section for flower, pre-rolls, edibles, THC vapes, concentrates, accessories, cigarettes, Native smokes, Backwoods, and grabba.",
     cards: [
-      { title: "Local Visit Guide", href: "/visit", text: "How to reach 1220b King St W: 504 King, Liberty Village walk, unit B, parking, and 19+ ID." },
+      { title: "Store listing", href: "/", text: "Homepage NAP, 24/7 hours, map, and King West / Liberty Village walk-in cues." },
       { title: "Menu Guide", href: "/resources/menu-guide", text: "Choose the matching menu category before opening individual product listings." },
       { title: "Weed & Flower Guide", href: "/resources/weed-flower-guide", text: "Compare Exotic Weed, Premium Weed, AAA+ Weed, AA Weed and Budget Weed." },
       { title: "Value Guide", href: "/resources/value-guide", text: "A cleaner path for cheap weed, budget weed, and affordable flower searches." },
@@ -43,7 +43,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
       {
         heading: "Local Search, Useful Next Step",
         body: "King Rock is listed at 1220b King St W, Toronto, ON M6K 1G4. These resources work with the visit guide, not replace it. Start with the local page for address and visit context, then use the resource guides for menu decisions.",
-        bullets: ["visit guide: /visit", "Local areas: King St W, Liberty Village, Dufferin, Atlantic Avenue, Exhibition Place, and TTC 504 King", "Store hours: Open 24 Hours Daily"]
+        bullets: ["store listing: homepage /", "how-to-reach extras: /visit", "Local areas: King St W, Liberty Village, Dufferin, Atlantic Avenue, Exhibition Place, and TTC 504 King", "Store hours: Open 24 Hours Daily"]
       },
       {
         heading: "Built Around Real Menu Choices",
@@ -76,7 +76,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
       },
       {
         heading: "Choose a Starting Point",
-        body: "If you need store details, start with /visit. If you are comparing product types, start with the menu guide. If the trip is about Native smokes or cigarettes, start with the Native smokes page and then confirm the current category page."
+        body: "If you need store details, start with the homepage. If you need extra street-level transit and parking notes, use /visit. If you are comparing product types, start with the menu guide. If the trip is about Native smokes or cigarettes, start with the Native smokes page and then confirm the current category page."
       }
     ],
   },
@@ -103,9 +103,9 @@ export const RESOURCE_PAGES: ResourcePage[] = [
         heading: "Connecting the Words to King Rock",
         body: "King Rock serves adults 19+ in Toronto. This guide explains the vocabulary so shoppers can understand the different phrases they may see while looking for a nearby cannabis store.",
         link: {
-          title: "For King Rock store information and visiting details, see the King West visit guide.",
-          href: "/visit",
-          text: "King Rock King West how-to-reach page",
+          title: "For King Rock store information, see the homepage listing at 1220b King St W.",
+          href: "/",
+          text: "King Rock King West homepage",
         },
       },
     ],
@@ -125,7 +125,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
       },
       {
         question: "Where can I find King Rock store information?",
-        answer: "Use the King Rock visit page for store information and how-to-reach details on King West.",
+        answer: "Use the King Rock homepage for store information, 24/7 hours, and the map on King West.",
       },
     ],
   },

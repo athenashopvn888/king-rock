@@ -43,6 +43,9 @@ export const HOME_TITLE = "King Rock | King West & Liberty Village Cannabis";
 export const HOME_DESCRIPTION =
   "Walk-in cannabis dispensary at 1220b King St W for King West and Liberty Village. Unit B on King. Adults 19+. Open 24 Hours Daily. Call +1 (437) 780-9691.";
 
+/** GBP website for this single-location domain is always the homepage — never /visit. */
+export const GBP_WEBSITE = STORE_NAP.origin;
+
 /** Visible homepage FAQs — FAQPage JSON-LD must stay in lockstep with these strings. */
 export const HOME_FAQS = [
   {
@@ -51,7 +54,7 @@ export const HOME_FAQS = [
   },
   {
     q: "Where is King Rock relative to Liberty Village?",
-    a: "The shop is at 1220b King St W, Toronto, ON M6K 1G4, on King Street West at the Dufferin / Atlantic pinch. From Liberty Village, walk south on Atlantic Avenue across the pedestrian bridge over the rail corridor, then a short hop to King. Call +1 (437) 780-9691. How-to-reach notes live on the visit page.",
+    a: "The shop is at 1220b King St W, Toronto, ON M6K 1G4, on King Street West at the Dufferin / Atlantic pinch. From Liberty Village, walk south on Atlantic Avenue across the pedestrian bridge over the rail corridor, then a short hop to King. Call +1 (437) 780-9691. Address, 24/7 hours, and the map are on this homepage. Extra street-level notes are on the supporting /visit page.",
   },
   {
     q: "What can I browse before a King West walk-in?",

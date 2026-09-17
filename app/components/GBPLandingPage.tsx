@@ -49,7 +49,7 @@ export function GBPLandingPage() {
     "@context": "https://schema.org",
     "@type": "Store",
     "name": gbpLocation.storeName,
-    "url": `https://${gbpLocation.domain}/${gbpLocation.slug}/`,
+    "url": `https://${gbpLocation.domain}/`,
     "telephone": gbpLocation.phone,
     "address": {
       "@type": "PostalAddress",
@@ -86,17 +86,20 @@ export function GBPLandingPage() {
       {/* Hero Header */}
       <header className={styles.hero}>
         <h1 className={styles.h1}>{gbpLocation.storeName} — {gbpLocation.neighborhood} walk-in</h1>
-        <p className={styles.heroTagline}>How to reach 1220b King St W. City-wide Toronto pages are demoted — use the visit guide.</p>
+        <p className={styles.heroTagline}>Store listing is the King Rock homepage. This city URL is archived.</p>
       </header>
 
       {/* Call to Actions */}
       <div className={styles.btnRow}>
-        <Link href="/visit" className={`${styles.btn} ${styles.btnPrimary}`}>
+        <Link href="/" className={`${styles.btn} ${styles.btnPrimary}`}>
+          King Rock homepage
+        </Link>
+        <Link href="/visit" className={`${styles.btn} ${styles.btnSecondary}`}>
           How to get here
         </Link>
-        <a href={gbpLocation.menuUrl} className={`${styles.btn} ${styles.btnSecondary}`}>
+        <Link href="/exotic-weed" className={`${styles.btn} ${styles.btnSecondary}`}>
           View Menu
-        </a>
+        </Link>
         <a href={`tel:${gbpLocation.phoneIntl}`} className={`${styles.btn} ${styles.btnSecondary}`}>
           Call Store
         </a>
@@ -135,8 +138,8 @@ export function GBPLandingPage() {
           Helpful local reference points include {landmarkList}. Customers also use this page when planning from {nearbyAreaList}.
         </p>
         <p className={styles.infoText}>
-          For street-level directions, transit, parking, and unit B notes, use the{" "}
-          <Link href="/visit">King West visit guide</Link>.
+          Use the King Rock homepage for the store listing (address, 24/7 hours, map). For extra street-level transit and parking notes, see the{" "}
+          <Link href="/visit">how-to-reach page</Link>.
         </p>
       </section>
 

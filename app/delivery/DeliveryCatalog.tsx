@@ -132,7 +132,7 @@ export default function Catalog() {
       <main className="delivery-page" id="top">
         <section className="store-hero qlc-editorial-hero delivery-brand-hero">
           <Image src="/storeFavicon.webp" alt={`${store.name} logo`} width={240} height={240} priority />
-          <div className="store-hero-copy"><p>King Rock · Neighbourhood delivery</p><h1>Cannabis Delivery for King West &amp; Liberty Village</h1><span>Delivery from King Rock is scoped to King West, Liberty Village, Exhibition Place, and the Dufferin Gate area — not a city-wide Toronto delivery war. Adults 19+. The dispatcher confirms whether an address is in range. Walk-in is 24/7 at 1220b King St W. How-to-reach notes are on /visit.</span></div>
+          <div className="store-hero-copy"><p>King Rock · Neighbourhood delivery</p><h1>Cannabis Delivery for King West &amp; Liberty Village</h1><span>Delivery from King Rock is scoped to King West, Liberty Village, Exhibition Place, and the Dufferin Gate area — not a city-wide Toronto delivery war. Adults 19+. The dispatcher confirms whether an address is in range. Walk-in is 24/7 at 1220b King St W on the homepage. Extra how-to-reach notes are on /visit.</span></div>
         </section>
         <noscript>
           <ul>

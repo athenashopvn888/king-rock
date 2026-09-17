@@ -238,7 +238,7 @@ export default function HomePage() {
             <div className={styles.homeMenuActions} aria-label="Choose a King Rock menu">
               <Link href="/exotic-weed" className={styles.homeMenuCta}>STORE MENU</Link>
               <Link href="/delivery" className={`${styles.homeMenuCta} ${styles.homeDeliveryCta}`}>DELIVERY MENU</Link>
-              <Link href="/visit" className={`${styles.homeMenuCta} ${styles.homeVisitCta}`}>How to get here</Link>
+              <Link href="#visit" className={`${styles.homeMenuCta} ${styles.homeVisitCta}`}>Find us · 24/7</Link>
             </div>
           </div>
 
@@ -261,6 +261,83 @@ export default function HomePage() {
                 </div>
               </Link>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* -- HOMEPAGE VISIT HUB (GBP website target lives here, not /visit) -- */}
+      <section className={styles.visitHub} id="visit" aria-labelledby="visit-hub-heading">
+        <div className={styles.container}>
+          <p className={styles.visitHubEyebrow}>
+            {STORE_NAP.neighborhood} · {STORE_NAP.ageLine} · Walk-in
+          </p>
+          <h2 className={styles.visitHubTitle} id="visit-hub-heading">
+            Visit King Rock at 1220b King St W
+          </h2>
+          <p className={styles.visitHubLead}>
+            King Rock Cannabis is the 24/7 walk-in on King West at the Dufferin
+            / Atlantic pinch, south of Liberty Village. Look for unit B on the
+            1220 King frontage. This homepage is the store listing.
+          </p>
+
+          <div className={styles.storeGrid}>
+            <div className={styles.storeCard}>
+              <h3 className={styles.storeCardTitle}>Address</h3>
+              <p className={styles.storeCardText}>
+                King Rock Cannabis
+                <br />
+                1220b King St W
+                <br />
+                Toronto, ON M6K 1G4
+                <br />
+                <a href={`tel:${STORE_NAP.phoneIntl}`}>{STORE_NAP.phoneDisplay}</a>
+              </p>
+            </div>
+            <div className={styles.storeCard}>
+              <h3 className={styles.storeCardTitle}>Hours</h3>
+              <p className={styles.storeCardText}>
+                Open 7 Days a Week
+                <br />
+                <span className={styles.storeHighlight}>
+                  {STORE_NAP.hoursLabel}
+                </span>
+                <br />
+                No appointment · {STORE_NAP.ageLine}
+              </p>
+            </div>
+            <div className={styles.storeCard}>
+              <h3 className={styles.storeCardTitle}>Directions</h3>
+              <p className={styles.storeCardText}>
+                King &amp; Dufferin / Atlantic
+                <br />
+                <span className={styles.storeHighlight}>
+                  504 King · Liberty Village walk
+                </span>
+                <br />
+                <a href={STORE_NAP.mapSearchUrl} target="_blank" rel="noopener noreferrer">
+                  Open in Google Maps
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <p className={styles.visitHubNotes}>
+            Transit: 504 King streetcar on King Street West; 29 / 929 Dufferin
+            at King &amp; Dufferin; from Liberty Village walk Atlantic Avenue
+            south across the pedestrian bridge. Parking: paid King Street West
+            curb — never on the tracks; loop Liberty Village Green P when the
+            strip is busy. Extra street-level notes:{" "}
+            <Link href="/visit">how to get here</Link>.
+          </p>
+
+          <div className={styles.mapWrap}>
+            <iframe
+              title="Map of King Rock Cannabis at 1220b King St W"
+              src={STORE_NAP.mapEmbedUrl}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              style={{ width: "100%", height: 320, border: 0, display: "block" }}
+            />
           </div>
         </div>
       </section>
@@ -362,9 +439,10 @@ export default function HomePage() {
               runs the street itself. The 29 / 929 Dufferin buses serve King
               &amp; Dufferin. Exhibition GO and Dufferin Gate Loop sit south of
               the tracks as transfer landmarks, not as the door. Check current
-              TTC and GO service before you travel. Full how-to-reach notes,
-              parking caveats, and a map live on the{" "}
-              <Link href="/visit">visit page</Link>.
+              TTC and GO service before you travel. Address, 24/7 hours, and
+              the map sit on this homepage. Extra parking and unit-B notes are
+              on the supporting{" "}
+              <Link href="/visit">how-to-reach page</Link>.
             </p>
             <p className={styles.seoPanelText}>
               Paid street parking on King Street West is the usual curb pattern.
@@ -475,58 +553,6 @@ export default function HomePage() {
               <p className={styles.faqAnswer}>{faq.a}</p>
             </details>
           ))}
-        </div>
-      </section>
-
-      {/* -- STORE LOCATION GRID -- */}
-      <section className={styles.storeSection} id="contact">
-        <div className={styles.container}>
-          <div className={styles.storeGrid}>
-            <div className={styles.storeCard}>
-              <h3 className={styles.storeCardTitle}>Location</h3>
-              <p className={styles.storeCardText}>
-                {STORE_NAP.streetAddress}
-                <br />
-                {STORE_NAP.addressLocality}, {STORE_NAP.addressRegion}{" "}
-                {STORE_NAP.postalCode}
-                <br />
-                <a href={`tel:${STORE_NAP.phoneIntl}`}>{STORE_NAP.phoneDisplay}</a>
-              </p>
-            </div>
-            <div className={styles.storeCard}>
-              <h3 className={styles.storeCardTitle}>Hours</h3>
-              <p className={styles.storeCardText}>
-                Open 7 Days a Week
-                <br />
-                <span className={styles.storeHighlight}>
-                  {STORE_NAP.hoursLabel}
-                </span>
-              </p>
-            </div>
-            <div className={styles.storeCard}>
-              <h3 className={styles.storeCardTitle}>Walk In</h3>
-              <p className={styles.storeCardText}>
-                No appointment needed · {STORE_NAP.ageLine}
-                <br />
-                <span className={styles.storeHighlight}>
-                  King West and Liberty Village
-                </span>
-                <br />
-                <Link href="/visit">How to get here</Link>
-              </p>
-            </div>
-          </div>
-
-          {/* Map wrapper */}
-          <div className={styles.mapWrap}>
-            <iframe
-              title="Map of King Rock Cannabis at 1220b King St W"
-              src={STORE_NAP.mapEmbedUrl}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              style={{ width: "100%", height: 320, border: 0, display: "block" }}
-            />
-          </div>
         </div>
       </section>
 

@@ -28,7 +28,7 @@ export const SEO_PAGES: SeoPageData[] = [
       },
       {
         heading: "Transit and the Liberty Village hop",
-        body: "Ride the 504 King streetcar along King Street West, take the 29 / 929 Dufferin buses to King & Dufferin, or walk Atlantic Avenue south across the pedestrian bridge from Liberty Village. Exhibition GO and Dufferin Gate Loop are transfer landmarks south of the tracks. Check current TTC conditions. The /visit page is the full reach guide.",
+        body: "Ride the 504 King streetcar along King Street West, take the 29 / 929 Dufferin buses to King & Dufferin, or walk Atlantic Avenue south across the pedestrian bridge from Liberty Village. Exhibition GO and Dufferin Gate Loop are transfer landmarks south of the tracks. Check current TTC conditions. NAP, hours, and the map are on the homepage. /visit is the supporting reach guide.",
       },
       {
         heading: "Parking without blocking the streetcar",
@@ -41,7 +41,7 @@ export const SEO_PAGES: SeoPageData[] = [
     ],
     faqs: [
       { q: "Where is the King West shop?", a: "1220b King St W, Toronto, ON M6K 1G4, unit B, near King and Dufferin / Atlantic." },
-      { q: "Is this a walk-in or a delivery page?", a: "This page is for the 24/7 walk-in pin. Delivery is a separate neighbourhood-scoped URL. Directions: /visit." },
+      { q: "Is this a walk-in or a delivery page?", a: "This page is for the 24/7 walk-in pin. The store listing is the homepage. Delivery is a separate neighbourhood-scoped URL. Extra directions: /visit." },
     ],
   },
   {
@@ -91,7 +91,7 @@ export const SEO_PAGES: SeoPageData[] = [
       },
       {
         heading: "How to actually get here",
-        body: "Walk Atlantic Avenue south across the pedestrian bridge, then continue to King. Or ride the 504 King streetcar. Use /visit for parking, Dufferin Gate notes, and 19+ ID. Category pages help you plan a format; they do not reserve a jar.",
+        body: "Walk Atlantic Avenue south across the pedestrian bridge, then continue to King. Or ride the 504 King streetcar. Address, 24/7 hours, and the map are on the homepage. Use /visit for extra parking, Dufferin Gate notes, and 19+ ID. Category pages help you plan a format; they do not reserve a jar.",
       },
     ],
     faqs: [
@@ -107,7 +107,7 @@ export const SEO_PAGES: SeoPageData[] = [
     icon: "*",
     heroTagline: "Store details and current menu navigation",
     sections: [
-      { heading: "Start With Store Details", body: "Check 1220b King St W and 24-hour hours, then choose a menu category. How-to-reach notes are on /visit." },
+      { heading: "Start With Store Details", body: "Check 1220b King St W and 24-hour hours on the homepage, then choose a menu category. Extra how-to-reach notes are on /visit." },
       { heading: "Use Current Menu Pages", body: "Confirm an exact item through the current menu or with staff. Pages are not a live stock feed." },
     ],
     faqs: [

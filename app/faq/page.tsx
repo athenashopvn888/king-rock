@@ -30,7 +30,7 @@ const FAQ_CATEGORIES = [
       },
       {
         q: "How far are you from Liberty Village?",
-        a: "Liberty Village sits north of the rail corridor. Walk Atlantic Avenue south across the pedestrian bridge, then a short hop to King Street West. How-to-reach detail is on /visit.",
+        a: "Liberty Village sits north of the rail corridor. Walk Atlantic Avenue south across the pedestrian bridge, then a short hop to King Street West. Address, 24/7 hours, and the map are on the homepage. Extra how-to-reach detail is on /visit.",
       },
       {
         q: "What's the best way to get to King Rock?",

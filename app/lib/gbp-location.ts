@@ -33,7 +33,8 @@ export const gbpLocation = {
     "Accessories",
   ],
   menuUrl: "/",
-  directionsUrl: "/visit",
+  websiteUrl: STORE_NAP.origin,
+  directionsUrl: "/#visit",
   mapEmbedUrl: STORE_NAP.mapEmbedUrl,
   latitude: String(STORE_NAP.latitude),
   longitude: String(STORE_NAP.longitude),
@@ -43,7 +44,7 @@ export const gbpLocation = {
     "Walk-in cannabis shop at 1220b King St W for King West and Liberty Village. Adults 19+. Open 24 Hours Daily.",
   localLandmarks: ["King St W", "Liberty Village", "Exhibition Place"],
   introVariant:
-    "King Rock Cannabis is a neighbourhood walk-in at 1220b King St W on King West, beside Liberty Village and the Exhibition edge. Adults 19+ can browse menu categories including cannabis flower, pre-rolls, edibles, THC vapes, concentrates, and smoking accessories before visiting. How-to-reach notes are on /visit.",
+    "King Rock Cannabis is a neighbourhood walk-in at 1220b King St W on King West, beside Liberty Village and the Exhibition edge. Adults 19+ can browse menu categories including cannabis flower, pre-rolls, edibles, THC vapes, concentrates, and smoking accessories before visiting. The store listing is the homepage.",
   neighborhoodDescription:
     "The storefront faces King Street West at the Dufferin / Atlantic pinch, with Liberty Village north of the rail corridor and Exhibition Place to the south.",
   parkingNote: "Paid street parking on King Street West; Liberty Village Green P when the curb is full",

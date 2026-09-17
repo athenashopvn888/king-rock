@@ -49,7 +49,7 @@ export default function Navbar() {
             <span className={styles.brandName}>KING ROCK</span>
           </Link>
           <p className={styles.headerNap}>
-            <Link href="/visit">{STORE_NAP.streetAddress}, {STORE_NAP.addressLocality}, {STORE_NAP.addressRegion} {STORE_NAP.postalCode}</Link>
+            <Link href="/#visit">{STORE_NAP.streetAddress}, {STORE_NAP.addressLocality}, {STORE_NAP.addressRegion} {STORE_NAP.postalCode}</Link>
             <a href={`tel:${STORE_NAP.phoneIntl}`}>{STORE_NAP.phoneDisplay}</a>
           </p>
         </div>

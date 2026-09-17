@@ -44,12 +44,14 @@ export default function VisitPage() {
             How to Get to King Rock on King West
           </h1>
           <p className={styles.heroLead}>
-            This is the walk-in reach guide for King Rock Cannabis at{" "}
-            {nap.addressLine}. It is written for people already on King Street
-            West, walking down from Liberty Village, or transferring at Dufferin
-            Gate / Exhibition — not for a city-wide Toronto delivery search.
-            Hours stay {nap.hoursLabel}. Bring ID. Menu pages do not confirm live
-            stock.
+            This is a supporting how-to-reach page for King Rock Cannabis at{" "}
+            {nap.addressLine}. The store listing — NAP, 24/7 hours, and map —
+            lives on the{" "}
+            <Link href="/">King Rock homepage</Link>. Use this page when you
+            already know the pin and need street-level notes: unit B, 504 King,
+            the Liberty Village walk, parking, and 19+ ID. It is not a
+            city-wide Toronto delivery search. Hours stay {nap.hoursLabel}.
+            Menu pages do not confirm live stock.
           </p>
           <div className={styles.napCard}>
             <strong>Address, phone, hours</strong>

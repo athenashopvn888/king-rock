@@ -12,4 +12,7 @@ Both `kingrockcannabis.ca` and `kingrockcannabis.com` have served the same King 
 
 Local / preview hosts (`localhost`, `127.0.0.1`, `*.vercel.app`) are not redirected.
 
-Ops still need DNS + the Vercel project to accept the `.ca` hosts so the 308 can fire. GBP website field should be `https://www.kingrockcannabis.com` only.
+Ops still need DNS + the Vercel project to accept the `.ca` hosts so the 308 can fire.
+
+**GBP website:** `https://www.kingrockcannabis.com/` (homepage) permanently. Do not point Google Business Profile at `/visit`. `/visit` is a supporting how-to-reach page for organic search and internal links only.
+
