@@ -10,7 +10,8 @@
     "lint": "eslint",
     "verify:delivery": "node scripts/verify-pod3-delivery.mjs",
     "test:staff-photo": "node --experimental-strip-types --experimental-specifier-resolution=node --test tests/staff-photo.test.ts",
-    "test:nicotine-vapes": "node --test tests/nicotine-vape-landing.test.mjs"
+    "test:nicotine-vapes": "node --test tests/nicotine-vape-landing.test.mjs",
+    "test:four-pillar": "node --test tests/kr01-four-pillar.test.mjs"
   },
   "dependencies": {
     "@vercel/blob": "^2.6.1",

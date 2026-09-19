@@ -43,9 +43,10 @@ export default function NativeCigarettesPage() {
           { heading: "Backwoods and Grabba Near Liberty Village", body: "King Rock also lists Backwoods, grabba, grabba shakers and nicotine pouches for a convenient King Street West stop." },
         ]}
         faqs={[
-          { q: "Does King Rock sell Native cigarettes?", a: "Yes. King Rock lists Native cigarette brands and related smoke-shop products at 1220b King St W, Toronto." },
-          { q: "Can I see cigarette prices online?", a: "Yes. Listed prices appear with the cigarette selection, and staff can confirm current shelf details when you visit." },
-          { q: "Where is King Rock?", a: "King Rock is at 1220b King St W, Toronto, ON M6K 1G4 and is open 24 hours daily." },
+          { q: "Does King Rock sell Native cigarettes?", a: "Yes. King Rock lists Native cigarette brands and related smoke-shop products at 1220b King St W on the King / Parkdale / Queen West corridor." },
+          { q: "Can I see cigarette prices online?", a: "Yes. Listed prices appear with the cigarette selection, and staff can confirm current shelf details when you visit. This page does not invent extra inventory." },
+          { q: "Where is King Rock?", a: "King Rock is at 1220b King St W, Toronto, ON M6K 1G4 and is open 24 hours daily. Adults 19+." },
+          { q: "Is this a city-wide smoke shop page?", a: "No. It is a neighbourhood page for the King West walk-in. Other corridor pages cover the 24-hour counter, weed delivery, and nicotine vapes." },
         ]}
         address="1220b King St W, Toronto"
         hours="Open 24 Hours Daily"

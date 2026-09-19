@@ -7,7 +7,8 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import { SEO_PAGES, getSeoPageBySlug } from "../../lib/seoPages";
 import { TIER_CONFIG } from "../../lib/products";
-import { STORE_NAP } from "../../lib/storeNap";
+import { STORE_NAP, faqPageJsonLd } from "../../lib/storeNap";
+import JsonLd from "../../components/JsonLd";
 import styles from "./seo.module.css";
 
 /* ── Generate all SEO pages ── */
@@ -53,6 +54,7 @@ export default async function SeoLandingPage({
 
   return (
     <main className={styles.main}>
+      {page.faqs.length > 0 && <JsonLd data={faqPageJsonLd(page.faqs)} />}
       <Navbar />
 
       {/* Banner Image */}
