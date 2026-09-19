@@ -11,6 +11,7 @@ import SmokePilotSpotlight from "./components/SmokePilotSpotlight";
 import JsonLd from "./components/JsonLd";
 import { allFlowers, type FlowerProduct } from "./lib/products";
 import { HOME_FAQS, STORE_NAP, faqPageJsonLd } from "./lib/storeNap";
+import { PILLAR_HUB_CARDS } from "./lib/pillarPages";
 import Papa from "papaparse";
 
 function pickFeaturedStrains(flowers: FlowerProduct[]) {
@@ -338,6 +339,28 @@ export default function HomePage() {
               referrerPolicy="no-referrer-when-downgrade"
               style={{ width: "100%", height: 320, border: 0, display: "block" }}
             />
+          </div>
+
+          <div className={styles.pillarHub} id="corridor" aria-labelledby="pillar-hub-heading">
+            <p className={styles.visitHubEyebrow}>King / Parkdale / Queen West corridor</p>
+            <h2 className={styles.visitHubTitle} id="pillar-hub-heading">
+              Four neighbourhood pages
+            </h2>
+            <p className={styles.visitHubLead}>
+              Walk-in hours, neighbourhood delivery, Native cigarettes, and
+              nicotine vape — scoped to this corridor, not city-wide Toronto
+              clones. {STORE_NAP.ageLine}.
+            </p>
+            <div className={styles.pillarGrid}>
+              {PILLAR_HUB_CARDS.map((card) => (
+                <Link key={card.slug} href={card.href} className={styles.pillarCard}>
+                  <span className={styles.pillarCode}>{card.code}</span>
+                  <h3 className={styles.pillarCardTitle}>{card.title}</h3>
+                  <p className={styles.pillarCardText}>{card.blurb}</p>
+                  <span className={styles.pillarCardLink}>Open page</span>
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </section>

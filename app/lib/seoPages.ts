@@ -13,6 +13,50 @@ export interface SeoPageData {
 
 export const SEO_PAGES: SeoPageData[] = [
   {
+    slug: "24-hour-dispensary-king-west",
+    title: "24-Hour Dispensary King West | King Rock",
+    metaDescription:
+      "24/7 walk-in cannabis shop at 1220b King St W on the King / Parkdale / Queen West corridor. Adults 19+. Open 24 Hours Daily.",
+    h1: "24-Hour Dispensary on King West",
+    icon: "*",
+    heroTagline: "Walk-in at 1220b King St W — Open 24 Hours Daily",
+    suppressTierGrid: true,
+    sections: [
+      {
+        heading: "Open 24 Hours Daily",
+        body: "King Rock Cannabis at 1220b King St W is a 24/7 walk-in on the King / Parkdale / Queen West corridor. Adults 19+. Extra directions: /visit.",
+      },
+    ],
+    faqs: [
+      {
+        q: "Is the shop open overnight?",
+        a: "Yes. Walk-in at 1220b King St W is open 24 hours daily.",
+      },
+    ],
+  },
+  {
+    slug: "weed-delivery-king-west",
+    title: "Weed Delivery King West | King Rock",
+    metaDescription:
+      "Neighbourhood cannabis delivery from King Rock for King West, Liberty Village, Exhibition Place, and the Dufferin Gate / Parkdale edge. Adults 19+.",
+    h1: "Weed Delivery for King West & Liberty Village",
+    icon: "*",
+    heroTagline: "Neighbourhood delivery — not city-wide Toronto",
+    suppressTierGrid: true,
+    sections: [
+      {
+        heading: "Neighbourhood delivery window",
+        body: "Delivery is listed 10:00 a.m.–10:00 p.m. Walk-in stays Open 24 Hours Daily. The dispatcher confirms whether an address is in range. Use /delivery for the menu.",
+      },
+    ],
+    faqs: [
+      {
+        q: "Is delivery 24/7?",
+        a: "No. Delivery is listed 10:00 a.m.–10:00 p.m. Walk-in at 1220b King St W is 24/7.",
+      },
+    ],
+  },
+  {
     slug: "king-west-weed-dispensary",
     title: "King West Weed Dispensary | How to Reach King Rock",
     metaDescription:

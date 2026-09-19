@@ -4,8 +4,8 @@ import Footer from "../../components/Footer";
 import { SmokePilotLanding } from "../../components/SmokePilot";
 
 export const metadata: Metadata = {
-  title: { absolute: "Nicotine Vapes Toronto | King Rock" },
-  description: "Explore the King Rock Nicotine Vape category in Toronto, kept clearly separate from THC Vape products. Nicotine products are for adults 19+.",
+  title: { absolute: "Nicotine Vapes King West | King Rock" },
+  description: "Explore the King Rock Nicotine Vape category on King West / Liberty Village, kept clearly separate from THC Vape products. Nicotine products are for adults 19+.",
   alternates: { canonical: "https://www.kingrockcannabis.com/info/nicotine-vapes-king-west" },
 };
 
@@ -47,6 +47,7 @@ export default function NicotineVapesPage() {
           { q: "Are Nicotine Vape and THC Vape the same category at King Rock?", a: "No. King Rock keeps nicotine vape products separate from THC vape products." },
           { q: "Who is the Nicotine Vape category intended for?", a: "Nicotine products are for adults 19+. Nicotine is addictive." },
           { q: "Where are THC vape products?", a: "THC vape products remain in the separate THC Vape category." },
+          { q: "Where is this nicotine vape page scoped?", a: "It is a King West / Liberty Village neighbourhood page for the walk-in at 1220b King St W — not a city-wide Toronto vape directory." },
         ]}
         theme="nicotine"
         warning="Adults 19+. Nicotine is addictive."
