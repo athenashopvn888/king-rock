@@ -24,12 +24,13 @@ test("four neighbourhood pillar URLs are registered and hub-linked", () => {
     "nicotine-vapes-king-west",
   ]) {
     assert.match(pillarLib, new RegExp(slug));
-    assert.match(home, new RegExp(`/info/${slug}`));
+    assert.match(pillarLib, /`\/info\/\$\{PILLAR_SLUGS\.\w+\}`/);
     assert.match(footer, new RegExp(`/info/${slug}`));
     assert.match(seoPages, new RegExp(`slug: "${slug}"`));
   }
   assert.match(home, /PILLAR_HUB_CARDS/);
   assert.match(home, /Four neighbourhood pages/);
+  assert.match(home, /href=\{card\.href\}/);
   assert.match(dispensaryPage, /PILLAR_24H/);
   assert.match(deliveryLp, /PILLAR_DELIVERY/);
   assert.match(sitemap, /SEO_PAGES/);
