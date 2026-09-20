@@ -68,7 +68,7 @@ export const SEO_PAGES: SeoPageData[] = [
     sections: [
       {
         heading: "The door is on King, unit B",
-        body: "King Rock Cannabis is the walk-in shop at 1220b King St W, Toronto, ON M6K 1G4. Look for unit B on the 1220 King frontage at Dufferin / Atlantic. Call +1 (437) 780-9691. Adults 19+. Open 24 Hours Daily.",
+        body: "King Rock Cannabis is the walk-in shop at 1220b King St W, Toronto, ON M6K 1G4. Look for unit B on the 1220 King frontage at Dufferin / Atlantic. Call +1 (437) 780-9691. Adults 19+. Open 24 Hours Daily. The neighbourhood owner page is /weed-dispensary-king-west.",
       },
       {
         heading: "Transit and the Liberty Village hop",

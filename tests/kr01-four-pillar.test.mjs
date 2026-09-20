@@ -8,15 +8,20 @@ const home = fs.readFileSync("app/page.tsx", "utf8");
 const footer = fs.readFileSync("app/components/Footer.tsx", "utf8");
 const seoPages = fs.readFileSync("app/lib/seoPages.ts", "utf8");
 const landing = fs.readFileSync("app/components/PillarLanding.tsx", "utf8");
+const ownerPage = fs.readFileSync("app/weed-dispensary-king-west/page.tsx", "utf8");
 const dispensaryPage = fs.readFileSync("app/info/24-hour-dispensary-king-west/page.tsx", "utf8");
 const deliveryLp = fs.readFileSync("app/info/weed-delivery-king-west/page.tsx", "utf8");
 const cigarettes = fs.readFileSync("app/info/native-cigarettes-king-west/page.tsx", "utf8");
 const nicotine = fs.readFileSync("app/info/nicotine-vapes-king-west/page.tsx", "utf8");
 const sitemap = fs.readFileSync("app/sitemap.ts", "utf8");
 
-const stack = [pillarLib, home, footer, landing, dispensaryPage, deliveryLp, cigarettes, nicotine].join("\n");
+const stack = [pillarLib, home, footer, landing, ownerPage, dispensaryPage, deliveryLp, cigarettes, nicotine].join("\n");
 
-test("four neighbourhood pillar URLs are registered and hub-linked", () => {
+test("five neighbourhood pillar URLs are registered and hub-linked", () => {
+  assert.match(pillarLib, /weed-dispensary-king-west/);
+  assert.match(footer, /href="\/weed-dispensary-king-west"/);
+  assert.match(ownerPage, /PILLAR_OWNER/);
+  assert.match(sitemap, /\$\{BASE\}\/weed-dispensary-king-west/);
   for (const slug of [
     "24-hour-dispensary-king-west",
     "weed-delivery-king-west",
@@ -29,7 +34,7 @@ test("four neighbourhood pillar URLs are registered and hub-linked", () => {
     assert.match(seoPages, new RegExp(`slug: "${slug}"`));
   }
   assert.match(home, /PILLAR_HUB_CARDS/);
-  assert.match(home, /Four neighbourhood pages/);
+  assert.match(home, /Five neighbourhood pages/);
   assert.match(home, /href=\{card\.href\}/);
   assert.match(dispensaryPage, /PILLAR_24H/);
   assert.match(deliveryLp, /PILLAR_DELIVERY/);
@@ -52,6 +57,7 @@ test("pillar pages stay neighbourhood-scoped, 19+, and claim-safe", () => {
   assert.match(pillarLib, /King \/ Parkdale \/ Queen West/);
   assert.match(pillarLib, /Adults 19\+/);
   assert.match(pillarLib, /not a city-wide/);
+  assert.match(pillarLib, /Weed Dispensary at King & Dufferin/);
   assert.match(landing, /faqPageJsonLd\(page\.faqs\)/);
   assert.match(landing, /Frequently Asked Questions/);
   assert.match(cigarettes, /faqs=\{/);
@@ -59,4 +65,5 @@ test("pillar pages stay neighbourhood-scoped, 19+, and claim-safe", () => {
   assert.doesNotMatch(stack, /treats anxiety|medical marijuana|prescrib|cures|therapeutic/i);
   assert.doesNotMatch(pillarLib, /\$3\/g|\$10-\$12\/g|guaranteed availability|live stock feed of/i);
   assert.doesNotMatch(stack, /info\/24-hour-dispensary-toronto|info\/weed-delivery-toronto/);
+  assert.doesNotMatch(ownerPage, /weed-dispensary-toronto/);
 });

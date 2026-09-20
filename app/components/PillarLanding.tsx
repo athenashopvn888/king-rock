@@ -109,7 +109,7 @@ export default function PillarLanding({ page }: { page: PillarPage }) {
 
         <p className={styles.ageNote}>
           {nap.ageLine}. No medical claims. Selection varies. Canonical:{" "}
-          {pillarCanonical(page.slug).replace("https://", "")}
+          {pillarCanonical(page).replace("https://", "")}
         </p>
       </div>
 
