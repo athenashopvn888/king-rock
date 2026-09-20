@@ -4,6 +4,7 @@ import { STORE_NAP } from "./storeNap";
 export const DELIVERY_HOURS_LABEL = "10:00 a.m.–10:00 p.m." as const;
 
 export const PILLAR_SLUGS = {
+  weedDispensary: "weed-dispensary-king-west",
   dispensary24h: "24-hour-dispensary-king-west",
   weedDelivery: "weed-delivery-king-west",
   nativeCigarettes: "native-cigarettes-king-west",
@@ -48,6 +49,13 @@ export interface PillarPage {
 
 export const PILLAR_HUB_CARDS: PillarHubCard[] = [
   {
+    slug: PILLAR_SLUGS.weedDispensary,
+    href: `/${PILLAR_SLUGS.weedDispensary}`,
+    code: "KW",
+    title: "Weed Dispensary",
+    blurb: `King West / Liberty Village walk-in at ${STORE_NAP.streetAddress}. ${STORE_NAP.ageLine}.`,
+  },
+  {
     slug: PILLAR_SLUGS.dispensary24h,
     href: `/info/${PILLAR_SLUGS.dispensary24h}`,
     code: "24H",
@@ -76,6 +84,62 @@ export const PILLAR_HUB_CARDS: PillarHubCard[] = [
     blurb: `Nicotine vape category, kept separate from THC vape. ${STORE_NAP.ageLine}. Nicotine is addictive.`,
   },
 ];
+
+export const PILLAR_OWNER: PillarPage = {
+  slug: PILLAR_SLUGS.weedDispensary,
+  path: `/${PILLAR_SLUGS.weedDispensary}`,
+  title: "Weed Dispensary King West | King Rock",
+  metaDescription:
+    "Neighbourhood weed dispensary at 1220b King St W on the King / Parkdale / Queen West corridor, south of Liberty Village. Unit B at Dufferin / Atlantic. Adults 19+.",
+  eyebrow: "King West / Liberty Village · Walk-in · Adults 19+",
+  h1: "Weed Dispensary at King & Dufferin",
+  intro:
+    "King Rock Cannabis is the neighbourhood weed dispensary at 1220b King St W — unit B on the King Street West frontage at Dufferin / Atlantic. The pin sits on the King / Parkdale / Queen West corridor, south of Liberty Village. This page owns the King West shop listing. It is not a city-wide Toronto dispensary directory.",
+  hoursLine: STORE_NAP.hoursLabel,
+  showMap: true,
+  primaryCta: { href: "/#visit", label: "Store listing & map" },
+  secondaryCta: { href: "/visit", label: "How to get here" },
+  sections: [
+    {
+      heading: "A King West walk-in, not a Toronto city page",
+      body: "King Rock Cannabis is a walk-in shop at 1220b King St W, Toronto, ON M6K 1G4. Look for unit B on the 1220 King frontage. Call +1 (437) 780-9691. Adults 19+ bring government-issued photo ID. This landing is for the King / Parkdale / Queen West pinch — not a downtown-core address further east, and not a GTA-wide dispensary index. Address, hours, and the map also live on the homepage.",
+    },
+    {
+      heading: "What the King West counter is for",
+      body: "Walk in to browse posted flower tiers and format pages (pre-rolls, edibles, vapes, concentrates, accessories, cigarettes). Those pages help you plan a format. They are not a live inventory feed and this page does not invent stock or prices. If one exact item is the reason for the trip, call first. No medical claims, and no appointment.",
+    },
+    {
+      heading: "Parkdale, Queen West, Liberty Village, Exhibition",
+      body: "The door faces King Street West where Parkdale, King West, and the Dufferin walk up to Queen West meet. From Liberty Village, take Atlantic Avenue south across the pedestrian bridge. Exhibition Place and Dufferin Gate sit south of the tracks. The 504 King streetcar runs the street; the 29 / 929 Dufferin buses serve King & Dufferin. Neighbourhood cues — not a promise to cover every Toronto block.",
+    },
+    {
+      heading: "Hours, delivery, and smoke-shop pages are separate",
+      body: "Overnight and all-day walk-in details live on the 24-hour dispensary page. Neighbourhood delivery is a different URL with its own 10:00 a.m.–10:00 p.m. window. Native cigarettes and nicotine vape have their own King West landings. This page is the shop identity for the King West corridor. Extra street-level notes stay on /visit.",
+    },
+  ],
+  faqs: [
+    {
+      q: "Is King Rock a weed dispensary on King West?",
+      a: "Yes. King Rock Cannabis is the walk-in shop at 1220b King St W, Toronto, ON M6K 1G4 — unit B at King and Dufferin / Atlantic, on the King / Parkdale / Queen West corridor south of Liberty Village. Adults 19+.",
+    },
+    {
+      q: "Is this a city-wide Toronto dispensary listing?",
+      a: "No. This page is scoped to the King West neighbourhood pin. It does not claim downtown-core coverage, other boroughs, or a Toronto-wide dispensary directory. The archived city URL is not this page.",
+    },
+    {
+      q: "Where do I find unit B?",
+      a: "The civic address is 1220b King St W. Look for unit B on the 1220 King Street West frontage at Dufferin / Atlantic. Do not assume the first lobby on that block is the shop. Extra reach notes are on /visit.",
+    },
+    {
+      q: "Who can walk in?",
+      a: "Adults 19+ with government-issued photo ID. No appointment. The walk-in counter is open 24 hours daily. This is a retail shop, not a medical clinic.",
+    },
+    {
+      q: "Does this page confirm a specific strain or price?",
+      a: "No. Menu pages show posted details for planning. They are not a live stock feed and this page does not invent inventory or prices. Ask at the counter or call +1 (437) 780-9691 if one exact item matters.",
+    },
+  ],
+};
 
 export const PILLAR_24H: PillarPage = {
   slug: PILLAR_SLUGS.dispensary24h,
@@ -189,12 +253,13 @@ export const PILLAR_DELIVERY: PillarPage = {
   ],
 };
 
-export const CONTENT_PILLARS: PillarPage[] = [PILLAR_24H, PILLAR_DELIVERY];
+export const CONTENT_PILLARS: PillarPage[] = [PILLAR_OWNER, PILLAR_24H, PILLAR_DELIVERY];
 
 export function getPillarBySlug(slug: string) {
   return CONTENT_PILLARS.find((page) => page.slug === slug);
 }
 
-export function pillarCanonical(slug: PillarSlug) {
-  return `${STORE_NAP.origin}/info/${slug}`;
+export function pillarCanonical(page: Pick<PillarPage, "path"> | PillarSlug) {
+  const path = typeof page === "string" ? `/info/${page}` : page.path;
+  return `${STORE_NAP.origin}${path}`;
 }

@@ -344,12 +344,12 @@ export default function HomePage() {
           <div className={styles.pillarHub} id="corridor" aria-labelledby="pillar-hub-heading">
             <p className={styles.visitHubEyebrow}>King / Parkdale / Queen West corridor</p>
             <h2 className={styles.visitHubTitle} id="pillar-hub-heading">
-              Four neighbourhood pages
+              Five neighbourhood pages
             </h2>
             <p className={styles.visitHubLead}>
-              Walk-in hours, neighbourhood delivery, Native cigarettes, and
-              nicotine vape — scoped to this corridor, not city-wide Toronto
-              clones. {STORE_NAP.ageLine}.
+              King West weed dispensary, 24-hour walk-in, neighbourhood
+              delivery, Native cigarettes, and nicotine vape — scoped to this
+              corridor, not city-wide Toronto clones. {STORE_NAP.ageLine}.
             </p>
             <div className={styles.pillarGrid}>
               {PILLAR_HUB_CARDS.map((card) => (

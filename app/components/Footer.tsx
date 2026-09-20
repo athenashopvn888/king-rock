@@ -64,6 +64,9 @@ export default function Footer() {
               <Link href="/items/vapes">Nicotine Vapes</Link>
               <Link href="/faq">FAQ</Link>
               <Link href="/delivery">DELIVERY MENU</Link>
+              <Link href="/weed-dispensary-king-west">
+                Weed Dispensary King West
+              </Link>
               <Link href="/info/24-hour-dispensary-king-west">
                 24-Hour Dispensary
               </Link>
