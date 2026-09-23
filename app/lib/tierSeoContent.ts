@@ -7,8 +7,8 @@ export interface TierSeoData {
 
 export const TIER_SEO: Record<string, TierSeoData> = {
   EXOTIC: {
-    seoTitle: "Exotic Weed & Cannabis Flower Toronto | King Rock",
-    seoIntro: "King Rock brings Exotic Weed together as one of its Cannabis Flower collections for shoppers exploring the broader Weed selection. Browse the products presented within this collection and compare Exotic Weed with other King Rock flower collections that interest you.",
+    seoTitle: "Exotic Weed King West & Liberty Village | King Rock",
+    seoIntro: "Explore the Exotic Weed collection at King Rock on King West near Liberty Village. This page keeps the tier focused while the local store guide and visit page cover the storefront and directions.",
     sections: [
       { heading: "Explore Exotic Weed at King Rock", body: "Exotic Weed gives shoppers a focused Cannabis Flower collection to explore at King Rock. Browse the products presented within the collection and use the information shown with individual items as you explore." },
       { heading: "Compare Exotic Weed with Other Flower Collections", body: "King Rock also organizes flower into Premium Weed, AAA+ Weed, AA Weed and Budget Weed. Exploring more than one collection gives shoppers different parts of the flower selection to consider without suggesting that one tier is automatically preferable." },
@@ -20,8 +20,8 @@ export const TIER_SEO: Record<string, TierSeoData> = {
     ],
   },
   PREMIUM: {
-    seoTitle: "Premium Weed & Cannabis Flower Toronto | King Rock",
-    seoIntro: "Premium Weed is a King Rock Cannabis Flower collection for shoppers who want to explore this part of the wider Weed selection. Browse the collection and compare Premium Weed with other King Rock flower selections as you explore.",
+    seoTitle: "Premium Weed King West & Liberty Village | King Rock",
+    seoIntro: "Browse the Premium Weed collection at King Rock on King West near Liberty Village. Use the local store guide or visit page for storefront details and links to the wider flower lineup.",
     sections: [
       { heading: "Browse Premium Weed at King Rock", body: "Premium Weed brings together one part of the King Rock Cannabis Flower selection. Shoppers can explore the products presented within the collection and review the information shown with individual items." },
       { heading: "Explore Premium Weed Alongside Other Collections", body: "Premium Weed can be explored alongside Exotic Weed, AAA+ Weed, AA Weed and Budget Weed. Each collection offers another part of the King Rock flower selection to browse." },
@@ -33,8 +33,8 @@ export const TIER_SEO: Record<string, TierSeoData> = {
     ],
   },
   "AAA+": {
-    seoTitle: "AAA+ Weed & Cannabis Flower Toronto | King Rock",
-    seoIntro: "King Rock AAA+ Weed gives shoppers a focused Cannabis Flower collection to explore within the broader Weed selection. Browse the products presented within this collection and compare AAA+ Weed with other King Rock flower selections that catch your interest.",
+    seoTitle: "AAA+ Weed King West & Liberty Village | King Rock",
+    seoIntro: "Browse the AAA+ Weed collection at King Rock on King West near Liberty Village. This page is dedicated to the tier while the local guide covers the store and visit information.",
     sections: [
       { heading: "Explore AAA+ Weed at King Rock", body: "AAA+ Weed brings together a distinct part of the King Rock Cannabis Flower selection. Explore the products presented within the collection and review the information shown with individual items." },
       { heading: "Compare AAA+ Weed with Other King Rock Collections", body: "AAA+ Weed can be explored alongside Exotic Weed, Premium Weed, AA Weed and Budget Weed. Moving between collections gives shoppers more of the King Rock flower selection to consider." },
@@ -46,8 +46,8 @@ export const TIER_SEO: Record<string, TierSeoData> = {
     ],
   },
   AA: {
-    seoTitle: "AA Weed & Cannabis Flower Toronto | King Rock",
-    seoIntro: "AA Weed is one of King Rock's Cannabis Flower collections, giving shoppers a focused way to explore this part of the Weed selection. Browse the collection and compare AA Weed with other flower collections that interest you.",
+    seoTitle: "AA Weed King West & Liberty Village | King Rock",
+    seoIntro: "Explore the AA Weed collection at King Rock on King West near Liberty Village. Use this page for the tier and the visit guide for directions, hours and storefront details.",
     sections: [
       { heading: "Explore AA Weed Cannabis Flower", body: "King Rock presents AA Weed as one part of its broader Cannabis Flower selection. Shoppers can explore the products shown within the collection and continue comparing other flower selections as they browse." },
       { heading: "Compare AA Weed with Other Flower Collections", body: "AA Weed can be explored alongside Budget Weed, AAA+ Weed, Premium Weed and Exotic Weed. The different collections give shoppers several parts of the King Rock Cannabis Flower selection to explore." },
@@ -59,8 +59,8 @@ export const TIER_SEO: Record<string, TierSeoData> = {
     ],
   },
   BUDGET: {
-    seoTitle: "Budget Weed & Cannabis Flower Toronto | King Rock",
-    seoIntro: "King Rock Budget Weed is a Cannabis Flower collection for shoppers who want to explore this part of the wider Weed selection. Browse the collection and compare Budget Weed with other King Rock flower selections as you explore.",
+    seoTitle: "Budget Weed King West & Liberty Village | King Rock",
+    seoIntro: "Explore the Budget Weed collection at King Rock on King West near Liberty Village. The label identifies this store tier without promising a promotion, price or availability.",
     sections: [
       { heading: "Explore Budget Weed at King Rock", body: "Budget Weed brings together a focused part of the King Rock Cannabis Flower selection. Explore the products presented within the collection and use the information shown with individual items as you browse." },
       { heading: "Compare Budget Weed with Other Weed Flower Collections", body: "King Rock also organizes flower into AA Weed, AAA+ Weed, Premium Weed and Exotic Weed. Shoppers can explore more than one collection and compare the sections that interest them." },
@@ -74,17 +74,17 @@ export const TIER_SEO: Record<string, TierSeoData> = {
 };
 
 export const TIER_META_DESCRIPTION: Record<string, string> = {
-  EXOTIC: "Explore Exotic Weed as a King Rock Cannabis Flower collection and compare it with other Weed flower collections.",
-  PREMIUM: "Explore Premium Weed as a King Rock Cannabis Flower collection and compare it with other Weed flower collections.",
-  "AAA+": "Explore AAA+ Weed as a King Rock Cannabis Flower collection and compare it with other Weed flower collections.",
-  AA: "Explore AA Weed as a King Rock Cannabis Flower collection and compare it with other Weed flower collections.",
-  BUDGET: "Explore Budget Weed as a King Rock Cannabis Flower collection and compare it with other Weed flower collections.",
+  EXOTIC: "Explore Exotic Weed at King Rock on King West near Liberty Village and review the dedicated flower collection.",
+  PREMIUM: "Explore Premium Weed at King Rock on King West near Liberty Village through its dedicated flower collection.",
+  "AAA+": "Explore AAA+ Weed at King Rock on King West near Liberty Village through its dedicated flower collection.",
+  AA: "Explore AA Weed at King Rock on King West near Liberty Village through its dedicated flower collection.",
+  BUDGET: "Explore Budget Weed at King Rock on King West near Liberty Village without a promotion or availability claim.",
 };
 
 export const TIER_H1: Record<string, string> = {
-  EXOTIC: "Exotic Weed & Cannabis Flower in Toronto",
-  PREMIUM: "Premium Weed & Cannabis Flower in Toronto",
-  "AAA+": "AAA+ Weed & Cannabis Flower in Toronto",
-  AA: "AA Weed & Cannabis Flower in Toronto",
-  BUDGET: "Budget Weed & Cannabis Flower in Toronto",
+  EXOTIC: "Exotic Weed in King West & Liberty Village",
+  PREMIUM: "Premium Weed in King West & Liberty Village",
+  "AAA+": "AAA+ Weed in King West & Liberty Village",
+  AA: "AA Weed in King West & Liberty Village",
+  BUDGET: "Budget Weed in King West & Liberty Village",
 };
