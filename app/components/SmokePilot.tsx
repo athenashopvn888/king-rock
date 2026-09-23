@@ -20,7 +20,7 @@ interface HeroPreviewItem {
   image: string;
 }
 
-export const SMOKE_PILOT_HERO_DISCLOSURE = "Brand preview only. Selection varies by store; check the current cigarette menu before visiting.";
+export const SMOKE_PILOT_HERO_DISCLOSURE = "Use these names as a King West browsing guide, then check the current cigarette menu or ask at the counter before making a special trip.";
 
 interface SmokePilotLandingBaseProps {
   canonicalUrl: string;
