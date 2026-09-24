@@ -7,10 +7,10 @@ export const metadata: Metadata = {
   description:
     "Archived city landing notes for King Rock Cannabis. The store listing is the homepage at 1220b King St W on King West / Liberty Village.",
   alternates: {
-    canonical: STORE_NAP.origin,
+    canonical: `${STORE_NAP.origin}/weed-dispensary-toronto`,
   },
   robots: {
-    index: false,
+    index: true,
     follow: true,
   },
 };
