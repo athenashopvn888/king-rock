@@ -9,6 +9,7 @@ import { STORE_NAP } from "../lib/storeNap";
 
 const ALL_LINKS = [
   { href: "/visit", label: "Visit King West" },
+  { href: "/hours", label: "Hours" },
   { href: "/exotic-weed", label: "Exotic Weed" },
   { href: "/premium-weed", label: "Premium Weed" },
   { href: "/aaa-weed", label: "AAA+ Weed" },
