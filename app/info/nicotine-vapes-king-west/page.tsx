@@ -18,7 +18,7 @@ export default function NicotineVapesPage() {
         storeName="King Rock"
         locationLabel="King West / Liberty Village"
         eyebrow="KING ROCK • KING WEST / LIBERTY VILLAGE • ADULTS 19+"
-        title="Nicotine Vape"
+        title="Nicotine Vapes in King West & Liberty Village"
         intro="Explore King Rock nicotine vape products in a category kept separate from THC Vape products. Nicotine products are for adults 19+ and contain nicotine, which is addictive."
         items={[]}
         menuHref="/items/vapes"

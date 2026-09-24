@@ -12,7 +12,9 @@ test("King Rock nicotine page keeps evergreen nicotine copy and safe routes", ()
   assert.match(source, /menuHref="\/items\/vapes"/);
   assert.match(source, /showMenuGrid=\{false\}/);
   assert.match(source, /Adults 19\+\. Nicotine is addictive\./);
-  assert.match(source, /title="Nicotine Vape"/);
+  assert.match(source, /title="Nicotine Vapes in King West & Liberty Village"/);
+  assert.match(source, /title: \{ absolute: "Nicotine Vapes King West \| King Rock" \}/);
+  assert.doesNotMatch(source, /King Rock \| King Rock/);
   assert.match(source, /kept separate from THC Vape products/);
   assert.doesNotMatch(source, /six live-checked|Six Live-Checked|six featured|current stock|guaranteed availability/i);
   assert.doesNotMatch(source, /address=/);
