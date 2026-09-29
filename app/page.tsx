@@ -5,12 +5,13 @@ import Link from "next/link";
 import styles from "./page.module.css";
 import FleetAnnouncementBanner from "./components/FleetAnnouncementBanner";
 import Navbar from "./components/Navbar";
+import HomeDeliverySection from "./components/HomeDeliverySection";
 import Footer from "./components/Footer";
 import FlowerCard from "./components/FlowerCard";
 import SmokePilotSpotlight from "./components/SmokePilotSpotlight";
 import JsonLd from "./components/JsonLd";
 import { allFlowers, type FlowerProduct } from "./lib/products";
-import { HOME_FAQS, STORE_NAP, faqPageJsonLd } from "./lib/storeNap";
+import { HOME_FAQS, HOME_TITLE, STORE_NAP, faqPageJsonLd } from "./lib/storeNap";
 import { PILLAR_HUB_CARDS } from "./lib/pillarPages";
 import Papa from "papaparse";
 
@@ -173,9 +174,8 @@ export default function HomePage() {
   return (
     <main className={styles.main}>
       <JsonLd data={faqPageJsonLd(HOME_FAQS)} />
-      <FleetAnnouncementBanner />
-      {/* -- NAVBAR -- */}
       <Navbar />
+      <FleetAnnouncementBanner />
 
       {/* -- WELCOME BANNER -- */}
       {hasWelcomeBanner && !welcomeBannerError && (
@@ -227,9 +227,7 @@ export default function HomePage() {
                 marginBottom: "8px",
               }}
             />
-            <h1 className={styles.brandTitle}>
-              King Rock | King West &amp; Liberty Village Cannabis
-            </h1>
+            <h1 className={styles.brandTitle}>{HOME_TITLE}</h1>
             <p className={styles.brandSub}>
               Walk-in on King West / Liberty Village · {STORE_NAP.ageLine}
             </p>
@@ -237,8 +235,8 @@ export default function HomePage() {
               {STORE_NAP.hoursLabel}
             </div>
             <div className={styles.homeMenuActions} aria-label="Choose a King Rock menu">
-              <Link href="/exotic-weed" className={styles.homeMenuCta}>STORE MENU</Link>
-              <Link href="/delivery" className={`${styles.homeMenuCta} ${styles.homeDeliveryCta}`}>DELIVERY MENU</Link>
+              <Link href="/exotic-weed" className={`${styles.homeMenuCta} ${styles.homeMenuPrimary}`}>STORE MENU</Link>
+              <Link href="/delivery" className={`${styles.homeMenuCta} ${styles.homeDeliverySecondary}`}>Delivery</Link>
               <Link href="#visit" className={`${styles.homeMenuCta} ${styles.homeVisitCta}`}>Find us · 24/7</Link>
             </div>
           </div>
@@ -265,6 +263,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <HomeDeliverySection />
 
       {/* -- HOMEPAGE VISIT HUB (GBP website target lives here, not /visit) -- */}
       <section className={styles.visitHub} id="visit" aria-labelledby="visit-hub-heading">
