@@ -39,7 +39,8 @@ export const LEGACY_HOSTS = [
   "kingrockcannabis.com",
 ] as const;
 
-export const HOME_TITLE = "King Rock | King West & Liberty Village Cannabis";
+export const HOME_TITLE =
+  "King Rock Cannabis Dispensary - Weed Delivery in King West";
 export const HOME_DESCRIPTION =
   "Walk-in cannabis dispensary at 1220b King St W for King West and Liberty Village. Unit B on King. Adults 19+. Open 24 Hours Daily. Call +1 (437) 780-9691.";
 
