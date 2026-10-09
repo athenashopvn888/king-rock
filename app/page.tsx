@@ -10,10 +10,11 @@ import Footer from "./components/Footer";
 import FlowerCard from "./components/FlowerCard";
 import SmokePilotSpotlight from "./components/SmokePilotSpotlight";
 import JsonLd from "./components/JsonLd";
-import { allFlowers, type FlowerProduct } from "./lib/products";
+import { type FlowerProduct } from "./lib/products";
 import { HOME_FAQS, HOME_TITLE, STORE_NAP, faqPageJsonLd } from "./lib/storeNap";
 import { PILLAR_HUB_CARDS } from "./lib/pillarPages";
 import Papa from "papaparse";
+import { useLiveFlowers } from "./lib/useLiveMenu";
 
 function pickFeaturedStrains(flowers: FlowerProduct[]) {
   const pool = flowers.filter((f) => f.image);
@@ -100,7 +101,8 @@ interface ReviewStats {
 }
 
 export default function HomePage() {
-  const featuredStrains = pickFeaturedStrains(allFlowers);
+    const __liveFlowers = useLiveFlowers();
+  const featuredStrains = pickFeaturedStrains(__liveFlowers);
   const [reviews, setReviews] = useState<Review[]>([]);
   const [reviewsStats, setReviewsStats] = useState<ReviewStats | null>(null);
   const [reviewsLoading, setReviewsLoading] = useState(true);
