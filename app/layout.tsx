@@ -4,15 +4,15 @@ import "./globals.css";
 import JsonLd from "./components/JsonLd";
 import {
   STORE_NAP,
-  HOME_TITLE,
   HOME_DESCRIPTION,
   cannabisStoreJsonLd,
+  HOME_DOC_TITLE,
 } from "./lib/storeNap";
 
 export const metadata: Metadata = {
   metadataBase: new URL(STORE_NAP.origin),
   title: {
-    default: HOME_TITLE,
+    default: HOME_DOC_TITLE,
     template: "%s | King Rock",
   },
   description: HOME_DESCRIPTION,
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     locale: "en_CA",
     url: STORE_NAP.origin,
     siteName: "King Rock",
-    title: HOME_TITLE,
+    title: HOME_DOC_TITLE,
     description: HOME_DESCRIPTION,
     images: [
       {
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: HOME_TITLE,
+    title: HOME_DOC_TITLE,
     description: HOME_DESCRIPTION,
     images: [
       "https://www.kingrockcannabis.com/wp-content/uploads/2026/04/46Oi5.jpg",

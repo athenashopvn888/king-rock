@@ -159,3 +159,6 @@ export function faqPageJsonLd(
     }),
   };
 }
+
+// Document <title>/og/twitter: exact Google name | area. H1 keeps HOME_TITLE (previous keyword text).
+export const HOME_DOC_TITLE = "King Rock Dispensary Weed Delivery | King West";
