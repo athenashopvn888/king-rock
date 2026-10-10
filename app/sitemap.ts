@@ -26,6 +26,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE}/visit`, lastModified: now, changeFrequency: "weekly", priority: 0.7 },
     { url: `${BASE}/hours`, lastModified: now, changeFrequency: "weekly", priority: 0.7 },
     { url: `${BASE}/weed-dispensary-king-west`, lastModified: now, changeFrequency: "weekly", priority: 0.85 },
+    { url: `${BASE}/vape-shop-king-west`, lastModified: now, changeFrequency: "daily", priority: 0.8 },
     { url: `${BASE}/weed-dispensary-toronto`, lastModified: now, changeFrequency: "yearly", priority: 0.2 },
     { url: `${BASE}/contact`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
     { url: `${BASE}/faq`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
