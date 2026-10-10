@@ -10,6 +10,7 @@ import { TIER_CONFIG } from "../../lib/products";
 import { STORE_NAP, faqPageJsonLd } from "../../lib/storeNap";
 import JsonLd from "../../components/JsonLd";
 import styles from "./seo.module.css";
+import VapeActionPanel from "../../components/VapeActionPanel";
 
 /* ── Generate all SEO pages ── */
 export function generateStaticParams() {
@@ -76,6 +77,8 @@ export default async function SeoLandingPage({
           <p className={styles.heroTagline}>{page.heroTagline}</p>
         </div>
       </section>
+
+      {slug === "nicotine-vapes-king-west" && <VapeActionPanel compact />}
 
       {/* Content Sections */}
       <section className={styles.content}>

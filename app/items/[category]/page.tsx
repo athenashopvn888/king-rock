@@ -15,6 +15,7 @@ import {
 import { STORE_NAP } from "../../lib/storeNap";
 import styles from "./items.module.css";
 import { liveItemsByCategory } from "../../lib/liveMenu";
+import VapeActionPanel from "../../components/VapeActionPanel";
 
 // Read the live menu feed on every request (never a build-time snapshot).
 export const dynamic = "force-dynamic";
@@ -92,6 +93,8 @@ export default async function ItemsCategoryPage({
           </div>
         )}
       </section>
+
+      {(catSlug === "vapes" || catSlug === "vape-disposables") && <VapeActionPanel compact />}
 
       {bannerExists && catInfo.key === "VAPE PENS" && (
         <section className={styles.heroContent} style={{ background: config.color, padding: "32px 24px", textAlign: "center" }}>
