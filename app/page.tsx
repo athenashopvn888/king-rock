@@ -15,6 +15,7 @@ import { HOME_FAQS, HOME_TITLE, STORE_NAP, faqPageJsonLd } from "./lib/storeNap"
 import { PILLAR_HUB_CARDS } from "./lib/pillarPages";
 import Papa from "papaparse";
 import { useLiveFlowers } from "./lib/useLiveMenu";
+import { storeTierRange, tierRangeText } from "./lib/tierPriceRanges";
 
 function pickFeaturedStrains(flowers: FlowerProduct[]) {
   const pool = flowers.filter((f) => f.image);
@@ -35,6 +36,7 @@ function pickFeaturedStrains(flowers: FlowerProduct[]) {
 const BENTO_TIERS = [
   {
     name: "EXOTIC WEED",
+    key: "EXOTIC",
     slug: "exotic-weed",
     price: "$10-$12/g",
     banner: "/banners/exotics_banner.webp",
@@ -42,6 +44,7 @@ const BENTO_TIERS = [
   },
   {
     name: "PREMIUM WEED",
+    key: "PREMIUM",
     slug: "premium-weed",
     price: "$7-$10/g",
     banner: "/banners/premium_banner.webp",
@@ -49,6 +52,7 @@ const BENTO_TIERS = [
   },
   {
     name: "AAA+ WEED",
+    key: "AAA+",
     slug: "aaa-weed",
     price: "$5-$6/g",
     banner: "/banners/aaa_plus_banner.webp",
@@ -56,6 +60,7 @@ const BENTO_TIERS = [
   },
   {
     name: "AA WEED",
+    key: "AA",
     slug: "aa-weed",
     price: "$4/g",
     banner: "/banners/aa_banner.webp",
@@ -63,6 +68,7 @@ const BENTO_TIERS = [
   },
   {
     name: "BUDGET WEED",
+    key: "BUDGET",
     slug: "budget-weed",
     price: "$3/g",
     banner: "/banners/budget_banner.webp",
@@ -244,6 +250,7 @@ export default function HomePage() {
           </div>
 
           {/* Bento Grid */}
+          <p className="price-rule-notice"><strong>IN-STORE PRICES ONLY.</strong> These prices do not apply to delivery orders. Delivery has its own prices. Why? <Link href="/faq#delivery-price-rule">See the FAQ</Link></p>
           <div className={styles.bentoGrid}>
             {BENTO_TIERS.map((tier) => (
               <Link
@@ -258,7 +265,7 @@ export default function HomePage() {
                 <div className={styles.bentoTileOverlay} />
                 <div className={styles.bentoTileContent}>
                   <span className={styles.bentoLabel}>{tier.name}</span>
-                  <span className={styles.bentoPrice}>{tier.price}</span>
+                  {tier.key ? (() => { const line = tierRangeText(storeTierRange(__liveFlowers, tier.key)); return line ? <span className={styles.bentoPrice}><small className="price-scope-label">In-store price</small>{line}</span> : null; })() : <span className={styles.bentoPrice}>{tier.price}</span>}
                 </div>
               </Link>
             ))}
