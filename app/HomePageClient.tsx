@@ -183,7 +183,7 @@ export default function HomePageClient({ initialFlowers }: { initialFlowers: Par
     <main className={styles.main}>
       <JsonLd data={faqPageJsonLd(HOME_FAQS)} />
       <Navbar />
-      <FleetAnnouncementBanner />
+      <FleetAnnouncementBanner title={HOME_TITLE} />
 
       {/* -- WELCOME BANNER -- */}
       {hasWelcomeBanner && !welcomeBannerError && (
@@ -235,7 +235,7 @@ export default function HomePageClient({ initialFlowers }: { initialFlowers: Par
                 marginBottom: "8px",
               }}
             />
-            <h1 className={styles.brandTitle}>{HOME_TITLE}</h1>
+            <p className={styles.brandTitle}>{HOME_TITLE}</p>
             <p className={styles.brandSub}>
               Walk-in on King West / Liberty Village · {STORE_NAP.ageLine}
             </p>
