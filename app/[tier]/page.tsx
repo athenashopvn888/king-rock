@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import fs from "fs";
 import path from "path";
 import Navbar from "../components/Navbar";
+import CategoryCoreBanners from "../components/CategoryCoreBanners";
 import Footer from "../components/Footer";
 import FlowerCard from "../components/FlowerCard";
 import { storeTierRange, tierRangeText } from "../lib/tierPriceRanges";
@@ -129,6 +130,8 @@ export default async function TierPage({
           />
         </section>
       )}
+
+      {["exotic-weed", "premium-weed", "aaa-weed"].includes(tierSlug) && <CategoryCoreBanners kind="weed" />}
 
       {/* ── Hero Content BELOW banner ── */}
       <section
