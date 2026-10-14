@@ -50,6 +50,10 @@ export const GBP_WEBSITE = STORE_NAP.origin;
 /** Visible homepage FAQs — FAQPage JSON-LD must stay in lockstep with these strings. */
 export const HOME_FAQS = [
   {
+    q: "Is there a weed shop near me in King West or Liberty Village?",
+    a: "King Rock Cannabis is at 1220b King St W (look for unit B on the King Street frontage), between King West and Liberty Village. The walk-in is open 24 hours daily for adults 19+ with photo ID.",
+  },
+  {
     q: "What are the hours for King Rock on King West?",
     a: "King Rock Cannabis at 1220b King St W is open 24 hours daily. Walk in — no appointment. Adults 19+ must bring government-issued photo ID.",
   },
