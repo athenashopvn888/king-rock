@@ -96,7 +96,9 @@ export function cannabisStoreJsonLd() {
     "@context": "https://schema.org",
     "@type": "CannabisStore",
     "@id": `${nap.origin}/#store`,
-    name: nap.name,
+    name: "King Rock Dispensary Weed Delivery",
+    alternateName: nap.name,
+    sameAs: ["https://www.google.com/maps/place/?q=place_id:ChIJS27Cvmo1K4gRemGsilWLHzk"],
     description:
       "Walk-in cannabis dispensary on King West / Liberty Village at 1220b King St W (unit B). Adults 19+. Open 24 Hours Daily.",
     url: nap.origin,
