@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import ResourceView from "../ResourceView";
 import { getResourcePage, RESOURCE_PAGES } from "../resourceData";
+import { VAPE_PAGE, cigaretteRedirectDestination } from "../../lib/cigaretteGate";
 
 type ResourceRouteProps = {
   params: Promise<{ slug?: string[] }>;
@@ -17,7 +18,9 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: ResourceRouteProps): Promise<Metadata> {
   const { slug } = await params;
-  const page = getResourcePage(routeSlug(slug));
+  const route = routeSlug(slug);
+  if (cigaretteRedirectDestination(`/resources/${route}`)) redirect(VAPE_PAGE);
+  const page = getResourcePage(route);
   if (!page) return {};
   return {
     title: { absolute: page.seoTitle },
@@ -28,7 +31,9 @@ export async function generateMetadata({ params }: ResourceRouteProps): Promise<
 
 export default async function ResourcePage({ params }: ResourceRouteProps) {
   const { slug } = await params;
-  const page = getResourcePage(routeSlug(slug));
+  const route = routeSlug(slug);
+  if (cigaretteRedirectDestination(`/resources/${route}`)) redirect(VAPE_PAGE);
+  const page = getResourcePage(route);
   if (!page) notFound();
   return <ResourceView page={page} />;
 }

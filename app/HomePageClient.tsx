@@ -12,7 +12,8 @@ import SmokePilotSpotlight from "./components/SmokePilotSpotlight";
 import JsonLd from "./components/JsonLd";
 import { type FlowerProduct } from "./lib/products";
 import { HOME_FAQS, HOME_TITLE, STORE_NAP, faqPageJsonLd } from "./lib/storeNap";
-import { PILLAR_HUB_CARDS } from "./lib/pillarPages";
+import { visiblePillarHubCards } from "./lib/pillarPages";
+import { SHOW_CIGARETTES, publicCopy } from "./lib/cigaretteGate";
 import Papa from "papaparse";
 import { useLiveFlowers } from "./lib/useLiveMenu";
 import { storeTierRange, tierRangeText } from "./lib/tierPriceRanges";
@@ -93,7 +94,7 @@ const EXPLORE_CATEGORIES = [
   { name: "Magic Stuff", slug: "items/magic", banner: "/banners/09_Magic_Stuff.webp" },
 ];
 
-const LOCAL_FAQS = HOME_FAQS;
+const LOCAL_FAQS = HOME_FAQS.map((faq) => ({ q: faq.q, a: publicCopy(faq.a) }));
 
 interface Review {
   name: string;
@@ -181,7 +182,7 @@ export default function HomePageClient({ initialFlowers }: { initialFlowers: Par
 
   return (
     <main className={styles.main}>
-      <JsonLd data={faqPageJsonLd(HOME_FAQS)} />
+      <JsonLd data={faqPageJsonLd(LOCAL_FAQS)} />
       <Navbar />
       <FleetAnnouncementBanner title={HOME_TITLE} />
 
@@ -353,15 +354,16 @@ export default function HomePageClient({ initialFlowers }: { initialFlowers: Par
           <div className={styles.pillarHub} id="corridor" aria-labelledby="pillar-hub-heading">
             <p className={styles.visitHubEyebrow}>King / Parkdale / Queen West corridor</p>
             <h2 className={styles.visitHubTitle} id="pillar-hub-heading">
-              Five neighbourhood pages
+              {SHOW_CIGARETTES ? "Five neighbourhood pages" : "Neighbourhood pages"}
             </h2>
             <p className={styles.visitHubLead}>
-              King West weed dispensary, 24-hour walk-in, neighbourhood
-              delivery, Native cigarettes, and nicotine vape — scoped to this
-              corridor, not city-wide Toronto clones. {STORE_NAP.ageLine}.
+              {SHOW_CIGARETTES
+                ? "King West weed dispensary, 24-hour walk-in, neighbourhood delivery, Native cigarettes, and nicotine vape — scoped to this corridor, not city-wide Toronto clones."
+                : "King West weed dispensary, 24-hour walk-in, neighbourhood delivery, and nicotine vape — scoped to this corridor, not city-wide Toronto clones."}{" "}
+              {STORE_NAP.ageLine}.
             </p>
             <div className={styles.pillarGrid}>
-              {PILLAR_HUB_CARDS.map((card) => (
+              {visiblePillarHubCards().map((card) => (
                 <Link key={card.slug} href={card.href} className={styles.pillarCard}>
                   <span className={styles.pillarCode}>{card.code}</span>
                   <h3 className={styles.pillarCardTitle}>{card.title}</h3>
@@ -380,8 +382,9 @@ export default function HomePageClient({ initialFlowers }: { initialFlowers: Par
           <div className={styles.sectionHeader}>
             <h2 className={styles.sectionTitle}>Explore Categories</h2>
             <p className={styles.sectionSubtitle}>
-              From custom disposable vapes and concentrates to accessories and
-              cigarettes.
+              {SHOW_CIGARETTES
+                ? "From custom disposable vapes and concentrates to accessories and cigarettes."
+                : "From custom disposable vapes and concentrates to accessories."}
             </p>
           </div>
 
@@ -488,9 +491,9 @@ export default function HomePageClient({ initialFlowers }: { initialFlowers: Par
               Walk-ins do not need an appointment. Bring government-issued photo
               ID that proves you are 19 or older. The counter accepts debit and
               cash. Store hours are 24 hours daily — a King West pin fact, not a
-              city-wide slogan. The public menu is split into flower tiers and
+              city-wide slogan.               The public menu is split into flower tiers and
               format categories (pre-rolls, edibles, vapes, concentrates,
-              accessories, cigarettes). Those pages are for browsing names and
+              accessories{SHOW_CIGARETTES ? ", cigarettes" : ""}). Those pages are for browsing names and
               posted details before you visit. They are not a live inventory
               feed. If one exact item is the reason for the trip, call{" "}
               <a href={`tel:${STORE_NAP.phoneIntl}`}>{STORE_NAP.phoneDisplay}</a>{" "}

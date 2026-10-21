@@ -3,6 +3,7 @@ import Link from "next/link";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import { DELIVERY_GUIDE_REGISTRY } from "../lib/deliveryGuideRegistry";
+import { SHOW_CIGARETTES, isCigaretteGuide } from "../lib/cigaretteGate";
 import { STRAIN_GUIDES, STRAIN_GUIDE_STORE as STORE } from "../lib/strainGuides";
 import styles from "./[slug]/guide.module.css";
 
@@ -42,10 +43,10 @@ export default function GuidesIndexPage() {
           </section>
         ))}
         {DELIVERY_GUIDE_REGISTRY.length > 0 && (
-          <section className={styles.section} aria-label="Cigarette and vape guides">
+          <section className={styles.section} aria-label={SHOW_CIGARETTES ? "Cigarette and vape guides" : "Vape and Backwoods guides"}>
             <div className={styles.body}>
-              <h2>Cigarette and vape guides</h2>
-              <ul>{DELIVERY_GUIDE_REGISTRY.map((guide) => <li key={guide.slug}><Link href={`/guides/${guide.slug}`}>{guide.h1}</Link></li>)}</ul>
+              <h2>{SHOW_CIGARETTES ? "Cigarette and vape guides" : "Vape and Backwoods guides"}</h2>
+              <ul>{(SHOW_CIGARETTES ? DELIVERY_GUIDE_REGISTRY : DELIVERY_GUIDE_REGISTRY.filter((guide) => !isCigaretteGuide(guide))).map((guide) => <li key={guide.slug}><Link href={`/guides/${guide.slug}`}>{guide.h1}</Link></li>)}</ul>
             </div>
           </section>
         )}

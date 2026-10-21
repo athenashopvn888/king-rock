@@ -1,5 +1,7 @@
 import { getLiveMenu } from "../../lib/liveMenu";
 import type { Metadata } from "next";
+import { redirect } from "next/navigation";
+import { SHOW_CIGARETTES, VAPE_PAGE } from "../../lib/cigaretteGate";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import { SMOKE_PILOT_HERO_DISCLOSURE, SmokePilotLanding } from "../../components/SmokePilot";
@@ -29,6 +31,7 @@ const HERO_ITEMS = [
 ] as const;
 
 export default async function NativeCigarettesPage() {
+  if (!SHOW_CIGARETTES) redirect(VAPE_PAGE);
     await __loadMenuData();
   const items = __menu.items.filter((i) => i.category.toUpperCase() === String("CIGARETTES").toUpperCase());
   return (

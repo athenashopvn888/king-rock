@@ -1,5 +1,6 @@
 import { getLiveMenu } from "../../lib/liveMenu";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
+import { SHOW_CIGARETTES, VAPE_PAGE, isCigaretteItem } from "../../lib/cigaretteGate";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "../../components/Navbar";
@@ -35,6 +36,7 @@ export async function generateMetadata({
     await __loadMenuData();
   const { slug } = await params;
   const item = __menu.items.find((i) => i.slug === slug);
+  if (item && !SHOW_CIGARETTES && isCigaretteItem(item)) redirect(VAPE_PAGE);
   if (!item) return {};
 
   const itemData = getItemData(item.category, item.name);
@@ -133,6 +135,7 @@ export default async function ItemPage({
     await __loadMenuData();
   const { slug } = await params;
   const item = __menu.items.find((i) => i.slug === slug);
+  if (item && !SHOW_CIGARETTES && isCigaretteItem(item)) redirect(VAPE_PAGE);
   if (!item) notFound();
 
   const catInfo = Object.values(CATEGORY_CONFIG).find(c => c.name.toUpperCase() === item.category.toUpperCase() || c.name === item.category);

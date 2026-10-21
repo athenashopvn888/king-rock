@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
+import { SHOW_CIGARETTES, VAPE_PAGE, isCigaretteGuide } from "../../lib/cigaretteGate";
 import { DELIVERY_GUIDE_REGISTRY, DELIVERY_GUIDE_STORE, getDeliveryGuide } from "../../lib/deliveryGuideRegistry";
 import { STRAIN_GUIDES, STRAIN_GUIDE_STORE, getStrainGuide } from "../../lib/strainGuides";
 import DeliveryGuidePage from "./DeliveryGuidePage";
@@ -13,6 +14,7 @@ export function generateStaticParams() { return [...DELIVERY_GUIDE_REGISTRY.map(
 export async function generateMetadata({ params }: GuidePageProps): Promise<Metadata> {
   const slug = (await params).slug;
   const guide = getDeliveryGuide(slug);
+  if (guide && !SHOW_CIGARETTES && isCigaretteGuide(guide)) redirect(VAPE_PAGE);
   if (guide) return { title: { absolute: guide.title }, description: guide.description, alternates: { canonical: `${BASE}/guides/${guide.slug}` }, robots: { index: true, follow: true }, openGraph: { title: guide.title, description: guide.description, url: `${BASE}/guides/${guide.slug}`, type: "website" } };
   const strain = getStrainGuide(slug);
   if (!strain) return {};
@@ -21,6 +23,7 @@ export async function generateMetadata({ params }: GuidePageProps): Promise<Meta
 export default async function GuidePage({ params }: GuidePageProps) {
   const slug = (await params).slug;
   const guide = getDeliveryGuide(slug);
+  if (guide && !SHOW_CIGARETTES && isCigaretteGuide(guide)) redirect(VAPE_PAGE);
   if (guide) return <DeliveryGuidePage guide={guide} />;
   const strain = getStrainGuide(slug);
   if (!strain) notFound();

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import styles from "./faq.module.css";
+import { SHOW_CIGARETTES, publicCopy } from "../lib/cigaretteGate";
 
 export const metadata: Metadata = {
   title: { absolute: "FAQ | King West & Liberty Village — King Rock" },
@@ -130,11 +131,17 @@ const FAQ_CATEGORIES = [
 ];
 
 export default function FAQPage() {
+  const categories = FAQ_CATEGORIES.map((cat) => ({
+    ...cat,
+    faqs: cat.faqs
+      .filter((faq) => SHOW_CIGARETTES || faq.q !== "Do you sell native cigarettes?")
+      .map((faq) => ({ ...faq, a: publicCopy(faq.a) })),
+  }));
   // JSON-LD for FAQ page
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: FAQ_CATEGORIES.flatMap((cat) =>
+    mainEntity: categories.flatMap((cat) =>
       cat.faqs.map((faq) => ({
         "@type": "Question",
         name: faq.q,
@@ -178,7 +185,7 @@ export default function FAQPage() {
             King West / Liberty Village. Adults 19+. Open 24 Hours Daily.
           </p>
 
-          {FAQ_CATEGORIES.map((cat) => (
+          {categories.map((cat) => (
             <div key={cat.title} className={styles.category}>
               <h2 className={styles.categoryTitle}>{cat.title}</h2>
               {cat.faqs.map((faq) => (

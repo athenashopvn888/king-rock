@@ -1,6 +1,7 @@
 import Link from "next/link";
 import styles from "./Footer.module.css";
 import { STORE_NAP } from "../lib/storeNap";
+import { SHOW_CIGARETTES } from "../lib/siteConfig";
 
 export default function Footer() {
   const nap = STORE_NAP;
@@ -61,7 +62,7 @@ export default function Footer() {
               <Link href="/aa-weed">AA Weed</Link>
               <Link href="/budget-weed">Budget Weed</Link>
               <Link href="/items/edibles">Edibles</Link>
-              <Link href="/items/cigarettes">Cigarettes</Link>
+              {SHOW_CIGARETTES ? <Link href="/items/cigarettes">Cigarettes</Link> : null}
               <Link href="/items/vapes">Nicotine Vapes</Link>
               <Link href="/faq">FAQ</Link>
               <Link href="/delivery">DELIVERY MENU</Link>
@@ -78,9 +79,11 @@ export default function Footer() {
                 King West Dispensary
               </Link>
               <Link href="/info/cheap-weed-king-west">Value Weed King West</Link>
+              {SHOW_CIGARETTES ? (
               <Link href="/info/native-cigarettes-king-west">
                 Native Cigarettes
               </Link>
+              ) : null}
               <Link href="/info/nicotine-vapes-king-west">Nicotine Vapes King West</Link>
               <Link href="/info/weed-store-near-liberty-village">
                 Liberty Village Weed Store
