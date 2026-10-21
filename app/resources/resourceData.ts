@@ -1,3 +1,5 @@
+import { SHOW_CIGARETTES, publicCopy } from "../lib/cigaretteGate";
+
 export interface ResourceCard {
   title: string;
   href: string;
@@ -321,8 +323,33 @@ export const RESOURCE_PAGES: ResourcePage[] = [
 
 export const RESOURCE_HOME = RESOURCE_PAGES[0];
 
+function presentResource(page: ResourcePage): ResourcePage {
+  if (SHOW_CIGARETTES) return page;
+  return {
+    ...page,
+    title: publicCopy(page.title),
+    seoTitle: publicCopy(page.seoTitle),
+    description: publicCopy(page.description),
+    eyebrow: publicCopy(page.eyebrow),
+    intro: publicCopy(page.intro),
+    cards: page.cards
+      .filter((card) => !/cigarette/i.test(card.title) && !card.href.includes("native-cigarettes"))
+      .map((card) => ({ ...card, title: publicCopy(card.title), text: publicCopy(card.text) })),
+    sections: page.sections
+      .filter((section) => !/cigarette/i.test(section.heading))
+      .map((section) => ({
+        ...section,
+        heading: publicCopy(section.heading),
+        body: Array.isArray(section.body) ? section.body.map((paragraph) => publicCopy(paragraph)) : publicCopy(section.body),
+        bullets: section.bullets?.map((item) => publicCopy(item)),
+      })),
+    faqs: page.faqs?.map((faq) => ({ question: publicCopy(faq.question), answer: publicCopy(faq.answer) })),
+  };
+}
+
 export function getResourcePage(slug: string) {
   const cleanSlug = slug.replace(/^\/+|\/+$/g, "");
-  return RESOURCE_PAGES.find((page) => page.slug === cleanSlug);
+  const page = RESOURCE_PAGES.find((entry) => entry.slug === cleanSlug);
+  return page ? presentResource(page) : undefined;
 }
 

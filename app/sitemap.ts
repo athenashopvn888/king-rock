@@ -5,6 +5,7 @@ import { TIER_CONFIG, CATEGORY_CONFIG } from "./lib/products";
 import { SEO_PAGES } from "./lib/seoPages";
 import { RESOURCE_PAGES } from "./resources/resourceData";
 import { STRAIN_GUIDES } from "./lib/strainGuides";
+import { SHOW_CIGARETTES, isCigaretteGuide, isCigaretteItem } from "./lib/cigaretteGate";
 
 // Products come from the same loader as /api/tv-data on every request.
 export const dynamic = "force-dynamic";
@@ -44,7 +45,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }));
 
   /* Item category pages */
-  const itemPages: MetadataRoute.Sitemap = Object.values(CATEGORY_CONFIG).map((c) => ({
+  const itemPages: MetadataRoute.Sitemap = Object.values(CATEGORY_CONFIG).filter((c) => SHOW_CIGARETTES || c.slug !== "cigarettes").map((c) => ({
     url: `${BASE}/items/${c.slug}`,
     lastModified: now,
     changeFrequency: "daily" as const,
@@ -60,7 +61,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }));
 
   /* Item detail pages */
-  const itemDetailPages: MetadataRoute.Sitemap = __menu.items.map((i) => ({
+  const itemDetailPages: MetadataRoute.Sitemap = __menu.items.filter((i) => SHOW_CIGARETTES || !isCigaretteItem(i)).map((i) => ({
     url: `${BASE}/item/${i.slug}`,
     lastModified: now,
     changeFrequency: "weekly" as const,
@@ -68,20 +69,20 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }));
 
   /* SEO landing pages */
-  const seoPages: MetadataRoute.Sitemap = SEO_PAGES.map((p) => ({
+  const seoPages: MetadataRoute.Sitemap = SEO_PAGES.filter((p) => SHOW_CIGARETTES || p.slug !== "native-cigarettes-king-west").map((p) => ({
     url: `${BASE}/info/${p.slug}`,
     lastModified: now,
     changeFrequency: "monthly" as const,
     priority: 0.8,
   }));
-  const resourcePages: MetadataRoute.Sitemap = RESOURCE_PAGES.map((page) => ({
+  const resourcePages: MetadataRoute.Sitemap = RESOURCE_PAGES.filter((page) => SHOW_CIGARETTES || page.slug !== "native-smokes/native-cigarettes-guide").map((page) => ({
     url: page.slug ? `${BASE}/resources/${page.slug}` : `${BASE}/resources`,
     lastModified: now,
     changeFrequency: "weekly" as const,
     priority: page.slug ? 0.65 : 0.75,
   }));
 
-  const deliveryGuidePages: MetadataRoute.Sitemap = DELIVERY_GUIDE_REGISTRY.map((guide) => ({ url: `https://${DELIVERY_GUIDE_STORE.domain}/guides/${guide.slug}`, lastModified: new Date(), changeFrequency: "weekly" as const, priority: 0.75 }));
+  const deliveryGuidePages: MetadataRoute.Sitemap = DELIVERY_GUIDE_REGISTRY.filter((guide) => SHOW_CIGARETTES || !isCigaretteGuide(guide)).map((guide) => ({ url: `https://${DELIVERY_GUIDE_STORE.domain}/guides/${guide.slug}`, lastModified: new Date(), changeFrequency: "weekly" as const, priority: 0.75 }));
   const strainGuidePages: MetadataRoute.Sitemap = [`${BASE}/guides`, ...STRAIN_GUIDES.map((guide) => `${BASE}/guides/${guide.slug}`)].map((url) => ({ url, lastModified: new Date(), changeFrequency: "weekly" as const, priority: 0.7 }));
   return [...deliveryGuidePages, ...strainGuidePages, ...staticPages, ...tierPages, ...itemPages, ...flowerPages, ...itemDetailPages, ...seoPages, ...resourcePages];
 }

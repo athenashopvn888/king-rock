@@ -1,3 +1,4 @@
+import { SHOW_CIGARETTES } from "./siteConfig";
 import { STORE_NAP } from "./storeNap";
 
 /** Listed delivery window from the live /delivery menu — not the walk-in hours lock. */
@@ -84,6 +85,11 @@ export const PILLAR_HUB_CARDS: PillarHubCard[] = [
     blurb: `Nicotine vape category, kept separate from THC vape. ${STORE_NAP.ageLine}. Nicotine is addictive.`,
   },
 ];
+
+export function visiblePillarHubCards(): PillarHubCard[] {
+  if (SHOW_CIGARETTES) return PILLAR_HUB_CARDS;
+  return PILLAR_HUB_CARDS.filter((card) => card.slug !== PILLAR_SLUGS.nativeCigarettes);
+}
 
 export const PILLAR_OWNER: PillarPage = {
   slug: PILLAR_SLUGS.weedDispensary,

@@ -18,6 +18,7 @@ import { STORE_NAP } from "../../lib/storeNap";
 import styles from "./items.module.css";
 import { liveItemsByCategory } from "../../lib/liveMenu";
 import VapeActionPanel from "../../components/VapeActionPanel";
+import { SHOW_CIGARETTES, isCigaretteItem } from "../../lib/cigaretteGate";
 
 // Read the live menu feed on every request (never a build-time snapshot).
 export const dynamic = "force-dynamic";
@@ -36,6 +37,15 @@ export async function generateMetadata({
   const { category: catSlug } = await params;
   const catInfo = getCategoryFromSlug(catSlug);
   if (!catInfo) return {};
+  if (catSlug === "cigarettes" && !SHOW_CIGARETTES) {
+    return {
+      title: "Backwoods | King Rock",
+      description: "Backwoods cigarillos listed at King Rock.",
+      alternates: {
+        canonical: "https://www.kingrockcannabis.com/items/cigarettes",
+      },
+    };
+  }
   const items = (await liveItemsByCategory(catInfo.key));
 
   return {
@@ -60,6 +70,9 @@ export default async function ItemsCategoryPage({
 
   /* Pre-Rolls also shows accessories (ADD ONS) */
   let items = (await liveItemsByCategory(catInfo.key));
+  if (catSlug === "cigarettes" && !SHOW_CIGARETTES) {
+    items = items.filter((item) => !isCigaretteItem(item));
+  }
   if (catInfo.key === "PREROLLS") {
     const accessories = (await liveItemsByCategory("ADD ONS"));
     const existingIds = new Set(items.map(i => i.sku));
@@ -76,11 +89,11 @@ export default async function ItemsCategoryPage({
   return (
     <main className={styles.main}>
       <Navbar />
-      {catSlug === "cigarettes" && <CigaretteSeasonalNotice sticky />}
+      {catSlug === "cigarettes" && SHOW_CIGARETTES && <CigaretteSeasonalNotice sticky />}
 
       {/* Hero Banner */}
       <section style={{ width: "100%", overflow: "hidden", marginTop: "92px", marginBottom: "24px" }}>
-        {config.banner && bannerExists ? (
+        {config.banner && bannerExists && (catSlug !== "cigarettes" || SHOW_CIGARETTES) ? (
           <img
             src={config.banner}
             alt={catSlug === "cigarettes" ? cigaretteCategoryImage.alt : config.name}
@@ -91,7 +104,7 @@ export default async function ItemsCategoryPage({
           <div className={styles.heroContent} style={{ background: config.color, padding: "60px 24px", textAlign: "center" }}>
             <span className={styles.heroIcon}>{config.icon}</span>
             <h1 className={styles.heroTitle}>
-              <span style={{ color: "#fff" }}>{config.name}</span>
+              <span style={{ color: "#fff" }}>{catSlug === "cigarettes" && !SHOW_CIGARETTES ? "Backwoods" : config.name}</span>
             </h1>
             <p className={styles.heroSub} style={{ color: "rgba(255,255,255,0.8)" }}>{items.length} products available</p>
           </div>
@@ -99,7 +112,7 @@ export default async function ItemsCategoryPage({
       </section>
 
       {(catSlug === "vapes" || catSlug === "vape-disposables") && <CategoryCoreBanners kind="vapes" />}
-      {catSlug === "cigarettes" && <CategoryCoreBanners kind="cigarettes" />}
+      {catSlug === "cigarettes" && SHOW_CIGARETTES && <CategoryCoreBanners kind="cigarettes" />}
 
       {(catSlug === "vapes" || catSlug === "vape-disposables") && <VapeActionPanel compact />}
 
@@ -132,7 +145,7 @@ export default async function ItemsCategoryPage({
       </section>
 
       {/* SEO Content */}
-      <section className={styles.seoSection}>
+      {(catSlug !== "cigarettes" || SHOW_CIGARETTES) && <section className={styles.seoSection}>
         <div className={styles.container}>
           <h2 className={styles.seoTitle}>{config.seoTitle}</h2>
           <p className={styles.seoBody}>{config.seoDescription}</p>
@@ -158,7 +171,7 @@ export default async function ItemsCategoryPage({
             </p>
           </div>
         </div>
-      </section>
+      </section>}
 
       <Footer />
     </main>

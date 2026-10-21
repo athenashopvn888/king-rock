@@ -3,8 +3,9 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import JsonLd from "./JsonLd";
 import { STORE_NAP, faqPageJsonLd } from "../lib/storeNap";
+import { publicCopy } from "../lib/cigaretteGate";
 import {
-  PILLAR_HUB_CARDS,
+  visiblePillarHubCards,
   type PillarPage,
   pillarCanonical,
 } from "../lib/pillarPages";
@@ -12,7 +13,7 @@ import styles from "./PillarLanding.module.css";
 
 export default function PillarLanding({ page }: { page: PillarPage }) {
   const nap = STORE_NAP;
-  const related = PILLAR_HUB_CARDS.filter((card) => card.slug !== page.slug);
+  const related = visiblePillarHubCards().filter((card) => card.slug !== page.slug);
 
   return (
     <main className={styles.main}>
@@ -59,7 +60,7 @@ export default function PillarLanding({ page }: { page: PillarPage }) {
         {page.sections.map((section) => (
           <section key={section.heading} className={styles.section}>
             <h2>{section.heading}</h2>
-            <p>{section.body}</p>
+            <p>{publicCopy(section.body)}</p>
           </section>
         ))}
 

@@ -15,6 +15,7 @@ import {
   isTv2Daytime,
   type Tv2DaytimePromo,
 } from "./tv2Promos";
+import { SHOW_CIGARETTES } from "../lib/siteConfig";
 
 /* -- TYPES -- */
 interface Item {
@@ -31,6 +32,7 @@ const CARD_CONFIG = [
   { id:"CIGARETTES",      title:"🚬 CIGARETTES",         accent:"#78350f", filter:(it:Item)=>it.category==="CIGARETTES", preset:"" },
   { id:"MAGIC",           title:"🍄 MAGIC & OTHERS",     accent:"#9333ea", filter:(it:Item)=>it.category==="MAGIC & OTHERS", preset:"🍫 START SMALL · WAIT 45 MIN · THEN MORE" },
 ];
+const VISIBLE_CARDS = SHOW_CIGARETTES ? CARD_CONFIG : CARD_CONFIG.filter((card) => card.id !== "CIGARETTES");
 
 /* -- HELPERS -- */
 const fmtPrice = (v?:string) => { const s=String(v||"").trim(); if(!s)return""; return /^\$/.test(s)?s:"$"+s; };
@@ -185,11 +187,11 @@ const TICKER_SLIDES = [
 function VerticalTicker() {
   const [activeIdx, setActiveIdx] = useState(0);
   const [exitIdx, setExitIdx] = useState(-1);
-  const [showCigaretteFlash, setShowCigaretteFlash] = useState(() => isCigaretteFlashWindow());
+  const [showCigaretteFlash, setShowCigaretteFlash] = useState(() => SHOW_CIGARETTES && isCigaretteFlashWindow());
   const slides = showCigaretteFlash ? [CIGARETTE_FLASH_MESSAGE, ...TICKER_SLIDES] : TICKER_SLIDES;
 
   useEffect(() => {
-    const update = () => setShowCigaretteFlash(isCigaretteFlashWindow());
+    const update = () => setShowCigaretteFlash(SHOW_CIGARETTES && isCigaretteFlashWindow());
     const iv = setInterval(update, 60_000);
     return () => clearInterval(iv);
   }, []);
@@ -287,7 +289,7 @@ export default function TV2Page() {
     const interval = setInterval(() => {
       setHighlights(prev => {
         const next = {...prev};
-        CARD_CONFIG.forEach(c => {
+        VISIBLE_CARDS.forEach(c => {
           const filtered = items.filter(c.filter);
           next[c.id] = ((prev[c.id]||0) + 1) % Math.max(1, filtered.length);
         });
@@ -311,7 +313,7 @@ export default function TV2Page() {
         <div className={styles.stage}>
           <HiringRibbon hiring={tvHiring} />
           <div className={styles.grid}>
-            {CARD_CONFIG.map(card => {
+            {VISIBLE_CARDS.map(card => {
               const filtered = items.filter(card.filter).filter(it => !(daytime && isNicotineItem(it)));
               const promo = getTv2DaytimePromo(card.id, daytime, promoElapsedMs);
 

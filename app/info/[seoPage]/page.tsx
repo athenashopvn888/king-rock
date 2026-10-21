@@ -11,6 +11,7 @@ import { STORE_NAP, faqPageJsonLd } from "../../lib/storeNap";
 import JsonLd from "../../components/JsonLd";
 import styles from "./seo.module.css";
 import VapeActionPanel from "../../components/VapeActionPanel";
+import { publicCopy } from "../../lib/cigaretteGate";
 
 /* ── Generate all SEO pages ── */
 export function generateStaticParams() {
@@ -86,7 +87,7 @@ export default async function SeoLandingPage({
           {page.sections.map((s, i) => (
             <div key={i} className={styles.section}>
               <h2 className={styles.sectionTitle}>{s.heading}</h2>
-              <p className={styles.sectionBody}>{s.body}</p>
+              <p className={styles.sectionBody}>{publicCopy(s.body)}</p>
             </div>
           ))}
 

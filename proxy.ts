@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
+import { cigaretteRedirectDestination } from "./app/lib/cigaretteGate";
 
 const PRIMARY_HOST = "www.kingrockcannabis.com";
 const LEGACY_HOSTS = new Set([
@@ -20,6 +21,12 @@ export function proxy(request: NextRequest) {
     url.hostname = PRIMARY_HOST;
     url.port = "";
     return NextResponse.redirect(url, 308);
+  }
+  const cigaretteDestination = cigaretteRedirectDestination(request.nextUrl.pathname);
+  if (cigaretteDestination) {
+    const url = request.nextUrl.clone();
+    url.pathname = cigaretteDestination;
+    return NextResponse.redirect(url, 302);
   }
   return NextResponse.next();
 }
