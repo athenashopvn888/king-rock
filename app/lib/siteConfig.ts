@@ -13,3 +13,9 @@ function readShowCigarettes(fallback: boolean): boolean {
 }
 
 export const SHOW_CIGARETTES = readShowCigarettes(SHOW_CIGARETTES_SWITCH);
+
+/** Explicit false / 0 / no / off. An empty value is not a hard override. */
+export function cigaretteEnvHardOff(raw: string | undefined = process.env.NEXT_PUBLIC_SHOW_CIGARETTES): boolean {
+  if (typeof raw !== "string" || raw.trim() === "") return false;
+  return /^(0|false|no|off)$/i.test(raw.trim());
+}

@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "King Rock In-Store Accessories Display",
   description: "Operational in-store accessories menu display for King Rock Cannabis.",
