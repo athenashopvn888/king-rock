@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { getFleetContent } from "../lib/fleetContent";
 import { STORE_NAP } from "../lib/storeNap";
 import styles from "./contact.module.css";
 
-export const metadata: Metadata = {
+export const dynamic = "force-dynamic";
+
+const CONTACT_METADATA: Metadata = {
   title: { absolute: "Contact King Rock | 1220b King St W, King West" },
   description:
     "Visit King Rock Cannabis at 1220b King St W, Toronto, ON M6K 1G4. King West / Liberty Village walk-in. Open 24 Hours Daily. Adults 19+.",
@@ -19,6 +22,18 @@ export const metadata: Metadata = {
   },
 };
 
+export async function generateMetadata(): Promise<Metadata> {
+  const fleet = await getFleetContent();
+  if (!fleet.active) return CONTACT_METADATA;
+  const description = fleet.pages.Contact?.metaDescription || "";
+  if (!description || description === CONTACT_METADATA.description) return CONTACT_METADATA;
+  return {
+    ...CONTACT_METADATA,
+    description,
+    openGraph: { ...CONTACT_METADATA.openGraph, description },
+  };
+}
+
 const DAYS = [
   "Monday",
   "Tuesday",
@@ -29,8 +44,15 @@ const DAYS = [
   "Sunday",
 ] as const;
 
-export default function ContactPage() {
+export default async function ContactPage() {
+  const fleet = await getFleetContent();
   const nap = STORE_NAP;
+  const street = fleet.active ? fleet.nap.street : nap.streetAddress;
+  const cityLine = fleet.active ? fleet.nap.cityLine : `${nap.addressLocality}, ${nap.addressRegion} ${nap.postalCode}`;
+  const phoneDisplay = fleet.active ? fleet.nap.phoneDisplay : nap.phoneDisplay;
+  const phoneTel = fleet.active ? fleet.nap.phoneTel : nap.phoneIntl;
+  const hours = fleet.active ? fleet.nap.hours : nap.hoursLabel;
+  const mapSrc = fleet.active ? fleet.nap.mapsEmbedUrl : nap.mapEmbedUrl;
 
   return (
     <main className={styles.main}>
@@ -64,16 +86,16 @@ export default function ContactPage() {
               <div className={styles.infoIcon}></div>
               <h2 className={styles.infoTitle}>Location</h2>
               <p className={styles.infoText}>
-                {nap.streetAddress}
+                {street}
                 <br />
-                {nap.addressLocality}, {nap.addressRegion} {nap.postalCode}
+                {cityLine}
                 <br />
                 <span className={styles.infoMuted}>
                   King West and Liberty Village · unit B
                 </span>
               </p>
               <p className={styles.infoText}>
-                <a href={`tel:${nap.phoneIntl}`}>{nap.phoneDisplay}</a>
+                <a href={`tel:${phoneTel}`}>{phoneDisplay}</a>
               </p>
             </div>
 
@@ -91,7 +113,7 @@ export default function ContactPage() {
               </div>
               <div className={styles.openBadge}>
                 <div className={styles.openDot} />
-                {nap.hoursLabel}
+                {hours}
               </div>
             </div>
 
@@ -131,7 +153,7 @@ export default function ContactPage() {
           <div className={styles.mapSection}>
             <iframe
               title="Map of King Rock Cannabis at 1220b King St W"
-              src={nap.mapEmbedUrl}
+              src={mapSrc}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               style={{ width: "100%", height: 360, border: 0, display: "block" }}
