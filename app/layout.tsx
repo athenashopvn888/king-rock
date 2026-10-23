@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
 import JsonLd from "./components/JsonLd";
-import { CIG_WORDING_FALLBACK } from "./lib/cigDecision";
+import { getCigaretteSnapshot, toPublicCigaretteState } from "./lib/cigaretteFeed";
 import { getFleetContent } from "./lib/fleetContent";
 import { SHOW_CIGARETTES } from "./lib/siteConfig";
 import {
@@ -98,8 +98,10 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const nap = STORE_NAP;
-  const fleet = await getFleetContent();
-  const cigarettes = { web: SHOW_CIGARETTES, tv: SHOW_CIGARETTES, wording: CIG_WORDING_FALLBACK };
+  const [fleet, cigaretteSnapshot] = await Promise.all([getFleetContent(), getCigaretteSnapshot()]);
+  const published = toPublicCigaretteState(cigaretteSnapshot);
+  // Website copy stays on the static switch. TV follows the feed flag only.
+  const cigarettes = { web: SHOW_CIGARETTES && published.web, tv: published.tv, wording: published.wording };
 
   return (
     <html lang="en">

@@ -122,6 +122,20 @@ export function decideCigaretteGuide(input: {
   return { show: true, reason: "on" };
 }
 
+/** Web uses the feed web flag (env hard-off still wins). TV uses only the feed flag. */
+export function buildCigaretteSnapshot<T extends ShelfItem>(cig: unknown, items: T[], live: boolean, errored: boolean) {
+  const web = decideCigaretteSurface({ cig, items, surface: "web", errored });
+  const tv = decideCigaretteSurface({ cig, items, surface: "tv", errored, envRaw: "" });
+  const guides = decideCigaretteGuide({ cig, items, errored });
+  return { web, tv, guides, wording: web.wording, live, items };
+}
+
+/** This store removes the cigarettes card when TV is off. Every other card stays. */
+export function tvCardsForFlag<T extends { id: string }>(cards: readonly T[], tvShow: boolean): T[] {
+  if (tvShow) return [...cards];
+  return cards.filter((card) => card.id !== "CIGARETTES");
+}
+
 /** Drop real cigarettes when this surface is off. Always keep wraps and pouches. */
 export function reconcileSurfaceItems<T extends ShelfItem>(menuItems: T[], liveItems: T[], show: boolean): T[] {
   if (!show) return menuItems.filter((item) => !isRealCigaretteItem(item));
