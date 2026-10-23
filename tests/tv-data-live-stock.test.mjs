@@ -6,6 +6,7 @@ import { beforeEach, test } from "node:test";
 const require = createRequire(import.meta.url);
 const {
   DEFAULT_APPS_SCRIPT_URL,
+  getCigaretteDataset,
   getTvData,
   postprocessFlowers,
   postprocessItems,
@@ -300,4 +301,37 @@ test("prebuild uses the shared post-processor", () => {
   assert.equal(itemsFixed, 1);
   assert.equal(items[0].price, "");
   assert.equal(items[1].price, "$12");
+});
+
+test("cigarette dataset keeps the feed cig block and does not strip items", async () => {
+  const cig = { on: true, tvOn: true, webOn: false };
+  const flowers = list(staticFlowers.length, (index) => flower(`FLOWER ${index}`));
+  const items = [
+    item("BB FULL CARTON"),
+    { ...item("BACKWOODS"), category: "CIGARETTES" },
+    ...list(Math.max(0, staticItems.length - 2), (index) => item(`ITEM ${index}`)),
+  ];
+  const { fetchImpl, calls } = mockFetch({ flowers, items, stockDate: "2026-10-23", cig });
+  const dataset = await getCigaretteDataset({
+    staticFlowers,
+    staticItems,
+    fetchImpl,
+    now: 5_000,
+  });
+  assert.equal(dataset.source, "live");
+  assert.equal(dataset.cig.tvOn, true);
+  assert.equal(dataset.cig.webOn, false);
+  assert.equal(dataset.items.length, items.length);
+  assert.equal(calls[0].opts.next.revalidate, 60);
+  assert.equal(calls[0].opts.cache, undefined);
+
+  const menu = await getTvData({
+    type: "items",
+    staticFlowers,
+    staticItems,
+    fetchImpl,
+    now: 5_000,
+  });
+  assert.equal(menu.body.some((entry) => entry.name === "BB FULL CARTON"), true);
+  assert.equal(menu.body.some((entry) => entry.name === "BACKWOODS"), true);
 });
