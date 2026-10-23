@@ -99,9 +99,8 @@ export default async function RootLayout({
 }>) {
   const nap = STORE_NAP;
   const [fleet, cigaretteSnapshot] = await Promise.all([getFleetContent(), getCigaretteSnapshot()]);
-  const published = toPublicCigaretteState(cigaretteSnapshot);
-  // Website copy stays on the static switch. TV follows the feed flag only.
-  const cigarettes = { web: SHOW_CIGARETTES && published.web, tv: published.tv, wording: published.wording };
+  const cigarettes = toPublicCigaretteState(cigaretteSnapshot);
+  // Website copy stays on the static switch, then the feed. TV follows the feed flag only.
 
   return (
     <html lang="en">
@@ -142,7 +141,7 @@ export default async function RootLayout({
           NEW DELIVERY MENU IS HERE — CLICK TO EXPLORE
         </Link>
         <FleetContentProvider value={{ active: fleet.active, version: fleet.version, nap: fleet.nap }}>
-          <CigaretteStateProvider value={cigarettes}>
+          <CigaretteStateProvider value={{ ...cigarettes, web: SHOW_CIGARETTES ? cigarettes.web : false }}>
             {children}
             <FullNameNap />
             <PinnedNavClearance />
