@@ -5,6 +5,7 @@ import {
   CIG_WORDING_FALLBACK,
   decideCigaretteGuide,
   decideCigaretteSurface,
+  publicWebsiteCigaretteFlag,
   reconcileSurfaceItems,
   resolveCigWording,
   resolveSurfaceFlag,
@@ -16,6 +17,9 @@ const grabba = { category: "CIGARETTES", name: "GRABBA", slug: "grabba" };
 const backwoods = { category: "CIGARETTES", name: "BACKWOODS ASSORTED FLAVORS $20-$25", slug: "backwoods-assorted-flavors-20-25" };
 const pouch = { category: "CIGARETTES", name: "NICOTINE POUCHES , VELO, PABLO, KILLA", slug: "nicotine-pouches-velo-pablo-killa" };
 const paper = { category: "CIGARETTES", name: "RAW ROLLING PAPERS", slug: "raw-rolling-papers" };
+const zyn = { category: "CIGARETTES", name: "ZYN CITRUS", slug: "zyn-citrus" };
+const cigarillo = { category: "CIGARETTES", name: "GAME CIGARILLOS", slug: "game-cigarillos" };
+const wrap = { category: "CIGARETTES", name: "SHOW BLUNT WRAPS", slug: "show-blunt-wraps" };
 const vape = { category: "VAPE PENS", name: "Mango Ice", slug: "mango-ice" };
 
 const wording = {
@@ -89,18 +93,64 @@ test("a website env hard-off hides web and still lets the TV flag through", () =
   }
 });
 
-test("only an explicit false flag, no real items, or the env override hides cigarettes", () => {
-  const items = [carton, grabba, backwoods];
-  const missing = decideCigaretteSurface({ cig: null, items, surface: "web" });
+test("a feed error or a missing block hides TV and the website feed", () => {
+  const items = [carton, grabba, backwoods, pouch];
+  const missing = decideCigaretteSurface({ cig: null, items, surface: "tv" });
   assert.equal(missing.reason, "missing");
-  assert.equal(missing.show, true);
+  assert.equal(missing.show, false);
+  assert.equal(decideCigaretteSurface({ cig: null, items, surface: "web" }).show, false);
+  const errored = decideCigaretteSurface({
+    cig: cig({ on: true, webOn: true, tvOn: true }),
+    items,
+    surface: "tv",
+    errored: true,
+  });
+  assert.equal(errored.reason, "error");
+  assert.equal(errored.show, false);
+  assert.equal(decideCigaretteSurface({ cig: cig({ on: true, webOn: true, tvOn: true }), items, surface: "web", errored: true }).show, false);
+  assert.equal(decideCigaretteSurface({ cig: cig({ tvOn: true, webOn: false }), items, surface: "tv" }).show, true);
+  assert.equal(decideCigaretteSurface({ cig: cig({ tvOn: false, webOn: true }), items, surface: "tv" }).show, false);
   assert.equal(decideCigaretteSurface({ cig: cig(), items, surface: "tv" }).show, false);
   assert.equal(decideCigaretteSurface({ cig: cig({ on: true, webOn: true, tvOn: true }), items: [backwoods, pouch], surface: "web" }).reason, "no-items");
-  const errored = decideCigaretteSurface({ cig: cig({ on: true, webOn: false, tvOn: false }), items, surface: "web", errored: true });
-  assert.equal(errored.reason, "error");
-  assert.equal(errored.show, true);
   assert.equal(decideCigaretteSurface({ cig: cig({ on: true, webOn: true, tvOn: true }), items, surface: "tv", envRaw: "false" }).reason, "env");
   assert.equal(decideCigaretteSurface({ cig: cig({ on: true, webOn: true, tvOn: true }), items, surface: "web", envRaw: "true" }).show, true);
+});
+
+test("a saved cig block still follows tvOn, and a miss with nothing saved stays hidden", () => {
+  const items = [carton, backwoods, pouch];
+  const savedOn = buildCigaretteSnapshot(cig({ on: false, webOn: false, tvOn: true }), items, false, false);
+  assert.equal(savedOn.tv.show, true);
+  assert.equal(savedOn.tv.reason, "on");
+  const savedOff = buildCigaretteSnapshot(cig({ on: true, webOn: true, tvOn: false }), items, false, false);
+  assert.equal(savedOff.tv.show, false);
+  assert.equal(savedOff.tv.reason, "off");
+  const miss = buildCigaretteSnapshot(null, items, false, true);
+  assert.equal(miss.tv.show, false);
+  assert.equal(miss.tv.reason, "error");
+  assert.equal(miss.web.show, false);
+  const missingBlock = buildCigaretteSnapshot(null, items, true, false);
+  assert.equal(missingBlock.tv.show, false);
+  assert.equal(missingBlock.tv.reason, "missing");
+  assert.equal(missingBlock.web.show, false);
+  assert.ok(reconcileSurfaceItems(items, items, miss.tv.show).some((item) => item.slug === backwoods.slug));
+  assert.ok(reconcileSurfaceItems(items, items, miss.tv.show).every((item) => item.slug !== carton.slug));
+});
+
+test("the website flag stays off whenever the static gate is off", () => {
+  const items = [carton, backwoods];
+  const on = decideCigaretteSurface({ cig: cig({ webOn: true, tvOn: true }), items, surface: "web" });
+  const off = decideCigaretteSurface({ cig: cig({ webOn: false, tvOn: true }), items, surface: "web" });
+  const errored = decideCigaretteSurface({ cig: cig({ webOn: true, tvOn: true }), items, surface: "web", errored: true });
+  const missing = decideCigaretteSurface({ cig: null, items, surface: "web" });
+  assert.equal(on.show, true);
+  assert.equal(publicWebsiteCigaretteFlag(on, false), false);
+  assert.equal(publicWebsiteCigaretteFlag(off, false), false);
+  assert.equal(publicWebsiteCigaretteFlag(errored, false), false);
+  assert.equal(publicWebsiteCigaretteFlag(missing, false), false);
+  assert.equal(publicWebsiteCigaretteFlag(errored, true), false);
+  assert.equal(publicWebsiteCigaretteFlag(missing, true), false);
+  assert.equal(publicWebsiteCigaretteFlag(off, true), false);
+  assert.equal(publicWebsiteCigaretteFlag(on, true), true);
 });
 
 test("wording uses the feed and falls back to the current copy field by field", () => {
@@ -128,9 +178,9 @@ test("guide pages follow the master switch and a feed error stays open", () => {
 });
 
 test("each surface hides real cigarettes itself and always keeps wraps and pouches", () => {
-  const menu = [vape, carton, grabba, backwoods, pouch];
+  const menu = [vape, carton, grabba, backwoods, pouch, paper, zyn, cigarillo, wrap];
   const hidden = reconcileSurfaceItems(menu, menu, false);
-  assert.deepEqual(hidden.map((item) => item.slug), [vape.slug, backwoods.slug, pouch.slug]);
+  assert.deepEqual(hidden.map((item) => item.slug), [vape.slug, backwoods.slug, pouch.slug, paper.slug, zyn.slug, cigarillo.slug, wrap.slug]);
   const shown = reconcileSurfaceItems([vape, backwoods], [carton, backwoods], true);
   assert.deepEqual(shown.map((item) => item.slug), [vape.slug, backwoods.slug, carton.slug]);
 });
