@@ -62,7 +62,8 @@ test("homepage is the visit hub and GBP website target", () => {
   assert.match(nap, /GBP_WEBSITE = STORE_NAP\.origin/);
   assert.match(layout, /url: STORE_NAP\.origin|url: nap\.origin|canonical: STORE_NAP\.origin/);
   assert.doesNotMatch(nap, /GBP_WEBSITE[^\n]*\/visit/);
-  assert.match(gbpLanding, /This city URL is archived/);
+  assert.match(gbpLanding, /Liberty Village Cannabis Dispensary in Toronto/);
+  assert.doesNotMatch(gbpLanding, /This city URL is archived/);
   assert.doesNotMatch(gbpLanding, /Use this page to confirm the basics/);
 });
 
@@ -86,12 +87,18 @@ test("/location aliases to /visit", () => {
   assert.match(nextConfig, /source: "\/location", destination: "\/visit", permanent: true/);
 });
 
-test("city owner URL is noindexed and canonicalized to the homepage", () => {
-  assert.match(ownerPage, /index: false/);
-  assert.match(ownerPage, /canonical: STORE_NAP\.origin/);
+test("Toronto city URL is indexable, self-canonical, and in the sitemap", () => {
+  assert.match(ownerPage, /Liberty Village Cannabis Dispensary Toronto \| King Rock/);
+  assert.match(ownerPage, /index: true/);
+  assert.doesNotMatch(ownerPage, /index: false/);
+  assert.match(ownerPage, /canonical: CITY_CANONICAL/);
+  assert.match(ownerPage, /STORE_NAP\.origin\}\$\{CITY_PATH\}/);
+  assert.match(ownerPage, /CITY_PATH = "\/weed-dispensary-toronto"/);
   assert.doesNotMatch(ownerPage, /origin\}\/visit/);
   assert.match(sitemap, /\$\{BASE\}\/visit/);
-  assert.match(sitemap, /priority: 0\.2/);
+  assert.match(sitemap, /\$\{BASE\}\/weed-dispensary-toronto/);
+  assert.match(sitemap, /weed-dispensary-toronto[\s\S]{0,160}changeFrequency: "weekly"/);
+  assert.match(sitemap, /weed-dispensary-toronto[\s\S]{0,180}priority: 0\.8/);
 });
 
 test("delivery is neighbourhood-scoped and does not use chain framing", () => {

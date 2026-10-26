@@ -89,7 +89,7 @@ export default function Footer() {
                 Liberty Village Weed Store
               </Link>
               <Link href="/weed-dispensary-toronto/">
-                King Rock store notes
+                Liberty Village Dispensary Toronto
               </Link>
               <Link href="/contact">Contact Us</Link>
               <Link href="/resources">Resources</Link>

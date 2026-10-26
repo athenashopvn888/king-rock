@@ -85,8 +85,10 @@ export function GBPLandingPage() {
 
       {/* Hero Header */}
       <header className={styles.hero}>
-        <h1 className={styles.h1}>{gbpLocation.storeName} — {gbpLocation.neighborhood} walk-in</h1>
-        <p className={styles.heroTagline}>Store listing is the King Rock homepage. This city URL is archived.</p>
+        <h1 className={styles.h1}>Liberty Village Cannabis Dispensary in Toronto</h1>
+        <p className={styles.heroTagline}>
+          {gbpLocation.storeName} on King West · {gbpLocation.hours[0]} · Adults 19+
+        </p>
       </header>
 
       {/* Call to Actions */}
@@ -132,8 +134,8 @@ export function GBPLandingPage() {
       <section className={styles.section}>
         <h2 className={styles.h2}>Plan a Visit to {gbpLocation.storeName}</h2>
         <p className={styles.infoText}>
-          This city URL is archived. The King Rock homepage is the store listing for {gbpLocation.storeName} near {gbpLocation.neighborhood}: address, phone, 24/7 hours, and the map. Extra street-level transit and parking notes are on the{" "}
-          <Link href="/visit">how-to-reach page</Link>.
+          {gbpLocation.storeName} is at {gbpLocation.address}, on King West beside Liberty Village. Hours are {gbpLocation.hours.join(" · ")}. Directions: {gbpLocation.transitNote} Street-level parking and unit B notes are on the{" "}
+          <Link href="/visit">how-to-reach page</Link>. The menu links on this page open the category boards for adults 19+.
         </p>
         <p className={styles.infoBlock}>
           Helpful local reference points include {landmarkList}. Neighbourhood cues also include {nearbyAreaList}.
@@ -229,7 +231,7 @@ export function GBPLandingPage() {
           <div className={styles.faqItem}>
             <h3 className={styles.faqQuestion}>How should I plan a visit to {gbpLocation.storeName}?</h3>
             <p className={styles.faqAnswer}>
-              Use the King Rock homepage for address, phone, 24/7 hours, and the map. Extra transit and parking notes are on the how-to-reach page. {gbpLocation.storeName} serves adults 19+ near {gbpLocation.neighborhood}.
+              Use the hours, address, and Directions on this page, then the how-to-reach page for the street-level walk from Liberty Village to King West. The map also sits on the King Rock homepage. {gbpLocation.storeName} serves adults 19+ near {gbpLocation.neighborhood}.
             </p>
           </div>
           <div className={styles.faqItem}>

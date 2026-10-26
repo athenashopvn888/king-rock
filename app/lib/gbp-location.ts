@@ -39,12 +39,12 @@ export const gbpLocation = {
   latitude: String(STORE_NAP.latitude),
   longitude: String(STORE_NAP.longitude),
   hours: [STORE_NAP.hoursLabel],
-  seoTitle: "King Rock | King West & Liberty Village Cannabis",
+  seoTitle: "Liberty Village Cannabis Dispensary Toronto | King Rock",
   metaDescription:
-    "Walk-in cannabis shop at 1220b King St W for King West and Liberty Village. Adults 19+. Open 24 Hours Daily.",
+    "King Rock Cannabis is the Liberty Village and King West dispensary at 1220b King St W in Toronto. Unit B. Adults 19+. Open 24 Hours Daily. Hours, directions, and the menu.",
   localLandmarks: ["King St W", "Liberty Village", "Exhibition Place"],
   introVariant:
-    "King Rock Cannabis is a neighbourhood walk-in at 1220b King St W on King West, beside Liberty Village and the Exhibition edge. Adults 19+ can browse menu categories including cannabis flower, pre-rolls, edibles, THC vapes, concentrates, and smoking accessories before visiting. The store listing is the homepage.",
+    "King Rock Cannabis is the walk-in dispensary at 1220b King St W on King West, beside Liberty Village and the Exhibition edge. Adults 19+ can browse menu categories including cannabis flower, pre-rolls, edibles, THC vapes, concentrates, and smoking accessories before visiting.",
   neighborhoodDescription:
     "The storefront faces King Street West at the Dufferin / Atlantic pinch, with Liberty Village north of the rail corridor and Exhibition Place to the south.",
   parkingNote: "Paid street parking on King Street West; Liberty Village Green P when the curb is full",
