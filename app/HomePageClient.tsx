@@ -339,7 +339,12 @@ export default function HomePageClient({ initialFlowers, contentBanners }: { ini
             south across the pedestrian bridge. Parking: paid King Street West
             curb — never on the tracks; loop Liberty Village Green P when the
             strip is busy. Extra street-level notes:{" "}
-            <Link href="/visit">how to get here</Link>.
+            <Link href="/visit">how to get here</Link>. Liberty Village and
+            King West landing:{" "}
+            <Link href="/weed-dispensary-toronto">
+              Liberty Village cannabis dispensary in Toronto
+            </Link>
+            .
           </p>
 
           <div className={styles.mapWrap}>

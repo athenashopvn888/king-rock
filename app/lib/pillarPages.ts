@@ -130,7 +130,7 @@ export const PILLAR_OWNER: PillarPage = {
     },
     {
       q: "Is this a city-wide Toronto dispensary listing?",
-      a: "No. This page is scoped to the King West neighbourhood pin. It does not claim downtown-core coverage, other boroughs, or a Toronto-wide dispensary directory. The archived city URL is not this page.",
+      a: "No. This page is scoped to the King West neighbourhood pin. It does not claim downtown-core coverage, other boroughs, or a Toronto-wide dispensary directory. Liberty Village has its own city landing for this same King Street West door.",
     },
     {
       q: "Where do I find unit B?",
