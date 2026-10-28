@@ -100,5 +100,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   } catch {
     fleetArticlePages = [];
   }
-  return [...deliveryGuidePages, ...strainGuidePages, ...staticPages, ...tierPages, ...itemPages, ...flowerPages, ...itemDetailPages, ...seoPages, ...resourcePages, ...fleetArticlePages];
+  const landraceArticlePage: MetadataRoute.Sitemap = [{
+    url: `${BASE}/resources/what-is-a-landrace-strain`,
+    lastModified: "2026-10-28",
+    changeFrequency: "weekly",
+    priority: 0.65,
+  }];
+  return [...deliveryGuidePages, ...strainGuidePages, ...staticPages, ...tierPages, ...itemPages, ...flowerPages, ...itemDetailPages, ...seoPages, ...resourcePages, ...fleetArticlePages, ...landraceArticlePage];
 }
