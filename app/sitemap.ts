@@ -106,5 +106,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     changeFrequency: "weekly",
     priority: 0.65,
   }];
-  return [...deliveryGuidePages, ...strainGuidePages, ...staticPages, ...tierPages, ...itemPages, ...flowerPages, ...itemDetailPages, ...seoPages, ...resourcePages, ...fleetArticlePages, ...landraceArticlePage];
+  const breakUpWeedArticlePage: MetadataRoute.Sitemap = [{
+    url: `${BASE}/resources/how-to-break-up-weed-without-a-grinder`,
+    lastModified: "2026-11-05",
+    changeFrequency: "weekly",
+    priority: 0.65,
+  }];
+  return [...deliveryGuidePages, ...strainGuidePages, ...staticPages, ...tierPages, ...itemPages, ...flowerPages, ...itemDetailPages, ...seoPages, ...resourcePages, ...fleetArticlePages, ...landraceArticlePage, ...breakUpWeedArticlePage];
 }
