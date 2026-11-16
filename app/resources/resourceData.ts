@@ -21,6 +21,7 @@ export interface ResourcePage {
   eyebrow: string;
   intro: string;
   cards: ResourceCard[];
+  related?: ResourceCard[];
   sections: ResourceSection[];
   faqHeading?: string;
   faqs?: { question: string; answer: string }[];
@@ -40,6 +41,13 @@ export const RESOURCE_PAGES: ResourcePage[] = [
       { title: "Weed & Flower Guide", href: "/resources/weed-flower-guide", text: "Compare Exotic Weed, Premium Weed, AAA+ Weed, AA Weed and Budget Weed." },
       { title: "Value Guide", href: "/resources/value-guide", text: "A cleaner path for cheap weed, budget weed, and affordable flower searches." },
       { title: "Native Smokes Prices", href: "/resources/native-smokes", text: "Brand and price notes for cigarettes, Backwoods, grabba, and pouch listings." }
+    ],
+    related: [
+      {
+        title: "What Is a Landrace Strain? The Old-School Cannabis Word, Decoded",
+        href: "/resources/what-is-a-landrace-strain",
+        text: "Landrace is one of the most misused words in cannabis, and King Rock explains what a landrace strain really means.",
+      },
     ],
     sections: [
       {
@@ -170,6 +178,13 @@ export const RESOURCE_PAGES: ResourcePage[] = [
       { title: "AAA+ Weed", href: "/aaa-weed", text: "Explore King Rock's AAA+ Weed flower collection." },
       { title: "AA Weed", href: "/aa-weed", text: "Browse King Rock's AA Weed flower collection." },
       { title: "Budget Weed", href: "/budget-weed", text: "Explore King Rock's Budget Weed flower collection." }
+    ],
+    related: [
+      {
+        title: "What Is a Landrace Strain? The Old-School Cannabis Word, Decoded",
+        href: "/resources/what-is-a-landrace-strain",
+        text: "Landrace is one of the most misused words in cannabis, and King Rock explains what a landrace strain really means.",
+      },
     ],
     sections: [
       {
@@ -335,6 +350,7 @@ function presentResource(page: ResourcePage): ResourcePage {
     cards: page.cards
       .filter((card) => !/cigarette/i.test(card.title) && !card.href.includes("native-cigarettes"))
       .map((card) => ({ ...card, title: publicCopy(card.title), text: publicCopy(card.text) })),
+    related: page.related?.map((item) => ({ ...item, title: publicCopy(item.title), text: publicCopy(item.text) })),
     sections: page.sections
       .filter((section) => !/cigarette/i.test(section.heading))
       .map((section) => ({
