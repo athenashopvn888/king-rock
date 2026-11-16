@@ -2,11 +2,32 @@ import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import styles from "./resources.module.css";
-import type { ResourcePage } from "./resourceData";
+import type { ResourceCard, ResourcePage } from "./resourceData";
 
 type ResourceViewProps = {
   page: ResourcePage;
 };
+
+function RelatedLinks({ heading, id, items }: { heading: string; id: string; items: ResourceCard[] }) {
+  if (items.length === 0) return null;
+  return (
+    <section className={styles.cardsSection} aria-labelledby={id}>
+      <div className={styles.latest}>
+        <h2 id={id}>{heading}</h2>
+        <ul className={styles.relatedList}>
+          {items.map((item) => (
+            <li key={item.href}>
+              <Link href={item.href} className={styles.card}>
+                <span>{item.title}</span>
+                <p>{item.text}</p>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  );
+}
 
 export default function ResourceView({ page }: ResourceViewProps) {
   return (
@@ -32,6 +53,12 @@ export default function ResourceView({ page }: ResourceViewProps) {
           </div>
         </section>
       )}
+
+      <RelatedLinks
+        heading={page.slug ? "Related" : "Latest articles"}
+        id={page.slug ? "related-heading" : "latest-articles-heading"}
+        items={page.related ?? []}
+      />
 
       <section className={styles.body}>
         {page.sections.map((section) => (
