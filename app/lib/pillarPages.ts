@@ -94,7 +94,7 @@ export function visiblePillarHubCards(): PillarHubCard[] {
 export const PILLAR_OWNER: PillarPage = {
   slug: PILLAR_SLUGS.weedDispensary,
   path: `/${PILLAR_SLUGS.weedDispensary}`,
-  title: "Weed Dispensary King West | King Rock",
+  title: "Weed Dispensary King West | King Rock | Dispensary near me",
   metaDescription:
     "Neighbourhood weed dispensary at 1220b King St W on the King / Parkdale / Queen West corridor, south of Liberty Village. Unit B at Dufferin / Atlantic. Adults 19+.",
   eyebrow: "King West / Liberty Village · Walk-in · Adults 19+",

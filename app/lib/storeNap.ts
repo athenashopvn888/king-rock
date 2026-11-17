@@ -166,5 +166,6 @@ export function faqPageJsonLd(
   };
 }
 
-// Document <title>/og/twitter: exact Google name | area. H1 keeps HOME_TITLE (previous keyword text).
+// Root default <title> plus inherited og/twitter. H1 keeps HOME_TITLE. Homepage document title is HOME_PAGE_TITLE.
 export const HOME_DOC_TITLE = "King Rock Dispensary Weed Delivery | King West & Liberty Village";
+export const HOME_PAGE_TITLE = "King Rock Dispensary near me | Weed Delivery | King West & Liberty Village";
