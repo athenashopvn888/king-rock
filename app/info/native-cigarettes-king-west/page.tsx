@@ -1,3 +1,4 @@
+import { getCigaretteSnapshot, toPublicCigaretteState } from "../../lib/cigaretteFeed";
 import { getLiveMenu } from "../../lib/liveMenu";
 import type { Metadata } from "next";
 import { redirect } from "next/navigation";
@@ -31,6 +32,7 @@ const HERO_ITEMS = [
 ] as const;
 
 export default async function NativeCigarettesPage() {
+  if (!toPublicCigaretteState(await getCigaretteSnapshot()).web) redirect("/items/vapes");
   if (!SHOW_CIGARETTES) redirect(VAPE_PAGE);
     await __loadMenuData();
   const items = __menu.items.filter((i) => i.category.toUpperCase() === String("CIGARETTES").toUpperCase());

@@ -1,5 +1,7 @@
 "use client";
 
+import { useCigaretteState } from "./components/CigaretteStateProvider";
+
 import { useEffect, useState, type CSSProperties } from "react";
 import Link from "next/link";
 import styles from "./page.module.css";
@@ -14,7 +16,7 @@ import JsonLd from "./components/JsonLd";
 import { type FlowerProduct } from "./lib/products";
 import { HOME_FAQS, HOME_TITLE, STORE_NAP, faqPageJsonLd } from "./lib/storeNap";
 import { visiblePillarHubCards } from "./lib/pillarPages";
-import { SHOW_CIGARETTES, publicCopy } from "./lib/cigaretteGate";
+import { publicCopy } from "./lib/cigaretteGate";
 import Papa from "papaparse";
 import { useLiveFlowers } from "./lib/useLiveMenu";
 import { storeTierRange, tierRangeText } from "./lib/tierPriceRanges";
@@ -109,6 +111,7 @@ interface ReviewStats {
 }
 
 export default function HomePageClient({ initialFlowers, contentBanners }: { initialFlowers: Parameters<typeof storeTierRange>[0]; contentBanners?: ResolvedBanner[] }) {
+  const { web: showCigarettes } = useCigaretteState();
     const __liveFlowers = useLiveFlowers();
   const featuredStrains = pickFeaturedStrains(__liveFlowers);
   const [reviews, setReviews] = useState<Review[]>([]);
@@ -360,10 +363,10 @@ export default function HomePageClient({ initialFlowers, contentBanners }: { ini
           <div className={styles.pillarHub} id="corridor" aria-labelledby="pillar-hub-heading">
             <p className={styles.visitHubEyebrow}>King / Parkdale / Queen West corridor</p>
             <h2 className={styles.visitHubTitle} id="pillar-hub-heading">
-              {SHOW_CIGARETTES ? "Five neighbourhood pages" : "Neighbourhood pages"}
+              {showCigarettes ? "Five neighbourhood pages" : "Neighbourhood pages"}
             </h2>
             <p className={styles.visitHubLead}>
-              {SHOW_CIGARETTES
+              {showCigarettes
                 ? "King West weed dispensary, 24-hour walk-in, neighbourhood delivery, Native cigarettes, and nicotine vape — scoped to this corridor, not city-wide Toronto clones."
                 : "King West weed dispensary, 24-hour walk-in, neighbourhood delivery, and nicotine vape — scoped to this corridor, not city-wide Toronto clones."}{" "}
               {STORE_NAP.ageLine}.
@@ -388,7 +391,7 @@ export default function HomePageClient({ initialFlowers, contentBanners }: { ini
           <div className={styles.sectionHeader}>
             <h2 className={styles.sectionTitle}>Explore Categories</h2>
             <p className={styles.sectionSubtitle}>
-              {SHOW_CIGARETTES
+              {showCigarettes
                 ? "From custom disposable vapes and concentrates to accessories and cigarettes."
                 : "From custom disposable vapes and concentrates to accessories."}
             </p>
@@ -499,7 +502,7 @@ export default function HomePageClient({ initialFlowers, contentBanners }: { ini
               cash. Store hours are 24 hours daily — a King West pin fact, not a
               city-wide slogan.               The public menu is split into flower tiers and
               format categories (pre-rolls, edibles, vapes, concentrates,
-              accessories{SHOW_CIGARETTES ? ", cigarettes" : ""}). Those pages are for browsing names and
+              accessories{showCigarettes ? ", cigarettes" : ""}). Those pages are for browsing names and
               posted details before you visit. They are not a live inventory
               feed. If one exact item is the reason for the trip, call{" "}
               <a href={`tel:${STORE_NAP.phoneIntl}`}>{STORE_NAP.phoneDisplay}</a>{" "}
