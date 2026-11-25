@@ -372,7 +372,7 @@ export default function HomePageClient({ initialFlowers, contentBanners }: { ini
               {STORE_NAP.ageLine}.
             </p>
             <div className={styles.pillarGrid}>
-              {visiblePillarHubCards().map((card) => (
+              {visiblePillarHubCards().filter((card) => showCigarettes || card.slug !== "native-cigarettes-king-west").map((card) => (
                 <Link key={card.slug} href={card.href} className={styles.pillarCard}>
                   <span className={styles.pillarCode}>{card.code}</span>
                   <h3 className={styles.pillarCardTitle}>{card.title}</h3>
