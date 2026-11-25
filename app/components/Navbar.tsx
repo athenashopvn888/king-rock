@@ -1,12 +1,14 @@
 "use client";
 
+import { useCigaretteState } from "./CigaretteStateProvider";
+
 import { useCallback, useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./Navbar.module.css";
 import { STORE_NAP } from "../lib/storeNap";
-import { SHOW_CIGARETTES } from "../lib/siteConfig";
+
 
 const ALL_LINKS = [
   { href: "/visit", label: "Visit King West" },
@@ -31,8 +33,9 @@ const ALL_LINKS = [
 ];
 
 export default function Navbar() {
+  const { web: showCigarettes } = useCigaretteState();
   const pathname = usePathname();
-  const links = SHOW_CIGARETTES ? ALL_LINKS : ALL_LINKS.filter((link) => link.href !== "/items/cigarettes");
+  const links = showCigarettes ? ALL_LINKS : ALL_LINKS.filter((link) => link.href !== "/items/cigarettes");
   const storeMenuLinks = links.filter((link) => link.href.startsWith("/items/") || ["/exotic-weed", "/premium-weed", "/aaa-weed", "/aa-weed", "/budget-weed"].includes(link.href));
   const isStoreMenuActive = storeMenuLinks.some((link) => pathname === link.href);
   const isDeliveryActive = pathname === "/delivery";
